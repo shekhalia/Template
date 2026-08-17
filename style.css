@@ -1,0 +1,396 @@
+
+/* ===== Base / Layout (from previous inline styles) ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #2b2d42;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  margin: 0;
+  padding: 5px 0 5px 5px;
+  color: #2b2d42;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid #dadce0;
+  height: 50px;
+  overflow: hidden;
+}
+
+header .header-container {
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  max-width: 960px;
+  width: 100%;
+  align-items: center;
+  height: 100%;
+}
+
+header .logo {
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #06f;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+header .logo img {
+  margin: 0;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  flex-shrink: 0;
+}
+
+header .site-name {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #5d5d5d;
+  font-size: 1.1rem;
+  line-height: 1.75rem;
+}
+
+main {
+  margin: 0 auto;
+  padding: 10px 10px 0 10px;
+  background-color: #fff;
+  min-height: 100%;
+  max-width: 960px;
+  width: 100%;
+}
+
+.hero-title {
+  margin: 10px 0 20px;
+  padding: 0;
+  font-weight: 600;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #333;
+}
+
+.ratebox {
+  margin: 0 auto 20px;
+  padding: 0;
+  max-width: 960px;
+  text-align: center;
+}
+
+footer {
+  margin: 0;
+  padding: 28px 20px 24px;
+  width: 100%;
+  background-color: #ffffff;
+  text-align: center;
+  border-top: 1px solid #e5e5e5;
+  margin-top: auto;
+}
+
+footer .container {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 680px;
+  text-align: center;
+}
+
+footer .footer-desc {
+  margin: 0 0 10px 0;
+  padding: 0;
+  font-size: 14px;
+  color: #999999;
+  line-height: 1.55;
+}
+
+footer .footer-desc b {
+  color: #666666;
+  font-weight: 600;
+}
+
+footer p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #222222;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.faq-scroll > p:last-of-type {
+  margin: 8px 0 0 0;
+}
+
+
+.apk-section {
+        max-width: 960px;
+        margin: 0 auto;
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+          Arial, sans-serif;
+      }
+
+      .apk-section .contents {
+        margin: 10px 10px 0 10px;
+        padding: 10px 10px 0 10px;
+        color: #212529;
+        line-height: 1.6;
+        font-size: 14px;
+        text-align: left;
+      }
+
+      .apk-section .contents h2 {
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #e5e7eb;
+        color: #212529;
+        text-align: left;
+      }
+
+      .apk-section .contents h3 {
+        font-size: 15px;
+        font-weight: 600;
+        color: #202124;
+        margin-top: 25px;
+        margin-bottom: 8px;
+        text-align: left;
+      }
+
+      .apk-section .contents p {
+        margin-bottom: 15px;
+        text-align: justify;
+        color: #212529;
+      }
+      .apk-section .how-to-steps {
+        background: #fcfcfd;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        padding: 20px 20px 20px 40px;
+        margin: 20px 0;
+        text-align: left;
+      }
+
+      .apk-section .how-to-steps ol {
+        margin: 0;
+        padding: 0;
+      }
+
+      .apk-section .how-to-steps li {
+        margin-bottom: 12px;
+        padding-left: 10px;
+        text-align: left;
+      }
+
+      .apk-section .how-to-steps li::marker {
+        color: #10b981;
+        font-weight: 700;
+        font-size: 18px;
+      }
+
+      .apk-section .how-to-steps strong {
+        color: #212529;
+      }
+      .apk-section .contents ul {
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 20px;
+        text-align: left;
+      }
+
+      .apk-section .contents ul li {
+        position: relative;
+        padding-left: 25px;
+        margin-bottom: 10px;
+        text-align: left;
+        color: #212529;
+      }
+
+      .apk-section .contents ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: #10b981;
+        font-weight: 700;
+        font-size: 16px;
+      }
+
+      .apk-section .contents a {
+        color: #1a73e8;
+        text-decoration: none;
+      }
+
+      .apk-section .contents a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 600px) {
+        .apk-section .contents h2 {
+          font-size: 16px;
+        }
+        .apk-section .contents h3 {
+          font-size: 14px;
+        }
+        .apk-section .how-to-steps {
+          padding: 15px 15px 15px 35px;
+        }
+      }
+
+.ratebox {
+        margin: 0 auto 20px;
+        max-width: 960px;
+        text-align: center;
+      }
+      .ratebox-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .ratebox-stars {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+      }
+      .ratebox-stars button {
+        font-size: 24px;
+        line-height: 1;
+        cursor: default;
+        background: transparent;
+        border: 0;
+        padding: 2px 3px;
+        color: #f5a623;
+        transition: 0.15s;
+      }
+      .ratebox-meta {
+        margin-top: 6px;
+        font-size: 13px;
+        color: #555;
+      }
+
+.bgen {
+        display: flex;
+        justify-content: stretch;
+        margin: 0 0 20px 0;
+        width: 100%;
+        align-items: center;
+        box-sizing: border-box;
+      }
+      #genlink {
+        height: 48px;
+        display: flex;
+        background-color: #06f;
+        color: #fff !important;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        font-weight: 500;
+        text-transform: none;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        font-size: 16px;
+        text-decoration: none;
+        font-family: Arial, sans-serif;
+        box-sizing: border-box;
+      }
+      #genlink:hover {
+        background-color: #0056b3;
+        color: #fff !important;
+      }
+
+.hero-img-wrap {
+        width: 100%;
+        margin: 0 0 20px 0;
+        box-sizing: border-box;
+      }
+      .hero-img-wrap img {
+        display: block;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: 32px;
+        box-sizing: border-box;
+      }
+
+header .header-container {
+        height: 100%;
+        align-items: center;
+      }
+
+.contents > h2:last-of-type {
+        margin-bottom: 0 !important;
+      }
+
+      .faq-scroll {
+        max-height: 400px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        margin: 0 !important;
+        padding: 0 0 20px 0 !important;
+        border: none !important;
+        background: transparent !important;
+        -webkit-mask-image: linear-gradient(
+          to bottom,
+          #000 0%,
+          #000 40%,
+          transparent 100%
+        );
+        mask-image: linear-gradient(
+          to bottom,
+          #000 0%,
+          #000 40%,
+          transparent 100%
+        );
+      }
+      .faq-scroll::-webkit-scrollbar {
+        display: none;
+      }
+      .faq-scroll > h3:first-child {
+        margin-top: 8px !important;
+      }
+      .faq-scroll > *:last-child {
+        margin-bottom: 0 !important;
+        padding-bottom: 8px !important;
+      }
+      .apk-section .contents {
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+      }
+      .apk-section {
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+      }
+/* FAQ paragraphs left-aligned */
+.faq-section p,
+.faq-container p,
+.faq-scroll p {
+  text-align: left !important;
+  word-spacing: normal !important;
+}
