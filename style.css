@@ -330,7 +330,7 @@ footer p {
         height: auto;
         aspect-ratio: 1 / 1;
         object-fit: cover;
-        border-radius: 32px;
+        border-radius: 64px;
         box-sizing: border-box;
       }
 
