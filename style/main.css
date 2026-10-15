@@ -252,7 +252,7 @@ header {
 body.dark-mode .theme-toggle .sun-icon { display: block; }
 body.dark-mode .theme-toggle .moon-icon { display: none; }
 
-.loginBtn { 
+.telegramBtn { 
     display: flex; 
     align-items: center; 
     justify-content: center;
@@ -264,10 +264,10 @@ body.dark-mode .theme-toggle .moon-icon { display: none; }
     transition: var(--transition);
 }
 
-.loginBtn:hover { border-color: var(--brand-color); background-color: var(--brand-color); color: #fff; }
+.telegramBtn:hover { border-color: var(--brand-color); background-color: var(--brand-color); color: #fff; }
 
 .acc-icon { color: var(--text-dark); flex-shrink: 0; }
-.loginBtn:hover .acc-icon { color: #fff; }
+.telegramBtn:hover .acc-icon { color: #fff; }
 
 #user-avatar { 
     width: 38px; 
@@ -479,7 +479,7 @@ body.dark-mode .theme-toggle .moon-icon { display: none; }
         font-size: 0.9rem; 
     }
 
-    .theme-toggle, .loginBtn, #user-avatar {
+    .theme-toggle, .telegramBtn, #user-avatar {
         width: 34px;
         height: 34px;
     }
