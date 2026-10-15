@@ -263,11 +263,28 @@ body.dark-mode .theme-toggle .moon-icon { display: none; }
     background-color: var(--bg-color);
     transition: var(--transition);
 }
+.telegramBtn { 
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
 
-.telegramBtn:hover { border-color: var(--brand-color); background-color: var(--brand-color); color: #fff; }
+.telegramBtn:hover { 
+    background: transparent; 
+    border: none;
+}
 
-.acc-icon { color: var(--text-dark); flex-shrink: 0; }
-.telegramBtn:hover .acc-icon { color: #fff; }
+.telegram-icon { 
+    color: var(--text-dark); 
+    flex-shrink: 0; 
+}
+
+.telegramBtn:hover .acc-icon { 
+    color: var(--brand-color);
+}
 
 #user-avatar { 
     width: 38px; 
