@@ -700,68 +700,6 @@ main.container{
 }
 
 /* =========================
-   Updates List
-   ========================= */
-.mi9-updates__list{list-style:none}
-
-.mi9-updates__item{border-bottom:1px solid var(--border-color)}
-
-.mi9-updates__link{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    padding:12px 14px;
-    color:var(--text-dark);
-    text-decoration:none;
-    transition:var(--transition);
-}
-
-.mi9-updates__link:hover{background:var(--bg-color)}
-
-.mi9-updates__thumb{
-    width:52px;
-    height:52px;
-    border-radius:6px;
-    object-fit:cover;
-    background:var(--bg-color);
-}
-
-.mi9-updates__name{font-size:15px;font-weight:500}
-
-.mi9-updates__meta{
-    margin-top:4px;
-    font-size:12px;
-    color:var(--text-light);
-}
-
-/* =========================
-   Updates Footer
-   ========================= */
-.mi9-updates__footer{
-    padding:12px;
-    border-top:1px solid var(--border-color);
-    background:var(--card-bg);
-}
-
-.mi9-updates__more{
-    display:block;
-    padding:12px;
-    border:1px solid var(--border-color);
-    border-radius:10px;
-    text-align:center;
-    font-size:14px;
-    font-weight:600;
-    color:var(--brand-color);
-    transition:var(--transition);
-}
-
-.mi9-updates__more:hover{
-    border-color:var(--brand-color);
-    background:var(--bg-color);
-    color:var(--brand-dark);
-}
-
-/* =========================
    Subcategories
    ========================= */
 .mi9-subcats{margin-bottom:18px}
@@ -799,31 +737,6 @@ main.container{
     color:var(--brand-color);
 }
 
-/* =========================
-   Breadcrumb
-   ========================= */
-.mi9-breadcrumb{margin:16px 0 14px}
-
-.mi9-breadcrumb__list{
-    display:flex;
-    flex-wrap:wrap;
-    gap:6px 10px;
-    list-style:none;
-}
-
-.mi9-breadcrumb__item{
-    font-size:13px;
-    color:var(--text-light);
-}
-
-.mi9-breadcrumb__item:not(:last-child)::after{
-    content:"/";
-    margin-left:10px;
-    opacity:.7;
-}
-
-.mi9-breadcrumb__link:hover{color:var(--brand-color)}
-.mi9-breadcrumb__current{color:var(--text-dark);font-weight:600}
 
 /* =========================
    View Select
