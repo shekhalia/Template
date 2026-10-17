@@ -282,7 +282,7 @@ body.dark-mode .theme-toggle .moon-icon { display: none; }
     flex-shrink: 0; 
 }
 
-.telegramBtn:hover .acc-icon { 
+.telegramBtn:hover .telegram-icon { 
     color: var(--brand-color);
 }
 
