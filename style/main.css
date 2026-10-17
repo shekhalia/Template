@@ -286,16 +286,6 @@ body.dark-mode .theme-toggle .moon-icon { display: none; }
     color: var(--brand-color);
 }
 
-#user-avatar { 
-    width: 38px; 
-    height: 38px; 
-    border-radius: 50%; 
-    cursor: pointer; 
-    object-fit: cover; 
-    border: 2px solid var(--brand-color);
-    padding: 2px;
-}
-
 /* ==========================================================================
    3. FOOTER
    ========================================================================== */
