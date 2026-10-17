@@ -221,7 +221,7 @@ header {
 
 .nav a:hover { color: var(--brand-color); }
 
-.acclogin { 
+.telegram { 
     display: flex; 
     align-items: center; 
     gap: 12px;
@@ -368,7 +368,7 @@ body.dark-mode .theme-toggle .moon-icon { display: none; }
         justify-content: center; 
     }
     
-    .acclogin { 
+    .telegram { 
         grid-column: 3 / 4; 
         grid-row: 1;
         gap: 8px; 
