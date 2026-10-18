@@ -677,6 +677,116 @@ main.container{
     background:var(--bg-color);
 }
 
+/* =========================
+   Layout & Container
+   ========================= */
+.container,
+main.container{
+    max-width:1200px;
+    margin:auto;
+    padding:0 16px;
+}
+
+/* =========================
+   Hero Category
+   ========================= */
+.mi9-category-hero{margin:22px 0 18px}
+
+.mi9-category-hero__title{
+    margin:0 0 8px;
+    font-size:30px;
+    font-weight:700;
+    color:var(--text-dark);
+    letter-spacing:-.2px;
+}
+
+.mi9-category-hero__desc{
+    max-width:760px;
+    font-size:15px;
+    line-height:1.65;
+    color:var(--text-light);
+}
+
+/* =========================
+   Layout Blocks
+   ========================= */
+.mi9-home-blocks{
+    display:flex;
+    align-items:flex-start;
+    gap:22px;
+    margin-bottom:34px;
+}
+
+.mi9-home-blocks__main{flex:1;min-width:0}
+.mi9-home-blocks__side{width:300px;flex:0 0 300px}
+
+/* =========================
+   Panel
+   ========================= */
+.mi9-panel{
+    padding:14px;
+    border:1px solid var(--border-color);
+    border-radius:12px;
+    background:var(--card-bg);
+}
+
+.mi9-panel__head{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-bottom:14px;
+}
+
+.mi9-panel__title{
+    font-size:20px;
+    font-weight:700;
+    line-height:1.3;
+    color:var(--text-dark);
+}
+
+.mi9-panel__empty{
+    font-size:14px;
+    line-height:1.6;
+    color:var(--text-light);
+}
+
+/* =========================
+   Featured Grid
+   ========================= */
+.mi9-featured__grid{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:14px;
+    padding-top:10px;
+}
+
+.mi9-featured__item{display:block;color:inherit;text-decoration:none}
+
+.mi9-featured__card{
+    height:100%;
+    padding:10px;
+    border:1px solid var(--border-color);
+    border-radius:12px;
+    background:var(--card-bg);
+    transition:var(--transition);
+}
+
+.mi9-featured__item:hover .mi9-featured__card{
+    border-color:var(--brand-color);
+    transform:translateY(-2px);
+}
+
+.mi9-featured__thumb-wrap{
+    position:relative;
+    padding-top:100%;
+    margin-bottom:8px;
+    border-radius:16px;
+    overflow:hidden;
+    background:var(--bg-color);
+}
+
 .mi9-featured__thumb{
     position:absolute;
     inset:6px;
@@ -697,6 +807,68 @@ main.container{
     -webkit-line-clamp:2;
     -webkit-box-orient:vertical;
     overflow:hidden;
+}
+
+/* =========================
+   Updates List
+   ========================= */
+.mi9-updates__list{list-style:none}
+
+.mi9-updates__item{border-bottom:1px solid var(--border-color)}
+
+.mi9-updates__link{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:12px 14px;
+    color:var(--text-dark);
+    text-decoration:none;
+    transition:var(--transition);
+}
+
+.mi9-updates__link:hover{background:var(--bg-color)}
+
+.mi9-updates__thumb{
+    width:52px;
+    height:52px;
+    border-radius:6px;
+    object-fit:cover;
+    background:var(--bg-color);
+}
+
+.mi9-updates__name{font-size:15px;font-weight:500}
+
+.mi9-updates__meta{
+    margin-top:4px;
+    font-size:12px;
+    color:var(--text-light);
+}
+
+/* =========================
+   Updates Footer
+   ========================= */
+.mi9-updates__footer{
+    padding:12px;
+    border-top:1px solid var(--border-color);
+    background:var(--card-bg);
+}
+
+.mi9-updates__more{
+    display:block;
+    padding:12px;
+    border:1px solid var(--border-color);
+    border-radius:10px;
+    text-align:center;
+    font-size:14px;
+    font-weight:600;
+    color:var(--brand-color);
+    transition:var(--transition);
+}
+
+.mi9-updates__more:hover{
+    border-color:var(--brand-color);
+    background:var(--bg-color);
+    color:var(--brand-dark);
 }
 
 /* =========================
@@ -737,6 +909,31 @@ main.container{
     color:var(--brand-color);
 }
 
+/* =========================
+   Breadcrumb
+   ========================= */
+.mi9-breadcrumb{margin:16px 0 14px}
+
+.mi9-breadcrumb__list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px 10px;
+    list-style:none;
+}
+
+.mi9-breadcrumb__item{
+    font-size:13px;
+    color:var(--text-light);
+}
+
+.mi9-breadcrumb__item:not(:last-child)::after{
+    content:"/";
+    margin-left:10px;
+    opacity:.7;
+}
+
+.mi9-breadcrumb__link:hover{color:var(--brand-color)}
+.mi9-breadcrumb__current{color:var(--text-dark);font-weight:600}
 
 /* =========================
    View Select
