@@ -327,6 +327,6 @@ function displayResults(items, query) {
     </p>
   </div>
 </footer>
-<script src="/jsai/app-main.js?v=3" defer></script>
+<script src="/jsai/app-main.js" defer></script>
 </body>
 </html>
