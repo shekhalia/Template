@@ -190,7 +190,7 @@
     
     <section class="panel">
 <div class="panel__head">
-    <h2 class="panel__title">New Games</h2>
+    <h2 class="panel__title">Popular Games</h2>
 
     <div class="view-select">
         <label class="view-select__label sr-only" for="view-select">Choose view</label>
@@ -200,11 +200,11 @@
             aria-label="Sort items"
             onchange="if(this.value){window.location.href=this.value;}"
         >
-            <option value="/" selected>
-                New Releases
-            </option>
-            <option value="/popular/">
+            <option value="/popular/" selected>
                 Popular
+            </option>
+            <option value="/">
+                New Releases 
             </option>
         </select>
     </div>
@@ -213,7 +213,7 @@
 <div
     id="list"
     class="featured__grid"
-    data-json-file="/all-new.json"
+    data-json-file="/all-popular.json"
     data-offset="24"
     data-limit="24"
 >
