@@ -7,8 +7,6 @@
   const input = document.getElementById("search-input");
   const suggestBox = document.getElementById("suggestions-box");
   const searchForm = document.querySelector(".search-box");
-  const avatar = document.getElementById("user-avatar");
-  const logoutBox = document.getElementById("logout-box");
 
   const cache = Object.create(null);
   let debounceTimer = null;
@@ -119,19 +117,6 @@
     });
   }
 
-  function openLoginPopup(url) {
-    const w = 500;
-    const h = 600;
-    const left = (screen.width - w) / 2;
-    const top = (screen.height - h) / 2;
-
-    window.open(
-      url,
-      "GoogleLogin",
-      `width=${w},height=${h},top=${top},left=${left},resizable=no,scrollbars=yes`
-    );
-  }
-
   function initGlobalClick() {
     document.addEventListener("click", (e) => {
       const target = e.target;
@@ -141,13 +126,6 @@
         if (input) input.value = suggestionItem.dataset.value || suggestionItem.textContent || "";
         setHidden(suggestBox, true);
         searchForm?.submit();
-        return;
-      }
-
-      const loginBtn = target.closest(".loginBtn");
-      if (loginBtn) {
-        e.preventDefault();
-        openLoginPopup(loginBtn.href);
         return;
       }
 
@@ -164,16 +142,6 @@
 
       if (searchForm && !searchForm.contains(target)) {
         setHidden(suggestBox, true);
-      }
-
-      if (avatar?.contains(target)) {
-        const isHidden = logoutBox?.classList.contains("is-hidden");
-        setHidden(logoutBox, !isHidden);
-        return;
-      }
-
-      if (logoutBox && !logoutBox.contains(target)) {
-        setHidden(logoutBox, true);
       }
     });
   }
