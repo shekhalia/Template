@@ -97,7 +97,7 @@
 }
 
 .subcats__scroller::-webkit-scrollbar {
-    height: 6px;
+    height: 0px;
 }
 
 .subcats__scroller::-webkit-scrollbar-thumb {
