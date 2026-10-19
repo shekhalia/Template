@@ -664,6 +664,11 @@
 
     if (!list || !button) return;
 
+    let allItems = [];
+    let currentIndex = parseInt(list.dataset.offset || '24', 10);
+    const limit = parseInt(list.dataset.limit || '24', 10);
+    const jsonFile = list.dataset.jsonFile || '/all-new.json';
+
     function esc(str) {
         return String(str ?? '')
             .replace(/&/g, '&amp;')
@@ -673,118 +678,80 @@
             .replace(/'/g, '&#039;');
     }
 
-    function buildMeta(item, view) {
-        const parts = [];
-
-        if (view === 'rating') {
-            if (item.rating) parts.push('★ ' + item.rating);
-            if (item.installs) parts.push(item.installs);
-        } else if (view === 'updates') {
-            if (item.app_ver) parts.push('v' + item.app_ver);
-            if (item.app_update) parts.push(item.app_update);
-        } else {
-            if (item.app_ver) parts.push('v' + item.app_ver);
-            if (item.installs) parts.push(item.installs);
+    async function preloadJson() {
+        try {
+            const res = await fetch(jsonFile);
+            if (res.ok) {
+                allItems = await res.json();
+            }
+        } catch (e) {
+            console.error("JSON load error:", e);
         }
-
-        return parts.join(' • ');
     }
 
-    async function loadMore() {
-        if (button.disabled) return;
-
-        const tag = list.dataset.tag || '';
-        const subtag = list.dataset.subtag || '';
-        const view = list.dataset.view || '';
-        const offset = parseInt(list.dataset.offset || '0', 10);
-        const limit = parseInt(list.dataset.limit || '24', 10);
+    function loadMore() {
+        if (!allItems.length) return;
 
         button.disabled = true;
         status.hidden = false;
         status.textContent = 'Loading...';
 
-        try {
-            const url = `/ajax/dcm-load/?t=${encodeURIComponent(tag)}&s=${encodeURIComponent(subtag)}&v=${encodeURIComponent(view)}&offset=${offset}&limit=${limit}`;
+        const nextItems = allItems.slice(currentIndex, currentIndex + limit);
+        let html = '';
 
-            const res = await fetch(url, {
-                headers: {
-                    'X-Requested-With': 'XMLHttpRequest'
-                }
-            });
+        nextItems.forEach(function (item) {
+            const pkgId = String(item.pkg_id || '').trim();
+            const name = String(item.game_name || '').trim();
 
-            if (!res.ok) {
-                throw new Error('HTTP ' + res.status);
-            }
+            if (!pkgId || !name) return;
 
-            const data = await res.json();
+            const logo = item.logo ? `/assets/logo/${item.logo}` : '/assets/logo/logo.svg';
 
-            if (!data.ok || !Array.isArray(data.items)) {
-                throw new Error('Invalid response');
-            }
+            html += `
+                <a class="featured__item" href="/package/${encodeURIComponent(pkgId)}/">
+                    <article class="featured__card">
+                        <div class="featured__thumb-wrap">
+                            <img
+                                class="featured__thumb"
+                                src="${esc(logo)}"
+                                alt="${esc(name)}"
+                                loading="lazy"
+                                decoding="async"
+                                width="180"
+                                height="180"
+                            >
+                        </div>
 
-            let html = '';
+                        <h3 class="featured__name">${esc(name)}</h3>
+                    </article>
+                </a>
+            `;
+        });
 
-            data.items.forEach(function (item) {
-                const googleId = String(item.google_id || '').trim();
-                const name = String(item.app_name || '').trim();
-
-                if (!googleId || !name) return;
-
-                const icon = item.icon_url || '/images/placeholder-180.webp';
-                const meta = buildMeta(item, view);
-
-                const metaHtml = meta
-                    ? `<span class="featured__meta">${esc(meta)}</span>`
-                    : '';
-
-                html += `
-                    <a class="featured__item" href="/package/${encodeURIComponent(googleId)}/">
-                        <article class="featured__card">
-                            <div class="featured__thumb-wrap">
-                                <img
-                                    class="featured__thumb"
-                                    src="${esc(icon)}"
-                                    alt="${esc(name)}"
-                                    loading="lazy"
-                                    decoding="async"
-                                    width="180"
-                                    height="180"
-                                >
-                            </div>
-
-                            <h3 class="featured__name">${esc(name)}</h3>
-
-                            ${metaHtml}
-                        </article>
-                    </a>
-                `;
-            });
-
-            if (html !== '') {
-                list.insertAdjacentHTML('beforeend', html);
-            }
-
-            list.dataset.offset = String(data.next_offset || (offset + data.items.length));
-
-            if (!data.has_more || !data.items.length) {
-                button.hidden = true;
-                status.hidden = false;
-                status.textContent = 'No more items.';
-            } else {
-                status.hidden = true;
-                status.textContent = '';
-            }
-        } catch (err) {
-            status.hidden = false;
-            status.textContent = 'Load failed. Please try again.';
-        } finally {
-            button.disabled = false;
+        if (html !== '') {
+            list.insertAdjacentHTML('beforeend', html);
         }
+
+        currentIndex += nextItems.length;
+
+        if (currentIndex >= allItems.length) {
+            button.hidden = true;
+            status.hidden = false;
+            status.textContent = 'No more items.';
+        } else {
+            status.hidden = true;
+            status.textContent = '';
+        }
+
+        button.disabled = false;
     }
 
     button.addEventListener('click', loadMore);
+    preloadJson();
 })();
-</script><footer class="site-footer" role="contentinfo">
+</script>
+ 
+<footer class="site-footer" role="contentinfo">
   <nav class="footer-nav" aria-label="Footer navigation">
 
     <div class="footer-col">
