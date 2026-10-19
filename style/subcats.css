@@ -11,11 +11,11 @@
 /* =========================
    3. CATEGORY HEADER
 ========================= */
-.category-head {
+.head {
     margin: 0 0 18px;
 }
 
-.category-head__title {
+.head__title {
     margin: 0;
     font-size: 28px;
     line-height: 1.2;
@@ -23,7 +23,7 @@
     font-weight: 700;
 }
 
-.category-head__desc {
+.head__desc {
     margin: 8px 0 0;
     color: var(--text-light);
     font-size: 14px;
@@ -33,15 +33,15 @@
 /* =========================
    4. SUBCATEGORIES (SCROLLABLE)
 ========================= */
-.subcats {
+.category {
     margin: 0 0 18px;
 }
 
-.subcats--scroll {
+.category--scroll {
     overflow: hidden;
 }
 
-.subcats__scroller {
+.category__scroller {
     display: flex;
     gap: 8px;
     overflow-x: auto;
@@ -51,16 +51,16 @@
     scrollbar-color: var(--border-color) transparent;
 }
 
-.subcats__scroller::-webkit-scrollbar {
+.category__scroller::-webkit-scrollbar {
     height: 6px;
 }
 
-.subcats__scroller::-webkit-scrollbar-thumb {
+.category__scroller::-webkit-scrollbar-thumb {
     background: var(--border-color);
     border-radius: 999px;
 }
 
-.subcats__link {
+.category__link {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -77,12 +77,12 @@
     transition: var(--transition);
 }
 
-.subcats__link:hover {
+.category__link:hover {
     border-color: var(--brand-color);
     color: var(--brand-color);
 }
 
-.subcats__link--active {
+.category__link--active {
     background: var(--bg-color);
     color: var(--brand-color);
     border-color: var(--brand-color);
@@ -291,7 +291,7 @@
    9. DARK MODE SUBTLETIES
 ========================= */
 body.dark-mode .featured__card:hover,
-body.dark-mode .subcats__link--active,
+body.dark-mode .category__link--active,
 body.dark-mode .view-switch__link.is-active {
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.28);
 }
@@ -305,12 +305,12 @@ body.dark-mode .view-switch__link.is-active {
 
 @media (max-width: 992px) {
     .featured__grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-    .category-head__title { font-size: 25px; }
+    .head__title { font-size: 25px; }
 }
 
 @media (max-width: 768px) {
     .container { padding: 12px; }
-    .category-head__title { font-size: 22px; }
+    .head__title { font-size: 22px; }
     .panel__title { font-size: 18px; }
     .featured__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     .view-switch { width: 100%; }
@@ -346,7 +346,7 @@ body.dark-mode .view-switch__link.is-active {
     }
 
     .featured__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .category-head__title { font-size: 20px; }
+    .head__title { font-size: 20px; }
 }
 
 /* Accessibility */
