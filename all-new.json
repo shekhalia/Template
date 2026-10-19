@@ -1,0 +1,17 @@
+[
+  {
+    "pkg_id": "Moneyrummy",
+    "game_name": "Money Rummy",
+    "logo": "moneyrummy.webp"
+  },
+  {
+    "pkg_id": "ludoking",
+    "game_name": "Ludo King",
+    "logo": "ludo.svg"
+  },
+  {
+    "pkg_id": "subwaysurf",
+    "game_name": "Subway Surfers",
+    "logo": "subway.webp"
+  }
+]
