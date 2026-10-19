@@ -10,11 +10,11 @@
 /* =========================
    2. BREADCRUMB
 ========================= */
-.mi9-breadcrumb {
+.breadcrumb {
     margin: 0 0 14px;
 }
 
-.mi9-breadcrumb__list {
+.breadcrumb__list {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -24,31 +24,31 @@
     list-style: none;
 }
 
-.mi9-breadcrumb__item {
+.breadcrumb__item {
     display: inline-flex;
     align-items: center;
     font-size: 13px;
     color: var(--text-light);
 }
 
-.mi9-breadcrumb__item:not(:last-child)::after {
+.breadcrumb__item:not(:last-child)::after {
     content: "/";
     margin-left: 10px;
     color: var(--text-light);
     opacity: 0.7;
 }
 
-.mi9-breadcrumb__link {
+.breadcrumb__link {
     color: var(--text-light);
     text-decoration: none;
     transition: var(--transition);
 }
 
-.mi9-breadcrumb__link:hover {
+.breadcrumb__link:hover {
     color: var(--brand-color);
 }
 
-.mi9-breadcrumb__current {
+.breadcrumb__current {
     color: var(--text-dark);
     font-weight: 600;
 }
@@ -56,11 +56,11 @@
 /* =========================
    3. CATEGORY HEADER
 ========================= */
-.mi9-category-head {
+.category-head {
     margin: 0 0 18px;
 }
 
-.mi9-category-head__title {
+.category-head__title {
     margin: 0;
     font-size: 28px;
     line-height: 1.2;
@@ -68,7 +68,7 @@
     font-weight: 700;
 }
 
-.mi9-category-head__desc {
+.category-head__desc {
     margin: 8px 0 0;
     color: var(--text-light);
     font-size: 14px;
@@ -78,15 +78,15 @@
 /* =========================
    4. SUBCATEGORIES (SCROLLABLE)
 ========================= */
-.mi9-subcats {
+.subcats {
     margin: 0 0 18px;
 }
 
-.mi9-subcats--scroll {
+.subcats--scroll {
     overflow: hidden;
 }
 
-.mi9-subcats__scroller {
+.subcats__scroller {
     display: flex;
     gap: 8px;
     overflow-x: auto;
@@ -96,16 +96,16 @@
     scrollbar-color: var(--border-color) transparent;
 }
 
-.mi9-subcats__scroller::-webkit-scrollbar {
+.subcats__scroller::-webkit-scrollbar {
     height: 6px;
 }
 
-.mi9-subcats__scroller::-webkit-scrollbar-thumb {
+.subcats__scroller::-webkit-scrollbar-thumb {
     background: var(--border-color);
     border-radius: 999px;
 }
 
-.mi9-subcats__link {
+.subcats__link {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -122,12 +122,12 @@
     transition: var(--transition);
 }
 
-.mi9-subcats__link:hover {
+.subcats__link:hover {
     border-color: var(--brand-color);
     color: var(--brand-color);
 }
 
-.mi9-subcats__link--active {
+.subcats__link--active {
     background: var(--bg-color);
     color: var(--brand-color);
     border-color: var(--brand-color);
@@ -137,14 +137,14 @@
 /* =========================
    5. PANEL & HEADERS
 ========================= */
-.mi9-panel {
+.panel {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 14px;
 }
 
-.mi9-panel__head {
+.panel__head {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -153,7 +153,7 @@
     margin-bottom: 14px;
 }
 
-.mi9-panel__title {
+.panel__title {
     margin: 0;
     font-size: 20px;
     font-weight: 700;
@@ -164,13 +164,13 @@
 /* =========================
    6. VIEW SWITCH & SELECT
 ========================= */
-.mi9-view-switch {
+.view-switch {
     display: flex;
     gap: 6px;
     flex-wrap: wrap;
 }
 
-.mi9-view-switch__link {
+.view-switch__link {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -188,26 +188,26 @@
     white-space: nowrap;
 }
 
-.mi9-view-switch__link:hover {
+.view-switch__link:hover {
     border-color: var(--brand-color);
     color: var(--brand-color);
 }
 
-.mi9-view-switch__link.is-active {
+.view-switch__link.is-active {
     background: var(--brand-color);
     color: #fff;
     border-color: var(--brand-color);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-.mi9-view-select {
+.view-select {
     position: relative;
     flex: 0 0 auto;
     min-width: 160px;
     max-width: 200px;
 }
 
-.mi9-view-select__control {
+.view-select__control {
     width: 100%;
     height: 34px;
     padding: 0 32px 0 10px;
@@ -225,7 +225,7 @@
     -webkit-appearance: none;
 }
 
-.mi9-view-select::after {
+.view-select::after {
     content: "";
     position: absolute;
     top: 50%;
@@ -242,19 +242,19 @@
 /* =========================
    7. GRID SYSTEM (6-COLUMN)
 ========================= */
-.mi9-featured__grid {
+.featured__grid {
     display: grid;
     grid-template-columns: repeat(6, minmax(0, 1fr));
     gap: 14px;
 }
 
-.mi9-featured__item {
+.featured__item {
     display: block;
     text-decoration: none;
     color: inherit;
 }
 
-.mi9-featured__card {
+.featured__card {
     height: 100%;
     padding: 10px;
     border: 1px solid var(--border-color);
@@ -264,18 +264,18 @@
     transition: var(--transition);
 }
 
-.mi9-featured__card:hover {
+.featured__card:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-.mi9-featured__thumb-wrap {
+.featured__thumb-wrap {
     width: 100%;
     aspect-ratio: 1 / 1;
     margin-bottom: 8px;
 }
 
-.mi9-featured__thumb {
+.featured__thumb {
     display: block;
     width: 100%;
     height: 100%;
@@ -284,7 +284,7 @@
     background: var(--bg-color);
 }
 
-.mi9-featured__name {
+.featured__name {
     margin: 0 0 4px;
     font-size: 13px;
     line-height: 1.35;
@@ -297,7 +297,7 @@
     min-height: 35px;
 }
 
-.mi9-featured__meta {
+.featured__meta {
     font-size: 12px;
     line-height: 1.4;
     color: var(--text-light);
@@ -310,7 +310,7 @@
 /* =========================
    8. LOAD MORE & STATUS
 ========================= */
-.mi9-loadmore-wrap {
+.loadmore-wrap {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -319,7 +319,7 @@
     margin-top: 20px;
 }
 
-.mi9-loadmore-btn {
+.loadmore-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -337,7 +337,7 @@
     transition: var(--transition);
 }
 
-.mi9-loadmore-btn:disabled {
+.loadmore-btn:disabled {
     opacity: 0.65;
     cursor: not-allowed;
 }
@@ -345,9 +345,9 @@
 /* =========================
    9. DARK MODE SUBTLETIES
 ========================= */
-body.dark-mode .mi9-featured__card:hover,
-body.dark-mode .mi9-subcats__link--active,
-body.dark-mode .mi9-view-switch__link.is-active {
+body.dark-mode .featured__card:hover,
+body.dark-mode .subcats__link--active,
+body.dark-mode .view-switch__link.is-active {
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.28);
 }
 
@@ -355,30 +355,30 @@ body.dark-mode .mi9-view-switch__link.is-active {
    10. RESPONSIVE DESIGN
 ========================= */
 @media (max-width: 1200px) {
-    .mi9-featured__grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+    .featured__grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
 }
 
 @media (max-width: 992px) {
-    .mi9-featured__grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-    .mi9-category-head__title { font-size: 25px; }
+    .featured__grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .category-head__title { font-size: 25px; }
 }
 
 @media (max-width: 768px) {
     .container { padding: 12px; }
-    .mi9-category-head__title { font-size: 22px; }
-    .mi9-panel__title { font-size: 18px; }
-    .mi9-featured__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    .mi9-view-switch { width: 100%; }
+    .category-head__title { font-size: 22px; }
+    .panel__title { font-size: 18px; }
+    .featured__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .view-switch { width: 100%; }
 }
 
 @media (max-width: 480px) {
-    .mi9-panel__head {
+    .panel__head {
         flex-wrap: nowrap;
         align-items: center;
         gap: 8px;
     }
 
-    .mi9-panel__title {
+    .panel__title {
         flex: 1 1 auto;
         min-width: 0;
         margin-right: 6px;
@@ -388,20 +388,20 @@ body.dark-mode .mi9-view-switch__link.is-active {
         font-size: 17px;
     }
 
-    .mi9-view-select {
+    .view-select {
         flex: 0 0 120px;
         width: 120px;
         max-width: 120px;
     }
 
-    .mi9-view-select__control {
+    .view-select__control {
         height: 30px;
         font-size: 12px;
         padding: 0 28px 0 8px;
     }
 
-    .mi9-featured__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .mi9-category-head__title { font-size: 20px; }
+    .featured__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .category-head__title { font-size: 20px; }
 }
 
 /* Accessibility */
