@@ -14,45 +14,6 @@
     margin: 0 0 14px;
 }
 
-.breadcrumb__list {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 6px 10px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.breadcrumb__item {
-    display: inline-flex;
-    align-items: center;
-    font-size: 13px;
-    color: var(--text-light);
-}
-
-.breadcrumb__item:not(:last-child)::after {
-    content: "/";
-    margin-left: 10px;
-    color: var(--text-light);
-    opacity: 0.7;
-}
-
-.breadcrumb__link {
-    color: var(--text-light);
-    text-decoration: none;
-    transition: var(--transition);
-}
-
-.breadcrumb__link:hover {
-    color: var(--brand-color);
-}
-
-.breadcrumb__current {
-    color: var(--text-dark);
-    font-weight: 600;
-}
-
 /* =========================
    3. CATEGORY HEADER
 ========================= */
