@@ -274,7 +274,9 @@ function displayResults(items, query) {
         setStatus("Please enter a search query.");
     }
 })();
-</script><footer class="site-footer" role="contentinfo">
+</script>
+
+<footer class="site-footer" role="contentinfo">
   <nav class="footer-nav" aria-label="Footer">
     <div class="footer-col">
       <div class="footer-title">MI9</div>
