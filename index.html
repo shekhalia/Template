@@ -213,7 +213,7 @@
 <div
     id="list"
     class="featured__grid"
-    data-json-file="/all-new.json"
+    data-json-file="/games.json"
     data-offset="24"
     data-limit="24"
 >
@@ -677,7 +677,7 @@
     let allItems = [];
     let currentIndex = parseInt(list.dataset.offset || '24', 10);
     const limit = parseInt(list.dataset.limit || '24', 10);
-    const jsonFile = list.dataset.jsonFile || '/all-new.json';
+    const jsonFile = list.dataset.jsonFile || '/games.json';
 
     function esc(str) {
         return String(str ?? '')
