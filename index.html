@@ -26,8 +26,8 @@
   ]
 }
 </script>
-<link rel="stylesheet" href="style/main.css">
-<link rel="stylesheet" href="style/category.css">
+<link rel="stylesheet" href="../style/main.css">
+<link rel="stylesheet" href="../style/subcats.css">
 <script>
 (() => {
   const theme = localStorage.getItem('theme');
@@ -104,85 +104,85 @@
     </div>
 </header>
 <main class="container">
-    <section class="head">
-        <div class="head__top">
-            <h1 class="head__title">Games</h1>
+    <section class="category-head">
+        <div class="category-head__top">
+            <h1 class="category-head__title">Games</h1>
 
         </div>
 
-                    <p class="head__desc">Browse popular action games for Android.</p>
+                    <p class="category-head__desc">Browse popular action games for Android.</p>
             </section>
 
-            <section class="category category--scroll">
-            <div class="category__scroller">
+            <section class="subcats subcats--scroll">
+            <div class="subcats__scroller">
                                     <a
-                        class="category__link"
-                        href="/yono/"
+                        class="subcats__link"
+                        href="/yono"
                         aria-current="page"                    >
                         Yono                    </a>
                                     <a
-                        class="category__link"
-                        href="/diwa/"
+                        class="subcats__link"
+                        href="/diwa"
                                             >
                         Diwa                    </a>
                                     <a
-                        class="category__link"
-                        href="/arcade/"
+                        class="subcats__link"
+                        href="/arcade"
                                             >
                         Arcade                    </a>
                                     <a
-                        class="category__link"
-                        href="/casual/"
+                        class="subcats__link"
+                        href="/casual"
                                             >
                         Casual                    </a>
                                     <a
-                        class="category__link"
-                        href="/puzzle/"
+                        class="subcats__link"
+                        href="/puzzle"
                                             >
                         Puzzle                    </a>
                                     <a
-                        class="category__link"
-                        href="/racing/"
+                        class="subcats__link"
+                        href="/racing"
                                             >
                         Racing                    </a>
                                     <a
-                        class="category__link"
-                        href="/role_playing/"
+                        class="subcats__link"
+                        href="/role_playing"
                                             >
                         RPG                    </a>
                                     <a
-                        class="category__link"
-                        href="/simulation/"
+                        class="subcats__link"
+                        href="/simulation"
                                             >
                         Simulation                    </a>
                                     <a
-                        class="category__link"
-                        href="/sports/"
+                        class="subcats__link"
+                        href="/sports"
                                             >
                         Sports                    </a>
                                     <a
-                        class="category__link"
-                        href="/strategy/"
+                        class="subcats__link"
+                        href="/strategy"
                                             >
                         Strategy                    </a>
                                     <a
-                        class="category__link"
-                        href="/board/"
+                        class="subcats__link"
+                        href="/board"
                                             >
                         Board                    </a>
                                     <a
-                        class="category__link"
-                        href="/card/"
+                        class="subcats__link"
+                        href="/card"
                                             >
                         Card                    </a>
                                     <a
-                        class="category__link"
-                        href="/trivia/"
+                        class="subcats__link"
+                        href="/trivia"
                                             >
                         Trivia                    </a>
                                     <a
-                        class="category__link"
-                        href="/word/"
+                        class="subcats__link"
+                        href="/word"
                                             >
                         Word                    </a>
                             </div>
@@ -190,7 +190,7 @@
     
     <section class="panel">
 <div class="panel__head">
-    <h2 class="panel__title">New Games</h2>
+    <h2 class="panel__title">Games</h2>
 
     <div class="view-select">
         <label class="view-select__label sr-only" for="view-select">Choose view</label>
@@ -203,8 +203,8 @@
             <option value="/" selected>
                 New Releases
             </option>
-            <option value="/popular/">
-                Popular
+            <option value="popular/">
+                Popular 
             </option>
         </select>
     </div>
@@ -677,7 +677,7 @@
     let allItems = [];
     let currentIndex = parseInt(list.dataset.offset || '24', 10);
     const limit = parseInt(list.dataset.limit || '24', 10);
-    const jsonFile = list.dataset.jsonFile || '/games.json';
+    const jsonFile = list.dataset.jsonFile || '/all-new.json';
 
     function esc(str) {
         return String(str ?? '')
@@ -849,6 +849,6 @@
     </p>
   </div>
 </footer>
-<script src="jsai/app-main.js" defer></script>
+<script src="../jsai/app-main.js" defer></script>
 </body>
 </html>
