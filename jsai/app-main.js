@@ -1,12 +1,7 @@
 (() => {
-  const body = document.body;
-  const html = document.documentElement;
-  const header = document.querySelector(".header-container");
-  const menuToggle = document.getElementById("menuToggle") || document.getElementById("mobile-toggle");
-  const themeToggle = document.getElementById("theme-toggle");
   const input = document.getElementById("search-input");
   const suggestBox = document.getElementById("suggestions-box");
-  const searchForm = document.querySelector(".search-box");
+  const searchForm = document.querySelector("form[action='/search']");
 
   const cache = Object.create(null);
   let debounceTimer = null;
@@ -22,35 +17,8 @@
 
   const setHidden = (el, hidden = true) => {
     if (!el) return;
-    el.classList.toggle("is-hidden", hidden);
+    el.style.display = hidden ? "none" : "block";
   };
-
-  function syncThemeToBody() {
-    body.classList.toggle("dark-mode", html.classList.contains("dark-mode"));
-    body.classList.toggle("light-mode", html.classList.contains("light-mode"));
-  }
-
-  function setTheme(mode) {
-    html.classList.remove("dark-mode", "light-mode");
-    html.classList.add(mode);
-    localStorage.setItem("theme", mode);
-    syncThemeToBody();
-  }
-
-  function initTheme() {
-    if (!html.classList.contains("dark-mode") && !html.classList.contains("light-mode")) {
-      html.classList.add(localStorage.getItem("theme") || "light-mode");
-    }
-
-    syncThemeToBody();
-
-    if (!themeToggle) return;
-
-    themeToggle.addEventListener("click", () => {
-      const isDark = html.classList.contains("dark-mode");
-      setTheme(isDark ? "light-mode" : "dark-mode");
-    });
-  }
 
   function renderSuggestions(items) {
     if (!suggestBox) return;
@@ -62,7 +30,7 @@
     }
 
     suggestBox.innerHTML = items
-      .map((item) => `<li class="suggestion-item" data-value="${escapeHTML(item)}">${escapeHTML(item)}</li>`)
+      .map((item) => `<li class="suggestion-item" data-value="${escapeHTML(item)}" style="display: flex; align-items: center; width: 100%; box-sizing: border-box; padding: 12px 16px; margin: 0; font-size: 15px; line-height: 1.45; color: var(--text-dark, #202124); background: transparent; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${escapeHTML(item)}</li>`)
       .join("");
 
     setHidden(suggestBox, false);
@@ -129,17 +97,6 @@
         return;
       }
 
-      if (menuToggle?.contains(target)) {
-        const isOpen = header?.classList.toggle("menu-open");
-        menuToggle.classList.toggle("open", !!isOpen);
-        return;
-      }
-
-      if (header?.classList.contains("menu-open") && !header.contains(target)) {
-        header.classList.remove("menu-open");
-        menuToggle?.classList.remove("open");
-      }
-
       if (searchForm && !searchForm.contains(target)) {
         setHidden(suggestBox, true);
       }
@@ -147,7 +104,6 @@
   }
 
   function init() {
-    initTheme();
     initSearch();
     initGlobalClick();
   }
