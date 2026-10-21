@@ -1,0 +1,1541 @@
+<style>
+/* ==========================================================================
+   1. GLOBAL STYLES & RESET
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: Roboto, Arial, sans-serif;
+    color: #2b2d42;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 10px;
+}
+
+main h1 {
+    font-size: 20px;
+}
+
+main h2 {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #444;
+}
+
+main h3 {
+    font-size: 14px;
+}
+
+a, a:visited {
+    color: #007bff;
+    text-decoration: none;
+}
+
+small {
+    font-weight: 400;
+}
+
+td, th {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+th {
+    font-weight: 700;
+    color: #333;
+}
+
+td {
+    color: #555;
+}
+
+tr:hover {
+    background-color: #f0f8ff;
+}
+
+tbody, td, tfoot, th, thead, tr {
+    border: 0 solid grey;
+}
+
+
+/* ==========================================================================
+   2. HEADER & NAVIGATION STYLES
+   ========================================================================== */
+header {
+    border-bottom: 1px solid #dadce0;
+    padding: 10px 0 10px 5px;
+}
+
+header .logo {
+    text-transform: none;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.site-name {
+    margin: 0;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 900;
+    letter-spacing: .2px;
+    color: #007bff;
+}
+
+.slog {
+    display: flex;
+    align-items: center;
+}
+
+.wsname {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.brand-tag {
+    font-size: 11px;
+    font-weight: 700;
+    color: #9ca3af;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: -2px;
+}
+
+.slogr {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.slogr .nav {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.slogr .nav a {
+    color: #333;
+    font-weight: 600;
+    padding: 6px 5px;
+    border-radius: 6px;
+    transition: .2s;
+    text-decoration: none;
+}
+
+.slogr .nav a:hover {
+    background: #e9e9e9;
+    color: #000;
+}
+
+.slogr .nav a.active {
+    background: #4caf50;
+    color: #fff;
+}
+
+
+/* ==========================================================================
+   3. SEARCH BAR & SUGGESTIONS STYLES
+   ========================================================================== */
+.search-box {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+    position: relative;
+    max-width: 250px;
+    justify-content: flex-end;
+    background: #f3f4f6;
+    border: 1px solid #eef2f7;
+    border-radius: 14px;
+}
+
+.search-box input[type=text] {
+    padding: 8px 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: width .3s;
+}
+
+.search-box input[type=text]:focus {
+    width: 250px;
+    outline: 0;
+    border-color: #007bff;
+}
+
+.search-box button {
+    font-size: 1rem;
+    background-color: transparent;
+    border: none;
+    margin-left: 10px;
+    cursor: pointer;
+    box-sizing: initial;
+    color: #222;
+    padding-right: 5px;
+}
+
+#search-input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    background: 0 0;
+    font-size: 14px;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.suggestions-box {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0,0,0,.1);
+    display: none;
+}
+
+.suggestions-box li {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.suggestions-box li:hover {
+    background-color: #f0f0f0;
+}
+
+
+/* ==========================================================================
+   4. BREADCRUMBS & ADS STYLES
+   ========================================================================== */
+.breadcrumbdiv {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 8px;
+}
+
+.breadcrumb {
+    list-style: none;
+    margin-top: 10px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    line-height: 1.2;
+    font-size: 14px;
+}
+
+.breadcrumb li {
+    display: inline-flex;
+    align-items: center;
+    min-width: 0;
+}
+
+.breadcrumb li+li::before {
+    content: "/";
+    display: inline-block;
+    margin: 0 6px 0 2px;
+    opacity: .55;
+}
+
+.breadcrumb a {
+    padding: 6px 10px;
+    border-radius: 10px;
+    background: rgba(0,0,0,.04);
+    max-width: 260px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    background: rgba(0,0,0,.08);
+}
+
+.breadcrumb a:focus-visible {
+    outline: rgba(0,0,0,.25) solid 2px;
+    outline-offset: 2px;
+}
+
+.adv, .best_ads {
+    padding: 10px 0;
+}
+
+.adv {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.best_ads {
+    height: 100px;
+}
+
+.googleadv {
+    display: block;
+    text-align: center;
+    min-height: 280px;
+    background: #f0f0f0;
+    margin: 20px 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    overflow: hidden;
+}
+
+ins.adsbygoogle[data-ad-status=unfilled] {
+    display: none !important;
+}
+
+.googleadv:has(ins.adsbygoogle[data-ad-status=unfilled]) {
+    display: none !important;
+}
+
+
+/* ==========================================================================
+   5. USER PROFILE & LOGOUT BOX STYLES
+   ========================================================================== */
+#user-avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #ccc;
+}
+
+#logout-box {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: #fff;
+    border: 1px solid #ccc;
+    margin-top: 8px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.2);
+    z-index: 999;
+    display: none;
+}
+
+.logout-button {
+    background-color: #eee;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color .2s;
+}
+
+.logout-button:hover {
+    background-color: #ddd;
+}
+
+
+/* ==========================================================================
+   6. GAME HEADER & HERO SECTION STYLES
+   ========================================================================== */
+.game-header, .game-header *, .game-header ::after, .game-header ::before {
+    box-sizing: border-box;
+}
+
+.game-header {
+    padding: 5px 0;
+    font-family: inherit;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.title-block {
+    margin-bottom: 20px;
+}
+
+.title-block h1 {
+    font-size: 24px;
+    margin: 0 0 8px;
+    color: #333;
+    line-height: 1.2;
+}
+
+.game-short-desc {
+    margin: 10px 0 0;
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: rgba(0,0,0,.6);
+    font-weight: 400;
+    letter-spacing: .1px;
+    max-width: 720px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+.content-wrgameer {
+    display: grid;
+    gap: 18px;
+}
+
+.icon-box {
+    flex: 1;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.game-icon {
+    width: 88px;
+    height: 88px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,.08);
+    display: block;
+}
+
+.game-hero__meta {
+    display: grid;
+    width: 100%;
+}
+
+.game-hero__row {
+    display: flex;
+    gap: 12px;
+    padding: 8px 0;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.game-hero__row:last-child {
+    border-bottom: none;
+}
+
+.game-hero__k {
+    font-size: 13px;
+    color: #666;
+}
+
+.game-hero__v {
+    font-size: 13px;
+    font-weight: 700;
+    color: #111;
+    text-align: right;
+}
+
+.info-box {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ==========================================================================
+   7. BUTTONS & ACTIONS STYLES
+   ========================================================================== */
+.btn-download {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #007bff;
+    color: #fff !important;
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,.2);
+    transition: .2s ease-in-out;
+    margin-bottom: 12px;
+    border: none;
+    width: 100%;
+    max-width: 400px;
+    overflow: hidden;
+    text-decoration: none;
+    position: relative;
+}
+
+.dl-icon-wrap svg {
+    width: 28px;
+    height: 28px;
+    margin-right: 12px;
+    fill: #fff;
+    flex-shrink: 0;
+    opacity: .95;
+}
+
+.btn-content {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    line-height: 1.25;
+    min-width: 0;
+}
+
+.txt-main {
+    font-size: 14px;
+    letter-spacing: .3px;
+    font-weight: 500;
+}
+
+.txt-sub {
+    font-size: 13px;
+    font-weight: 500;
+    opacity: .85;
+    overflow: hidden;
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.sec-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.btn-gp {
+    display: inline-flex;
+    font-size: 12px;
+    white-space: nowrap;
+    align-items: center;
+    justify-content: center;
+    background: 0 0;
+    color: #666 !important;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-weight: 600;
+    transition: .2s;
+    text-decoration: none;
+}
+
+.btn-gp:hover {
+    background: #f9f9f9;
+    color: #333 !important;
+    border-color: #bbb;
+}
+
+.btn-gp svg {
+    margin-right: 5px;
+}
+
+.trusted-badge {
+    display: inline-flex;
+    font-size: 12px;
+    white-space: nowrap;
+    align-items: center;
+    color: #00897b;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.trusted-badge svg {
+    fill: #00897b;
+    margin-right: 4px;
+    width: 16px;
+    height: 16px;
+}
+
+.report-link {
+    color: #0b66ff;
+    font-size: 12px;
+    line-height: 1.15;
+    align-items: center;
+    justify-content: center;
+    background: 0 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .2s;
+}
+
+
+/* ==========================================================================
+   8. DESCRIPTION & ACCORDION STYLES
+   ========================================================================== */
+.description-box-info {
+    margin-top: 10px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.description-wrgameer {
+    position: relative;
+    overflow: hidden;
+    max-height: 200px;
+    transition: max-height .3s;
+}
+
+.description-wrgameer.expanded {
+    max-height: none;
+}
+
+.description-content {
+    width: auto !important;
+    word-break: break-word;
+    color: rgba(0,0,0,.6);
+    font-size: 15px;
+    line-height: 28px;
+}
+
+.description-content p {
+    margin-bottom: 5px;
+}
+
+.description-content ol, .description-content ul {
+    margin: 4px 0 6px 18px;
+    padding: 0;
+}
+
+.description-content li {
+    margin-bottom: 4px;
+}
+
+.fade-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background: linear-gradient(to bottom,rgba(255,255,255,0),#fff);
+    pointer-events: none;
+    display: block;
+    transition: opacity .3s;
+}
+
+.fade-overlay.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.toggle-btn {
+    color: #007bff;
+    display: block;
+    font-size: 14px;
+    background: 0 0;
+    border: none;
+    cursor: pointer;
+    outline: 0;
+    margin-left: auto;
+    text-align: right;
+    transition: .2s;
+}
+
+.arrow {
+    font-size: 12px;
+    transition: transform .3s;
+}
+
+.toggle-btn.expanded .arrow {
+    transform: rotate(180deg);
+}
+
+
+/* ==========================================================================
+   9. QUICK TAGS & FAST NAVIGATION
+   ========================================================================== */
+.btfast {
+    display: block;
+    margin: 10px 0 12px;
+}
+
+.btfast ul {
+    list-style: none;
+    padding: 0 0 4px;
+    margin: 0;
+    gap: 8px;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.btfast ul::-webkit-scrollbar {
+    height: 6px;
+}
+
+.btfast ul::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,.12);
+    border-radius: 10px;
+}
+
+.btfast li {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+}
+
+.btfast a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 10px;
+    border-radius: 999px;
+    border: 1px solid #e6e8eb;
+    background: #f7f8fa;
+    color: #111827;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 700;
+    white-space: nowrap;
+    box-shadow: 0 1px 4px rgba(0,0,0,.04);
+    transition: transform 80ms, background .15s, border-color .15s;
+}
+
+.btfast a:active {
+    transform: translateY(1px);
+}
+
+.btfast a:focus-visible {
+    outline: rgba(11,102,255,.35) solid 2px;
+    outline-offset: 2px;
+}
+
+
+/* ==========================================================================
+   10. APK SPECIFICATIONS TABLE CARD
+   ========================================================================== */
+.apk-info-card {
+    background: #fff;
+    border: 1px solid #e6e8eb;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    font-family: Roboto, Arial, sans-serif;
+    box-shadow: 0 1px 6px rgba(0,0,0,.04);
+}
+
+.apk-info-card__header {
+    background: #f7f8fa;
+    padding: 10px 14px;
+    border-bottom: 1px solid #eef0f2;
+}
+
+.apk-info-card__header h2 {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.25;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.apk-info-card__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+}
+
+.spec-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px 14px;
+    border-bottom: 1px solid #f0f1f3;
+}
+
+.apk-info-card__grid .spec-item {
+    border-right: 1px solid #f0f1f3;
+}
+
+.apk-info-card__grid .spec-item:nth-child(2n) {
+    border-right: none;
+}
+
+.apk-info-card__grid .spec-item:last-child, .version-item:last-child {
+    border-bottom: none;
+}
+
+.spec-label {
+    color: #6b7280;
+    flex: 0 0 auto;
+    font-size: 12.5px;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+.spec-value {
+    color: #111827;
+    text-align: right;
+    max-width: 62%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    font-size: 12.5px;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+.spec-value a {
+    color: #0b66ff;
+    text-decoration: none;
+}
+
+.spec-value a:hover {
+    text-decoration: underline;
+}
+
+.spec-value--meta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.spec-strong {
+    font-weight: 800;
+}
+
+.spec-muted {
+    font-size: 12px;
+    font-weight: 500;
+    color: #6b7280;
+}
+
+.rating-star {
+    font-size: 13px;
+    line-height: 1;
+    color: #fbbc04;
+    transform: translateY(-.5px);
+}
+
+.source-badge {
+    opacity: .55;
+    display: inline-flex;
+    align-items: center;
+}
+
+.svg-icon {
+    width: 14px;
+    height: 14px;
+    display: block;
+    fill: currentColor;
+    vertical-align: text-bottom;
+    cursor: pointer;
+}
+
+.spec-item.is-highlight .spec-value a {
+    color: #0a8f2c;
+    font-weight: 800;
+}
+
+
+/* ==========================================================================
+   11. GALLERY & LIGHTBOX STYLES
+   ========================================================================== */
+.gallery-container {
+    padding: 10px 0;
+    max-width: 100vw;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.gallery-container::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery {
+    display: flex;
+    gap: 10px;
+}
+
+.gallery img {
+    height: 250px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 5px;
+    opacity: 0;
+}
+
+.gallery img.lazy-loaded {
+    opacity: 1;
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,.8);
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.lightbox img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 5px;
+}
+
+.lightbox .close, .lightbox .next, .lightbox .prev {
+    position: absolute;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.lightbox .close {
+    top: 10px;
+    right: 20px;
+}
+
+.lightbox .next, .lightbox .prev {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.lightbox .prev {
+    left: 10px;
+}
+
+.lightbox .next {
+    right: 10px;
+}
+
+.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+}
+
+
+/* ==========================================================================
+   12. FAQ ACCORDION SECTION
+   ========================================================================== */
+.faq-box {
+    margin: 24px 0;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.faq-item {
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-question {
+    list-style: none;
+    padding: 12px 0;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question:hover {
+    color: #01875f;
+}
+
+.faq-question::-webkit-details-marker {
+    display: none;
+}
+
+.icon-toggle {
+    width: 12px;
+    height: 12px;
+    margin-left: 10px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.icon-toggle::after, .icon-toggle::before {
+    content: "";
+    position: absolute;
+    background-color: #01875f;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: transform .3s;
+}
+
+.icon-toggle::before {
+    width: 2px;
+    height: 100%;
+}
+
+.icon-toggle::after {
+    width: 100%;
+    height: 2px;
+}
+
+details[open] .icon-toggle::before {
+    transform: translate(-50%,-50%) rotate(90deg);
+    opacity: 0;
+}
+
+details[open] .icon-toggle {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    padding-bottom: 15px;
+    font-size: 13.5px;
+    color: #5f6368;
+    line-height: 1.5;
+    animation: .3s ease-in-out fadeIn;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* ==========================================================================
+   13. RECOMMENDATIONS, TOP GAMES & ALTERNATIVES CLEANED GRID & ITEMS
+   ========================================================================== */
+.rec-wrgameer {
+    margin-top: 30px;
+    padding-bottom: 10px;
+}
+
+.rec-box {
+    padding: 10px;
+}
+
+.rec-header h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #01875f;
+    margin-bottom: 10px;
+}
+
+.rec-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
+    gap: 15px;
+    padding: 0 15px;
+}
+
+.rec-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    transition: .2s;
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    border-radius: 10px;
+    color: inherit;
+    text-decoration: none;
+}
+
+.rec-item:hover {
+    border-color: #b3d7ff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,.05);
+}
+
+.rec-thumb {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+}
+
+.rec-thumb img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: #f8f9fa;
+    object-fit: cover;
+}
+
+.rec-main {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+}
+
+.rec-title {
+    font-weight: 600;
+    color: #333;
+    font-size: 14px;
+    line-height: 1.35;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.rank-box {
+    padding: 10px;
+    margin-top: 30px;
+}
+
+.rank-header {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 15px;
+}
+
+.rank-header p {
+    font-size: 13px;
+    color: #666;
+    margin: 0;
+    padding-left: 4px;
+}
+
+.rank-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(260px,1fr));
+    gap: 15px;
+}
+
+.rank-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    transition: .2s;
+    border-radius: 8px;
+    border: 1px solid #f0f0f0;
+    background: #fff;
+    text-decoration: none;
+    color: inherit;
+}
+
+.rank-item:hover {
+    background: #f8f9fa;
+    border-color: #b3d7ff;
+}
+
+.rank-num {
+    width: 24px;
+    text-align: center;
+    font-style: italic;
+    font-weight: 800;
+    color: #999;
+}
+
+.rank-num.rank-1 { color: #d4af37; font-size: 18px; }
+.rank-num.rank-2 { color: silver; font-size: 17px; }
+.rank-num.rank-3 { color: #cd7f32; font-size: 16px; }
+
+.rank-thumb {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+}
+
+.rank-thumb img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background: #eee;
+    object-fit: cover;
+}
+
+.rank-main {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+}
+
+.rank-title {
+    font-weight: 600;
+    color: #333;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.alt-box {
+    margin: 16px 0;
+    border: 1px solid #eef0f2;
+    border-radius: 14px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.alt-header {
+    padding: 12px 12px 10px;
+    border-bottom: 1px solid #f1f3f5;
+    background: #fafbfc;
+}
+
+.alt-header p {
+    margin: 0;
+    font-size: 12.5px;
+    line-height: 1.35;
+    color: #8a8f98;
+}
+
+.alt-group {
+    padding: 10px 12px 12px;
+}
+
+.alt-group+.alt-group {
+    border-top: 1px solid #f1f3f5;
+}
+
+.alt-group-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 2px 0 10px;
+}
+
+.alt-group-header h3 {
+    margin: 0;
+    font-size: 13.5px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #444;
+}
+
+.alt-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.alt-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    border: 1px solid #f0f2f4;
+    border-radius: 12px;
+    background: #fff;
+    color: inherit;
+    box-shadow: 0 1px 3px rgba(0,0,0,.03);
+    transition: transform 80ms, box-shadow .12s, border-color .12s;
+    text-decoration: none;
+}
+
+.alt-item:active {
+    transform: translateY(1px);
+}
+
+.alt-item:focus-visible {
+    outline: rgba(11,102,255,.28) solid 2px;
+    outline-offset: 2px;
+}
+
+@media (hover:hover) {
+    .alt-item:hover {
+        border-color: #e6e9ed;
+        box-shadow: 0 6px 16px rgba(0,0,0,.05);
+    }
+}
+
+.alt-thumb {
+    flex: 0 0 auto;
+    width: 48px;
+    height: 48px;
+}
+
+.alt-thumb img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: block;
+    object-fit: cover;
+    background: #f2f3f5;
+}
+
+.alt-main {
+    min-width: 0;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.alt-title {
+    margin: 0;
+    font-size: 13.5px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@media (min-width: 720px) {
+    .alt-header { padding: 14px 14px 12px; }
+    .alt-group { padding: 12px 14px 14px; }
+    .alt-list { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; }
+}
+
+
+/* ==========================================================================
+   14. MODAL POPUP STYLES
+   ========================================================================== */
+.btfast, .trusted-modal[aria-hidden=true] {
+    display: none;
+}
+
+.trusted-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.trusted-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.6);
+    z-index: 1;
+}
+
+.trusted-dialog {
+    position: relative;
+    width: min(600px, 92%);
+    background: #fff;
+    color: #222;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.2);
+    padding: 20px;
+    z-index: 2;
+    animation: .3s ease-out fadeInScale;
+}
+
+@keyframes fadeInScale {
+    from { opacity: 0; transform: scale(.98); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.trusted-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: 0 0;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #999;
+}
+
+.trusted-header {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.trusted-header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    margin-right: 12px;
+}
+
+.trusted-body {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.trusted-list {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.trusted-footer {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.trusted-btn {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #01875f;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+/* ==========================================================================
+   15. FOOTER STYLES
+   ========================================================================== */
+.site-footer {
+    border-top: 1px solid #e5e7eb;
+    color: #333;
+    margin-top: 20px;
+    padding: 20px 20px 10px;
+}
+
+.footer-nav {
+    max-width: 1200px;
+    margin: 0 auto 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.footer-title {
+    font-size: 15px;
+    color: #5f6368;
+    margin: 0 0 10px;
+    font-weight: 600;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-list li {
+    margin: 8px 0;
+}
+
+.footer-list a {
+    font-size: 14px;
+    padding: 6px 0;
+    transition: background-color .15s, color .15s;
+    color: #5f6368;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.footer-list a:focus, .footer-list a:hover {
+    background: #f1f5f9;
+    color: #0056b3;
+    outline: 0;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #e5e7eb;
+}
+
+.footer-copy {
+    margin: 0;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.footer-disclaimer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #888;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-disclaimer strong {
+    color: #555;
+    font-weight: 600;
+}
+
+
+/* ==========================================================================
+   16. RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+@media (max-width: 768px) {
+    .search-box { width: 100%; }
+    .footer-cat-grid { grid-template-columns: repeat(2,1fr); }
+    .top-games-list { grid-template-columns: repeat(1,1fr); }
+    .top-games-header h1, .top-games-header h2, .ua-header h2 { font-size: 16px; }
+    .top-game-title, .ua-title { font-size: 13px; }
+}
+
+@media (min-width: 500px) {
+    .best_ads { width: 468px; height: 60px; }
+}
+
+@media (min-width: 800px) {
+    .best_ads { width: 728px; height: 90px; }
+}
+
+@media (min-width: 768px) {
+    .footer-nav { grid-template-columns: repeat(4,1fr); gap: 32px; }
+    .top-game-item { border-bottom: 1px solid #f0f0f5; padding: 14px 16px; }
+}
+
+@media screen and (max-width: 600px) {
+    td:nth-child(2), td:nth-child(3), td:nth-child(4), th:nth-child(2), th:nth-child(3), th:nth-child(4) { display: none; }
+    .footer-disclaimer { font-size: 12px; text-align: left; padding-left: 15px; padding-right: 15px; margin-top: 20px; }
+}
+
+@media (max-width: 480px) {
+    .breadcrumb { font-size: 13px; gap: 4px; }
+    .breadcrumb a { padding: 5px 8px; max-width: 160px; }
+    .copy-text, .spec-value { max-width: 68%; }
+    .apk-info-card__header { padding: 9px 12px; }
+    .apk-info-card__header h2 { font-size: 14px; }
+    .apk-info-card__grid { grid-template-columns: 1fr; }
+    .spec-item { padding: 8px 12px; gap: 8px; }
+    .spec-label, .spec-value { font-size: 12px; line-height: 1.15; }
+    .svg-icon { width: 13px; height: 13px; }
+}
+
+@media (max-width: 360px) {
+    .game-short-desc { font-size: 13px; -webkit-line-clamp: 2; }
+}
+
+@media (min-width: 900px) {
+    .content-wrgameer { grid-template-columns: 1fr 320px; align-items: center; }
+}
+
+@media (max-width: 768px) {
+    .btfast ul, .rec-list { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; }
+    .rec-wrgameer { margin-top: 20px; padding-bottom: 10px; }
+    .rec-list { gap: 12px; padding-bottom: 15px; scrollbar-width: none; }
+    .rec-list::-webkit-scrollbar { display: none; }
+    .rec-item { min-width: 220px; max-width: 220px; scroll-snap-align: start; border: 1px solid #eee; box-shadow: 0 2px 6px rgba(0,0,0,.02); }
+    .rec-thumb { width: 44px; height: 44px; }
+    main h2 { font-size: 14px; }
+    .btfast { display: block; margin: 10px 0 12px; }
+}
+</style>
