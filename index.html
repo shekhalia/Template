@@ -52,14 +52,14 @@
     <div style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 20px; height: 70px; box-sizing: border-box;">  
         <div style="display: flex; align-items: center; gap: 25px; box-sizing: border-box;">
             <a href="/" style="display: flex; align-items: center; flex-shrink: 0; text-decoration: none; color: inherit; box-sizing: border-box;">
-                <img src="/assets/mi92026.svg" width="30" height="30" alt="MI9" style="box-sizing: border-box;">
+                <img src="mi92026.svg" width="30" height="30" alt="MI9" style="box-sizing: border-box;">
                 <div style="display: flex; flex-direction: column; line-height: 1.1; box-sizing: border-box;">
                     <span style="font-weight: bold; font-size: 1.4rem; color: #007bff; box-sizing: border-box;">MI9</span>
                     <span style="font-size: 0.8rem; color: #5f6368; box-sizing: border-box;">Games</span>
                 </div>
             </a>
         </div>
-        <div style="display: flex; flex: 1; justify-content: center; max-width: 500px; margin: 0 20px; box-sizing: border-box;">
+        <div style="display: flex; flex: 1; justify-content: flex-end; max-width: 500px; margin: 0 0 0 15px; box-sizing: border-box;">
             <form action="/search" method="GET" style="display: flex; width: 100%; position: relative; box-sizing: border-box;">
                 <input type="text" name="q" id="search-input" placeholder="Search..." required autocomplete="off" value="" aria-label="Search games" onfocus="this.style.borderColor='#007bff'; this.style.boxShadow='0 0 0 3px rgba(0, 123, 255, 0.1)';" onblur="this.style.borderColor='#e5e7eb'; this.style.boxShadow='none';" style="width: 100%; padding: 10px 45px 10px 18px; background-color: #f8f9fa; color: #202124; border: 1px solid #e5e7eb; border-radius: 50px; outline: none; font-size: 0.95rem; transition: all 0.3s ease; box-sizing: border-box;">
                 <button type="submit" aria-label="Search Game" style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%); background-color: transparent; color: #007bff; border: none; padding: 8px 12px; cursor: pointer; display: flex; align-items: center; justify-content: center; box-sizing: border-box;">
@@ -69,16 +69,6 @@
                 </button>   
                 <ul id="suggestions-box" class="suggestions-box" style="position: absolute; top: calc(100% + 8px); left: 0; width: 100%; margin: 0; padding: 6px 0; list-style: none; background: #ffffff; border: 1px solid #e5e7eb; border-radius: 12px; box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08); max-height: 280px; overflow-y: auto; z-index: 1000; box-sizing: border-box; display: none;"></ul>
             </form>
-        </div>
-        <div style="display: flex; align-items: center; gap: 12px; box-sizing: border-box;">
-            <a href="https://telegram.com" target="_blank" rel="noopener noreferrer" title="Join Telegram Channel" class="telegram" style="display: inline-flex; align-items: center; justify-content: center; background: transparent; border: none; padding: 0; text-decoration: none; box-sizing: border-box;">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 256 256" xml:space="preserve" style="display: block; box-sizing: border-box;">
-                    <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
-                        <path d="M 83.924 7.756 L 4.202 38.496 c -5.442 2.183 -5.409 5.219 -0.992 6.571 l 20.455 6.385 l 7.035 23.153 c 0.925 2.553 0.469 3.566 3.151 3.566 c 2.069 0 2.983 -0.946 4.138 -2.069 l 9.941 -9.666 l 20.681 15.28 c 3.806 2.1 6.553 1.012 7.501 -3.533 l 13.577 -63.978 C 91.079 8.631 87.565 6.103 83.924 7.756 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: #007bff; fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"/>
-                        <path d="M 33.942 72.016 l -6.747 -22.204 L 79.13 19.002 L 40.751 56.789 L 33.942 72.016 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"/>
-                    </g>
-                </svg>
-            </a>
         </div>
     </div>
 </header>
