@@ -103,42 +103,6 @@
     </div>
 </header>
 
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const themeToggle = document.getElementById("theme-toggle");
-        
-        function updateIcons() {
-            const isDark = document.documentElement.classList.contains("dark-mode") || document.body.classList.contains("dark-mode");
-            const sunIcon = themeToggle?.querySelector(".sun-icon");
-            const moonIcon = themeToggle?.querySelector(".moon-icon");
-            if (sunIcon && moonIcon) {
-                sunIcon.style.display = isDark ? "block" : "none";
-                moonIcon.style.display = isDark ? "none" : "block";
-            }
-        }
-
-        updateIcons();
-
-        if (themeToggle) {
-            themeToggle.addEventListener("click", () => {
-                const isCurrentlyDark = document.documentElement.classList.contains("dark-mode");
-                const newTheme = isCurrentlyDark ? "light-mode" : "dark-mode";
-                
-                localStorage.setItem('theme', newTheme);
-                
-                document.documentElement.classList.remove("dark-mode", "light-mode");
-                document.documentElement.classList.add(newTheme);
-                
-                document.body.classList.remove("dark-mode", "light-mode");
-                document.body.classList.add(newTheme);
-
-                updateIcons();
-            });
-        }
-    });
-</script>
-
-  
 <main class="container">
     <section class="head">
         <div class="head__top">
