@@ -19,81 +19,20 @@ main h3 {
 }
 
 /* =========================
-   BREADCRUMB
-========================= */
-.mi9-breadcrumb {
-    margin: 14px;
-    overflow-x: auto;        
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch; 
-}
-
-.mi9-breadcrumb__list {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    gap: 6px 10px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    min-width: max-content;
-}
-
-.mi9-breadcrumb__item {
-    display: inline-flex;
-    align-items: center;
-    font-size: 14px;
-    line-height: 1.4;
-    color: var(--text-light);
-    white-space: nowrap;
-}
-
-.mi9-breadcrumb__item:not(:last-child)::after {
-    content: "/";
-    margin-left: 10px;
-    opacity: 0.7;
-}
-
-.mi9-breadcrumb__link {
-    color: var(--text-light);
-    text-decoration: none;
-}
-
-
-.mi9-breadcrumb__item:last-child {
-    flex: 0 0 auto;
-}
-
-.mi9-breadcrumb__item:last-child .mi9-breadcrumb__current {
-    white-space: nowrap;
-    color: var(--text-dark);
-    font-weight: 600;
-}
-
-.mi9-breadcrumb::-webkit-scrollbar {
-    display: none;
-}
-.mi9-breadcrumb {
-    scrollbar-width: none;
-}
-
-/* =========================
    COMMON
 ========================= */
-.mi9-rank-item,
-.mi9-rec-item,
-.mi9-btn-more {
+.rank-item,
+.rec-item,
+.btn-more {
     text-decoration: none;
 }
 
 .gallery-container,
-.mi9-rank-dev,
-.mi9-rank-title {
+.rank-title {
     white-space: nowrap;
 }
 
-.mi9-rank-dev,
-.mi9-rank-title{
+.rank-title{
     text-overflow: ellipsis;
 }
 
@@ -104,14 +43,14 @@ main h3 {
 /* =========================
    APP HEADER
 ========================= */
-.mi9-app-header,
-.mi9-app-header *,
-.mi9-app-header::after,
-.mi9-app-header::before {
+.app-header,
+.app-header *,
+.app-header::after,
+.app-header::before {
     box-sizing: border-box;
 }
 
-.mi9-app-header {
+.app-header {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
     padding: 14px;
@@ -121,7 +60,7 @@ main h3 {
 /* =========================
    ACTION BUTTONS & BADGES
 ========================= */
-.mi9-trusted-badge {
+.trusted-badge {
     display: inline-flex;
     font-size: 12px;
     white-space: nowrap;
@@ -131,7 +70,7 @@ main h3 {
     font-weight: 500;
 }
 
-.mi9-trusted-badge svg {
+.trusted-badge svg {
     fill: currentColor;
     margin-right: 4px;
     width: 16px;
@@ -324,13 +263,13 @@ body.dark-mode .fade-overlay {
 }
 
 
-.mi9-more-wrap {
+.more-wrap {
     padding: 20px 15px;
     text-align: center;
     border-top: 1px solid var(--border-color);
 }
 
-.mi9-btn-more {
+.btn-more {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -344,39 +283,31 @@ body.dark-mode .fade-overlay {
     transition: var(--transition);
 }
 
-.mi9-btn-more:hover {
+.btn-more:hover {
     background-color: var(--hover-bg);
     color: var(--text-dark);
 }
 
-.mi9-btn-more:hover .mi9-btn-icon {
-    transform: translateX(3px);
-}
 
-.mi9-btn-more:active {
+.btn-more:active {
     transform: scale(0.98);
-}
-
-.mi9-btn-icon {
-    margin-left: 8px;
-    transition: transform 0.2s;
 }
 
 /* =========================
    RECOMMEND
 ========================= */
-.mi9-rec-wrapper {  
+.rec-wrapper {  
     margin-top: 10px;
     padding-bottom: 10px;
 }
 
-.mi9-rec-list {
+.rec-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 15px;
 }
 
-.mi9-rec-item {
+.rec-item {
     display: flex;
     align-items: center;
     padding: 10px;
@@ -386,27 +317,27 @@ body.dark-mode .fade-overlay {
     color: inherit;
 }
 
-.mi9-rec-item:hover {
+.rec-item:hover {
     border-color: var(--linkweb);
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
 }
 
-.mi9-rec-thumb {
+.rec-thumb {
     flex-shrink: 0;
     width: 60px;
     height: 60px;
     margin-right: 12px;
 }
 
-.mi9-rec-thumb img {
+.rec-thumb img {
     width: 100%;
     height: 100%;
     border-radius: 12px;
     background: var(--muted-bg);
 }
 
-.mi9-rec-main {
+.rec-main {
     flex: 1;
     min-width: 0;
     display: flex;
@@ -414,7 +345,7 @@ body.dark-mode .fade-overlay {
     justify-content: center;
 }
 
-.mi9-rec-title {
+.rec-title {
     font-weight: 600;
     color: var(--text-dark);
     font-size: 14px;
@@ -426,59 +357,42 @@ body.dark-mode .fade-overlay {
     overflow: hidden;
 }
 
-.mi9-rec-dev {
+.rec-dev {
     font-size: 11px;
     color: var(--text-light);
     margin-bottom: 4px;
 }
 
-.mi9-rank-meta,
-.mi9-rec-meta {
+.rec-meta {
     font-size: 11px;
     color: var(--text-light);
     display: flex;
     align-items: center;
 }
 
-.mi9-meta-star {
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-}
-
-.mi9-meta-sep {
-    margin: 0 6px;
-    font-size: 8px;
-    opacity: 0.4;
-}
-
-.mi9-meta-down {
-    color: var(--text-light);
-}
-
 /* =========================
    RANK
 ========================= */
-.mi9-rank-header {
+.rank-header {
     margin-bottom: 20px;
     border-bottom: 2px solid var(--border-color);
     padding-bottom: 15px;
 }
 
-.mi9-rank-header p {
+.rank-header p {
     font-size: 14px;
     color: var(--text-light);
     margin: 0;
     padding-left: 4px;
 }
 
-.mi9-rank-grid {
+.rank-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
+    gap: 1px;
 }
 
-.mi9-rank-item {
+.rank-item {
     display: flex;
     align-items: center;
     padding: 10px;
@@ -487,12 +401,12 @@ body.dark-mode .fade-overlay {
     border: 1px solid transparent;
 }
 
-.mi9-rank-item:hover {
+.rank-item:hover {
     background: var(--muted-bg);
     border-color: var(--border-color);
 }
 
-.mi9-rank-num {
+.rank-num {
     width: 30px;
     margin-right: 10px;
     text-align: center;
@@ -501,24 +415,24 @@ body.dark-mode .fade-overlay {
     color: var(--text-light);
 }
 
-.mi9-rank-num.rank-1 { color: var(--gold-color); font-size: 20px; }
-.mi9-rank-num.rank-2 { color: var(--silver-color); font-size: 19px; }
-.mi9-rank-num.rank-3 { color: var(--bronze-color); font-size: 18px; }
+.rank-num.rank-1 { color: var(--gold-color); font-size: 20px; }
+.rank-num.rank-2 { color: var(--silver-color); font-size: 19px; }
+.rank-num.rank-3 { color: var(--bronze-color); font-size: 18px; }
 
-.mi9-rank-thumb img {
+.rank-thumb img {
     width: 50px;
     height: 50px;
     border-radius: 10px;
     background: var(--soft-bg);
 }
 
-.mi9-rank-main {
+.rank-main {
     flex: 1;
     margin-left: 12px;
     min-width: 0;
 }
 
-.mi9-rank-title {
+.rank-title {
     font-weight: 600;
     color: var(--text-dark);
     font-size: 14px;
@@ -526,29 +440,23 @@ body.dark-mode .fade-overlay {
     overflow: hidden;
 }
 
-.mi9-rank-dev {
-    font-size: 11px;
-    color: var(--text-light);
-    margin-bottom: 3px;
-    overflow: hidden;
-}
 
 /* =========================
    ALTERNATIVES
 ========================= */
-.mi9-alt-box {
+.alt-box {
     border: 1px solid var(--border-color);
     overflow: hidden;
     margin-top: 20px;
 }
 
-.mi9-alt-header {
+.alt-header {
     padding: 12px 12px 10px;
     border-bottom: 1px solid var(--border-color);
     background: var(--card-bg);
 }
 
-.mi9-alt-header p {
+.alt-header p {
     margin: 0;
     font-size: 12.5px;
     line-height: 1.35;
@@ -649,22 +557,15 @@ body.dark-mode .fade-overlay {
 }
 
 /* =========================
-   BOX VERSIONS & PANELS
+   PANELS
 ========================= */
-.box-versions {
-    overflow: hidden;
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    overflow-x: hidden;
-    margin-top: 10px;
-}
 
-.mi9-panel {
+.panel {
     background: var(--card-bg);
     padding: 14px;
 }
 
-.mi9-panel__head {
+.panel__head {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -673,7 +574,7 @@ body.dark-mode .fade-overlay {
     margin-bottom: 14px;
 }
 
-.mi9-panel__title {
+.panel__title {
     margin: 0;
     font-size: 15px;
     font-weight: 700;
@@ -681,19 +582,19 @@ body.dark-mode .fade-overlay {
     color: var(--text-dark);
 }
 
-.mi9-featured__grid {
+.featured__grid {
     display: grid;
     grid-template-columns: repeat(8, minmax(0, 1fr));
     gap: 14px;
 }
 
-.mi9-featured__item {
+.featured__item {
     display: block;
     text-decoration: none;
     color: inherit;
 }
 
-.mi9-featured__card {
+.featured__card {
     height: 100%;
     padding: 10px;
     border: 1px solid var(--border-color);
@@ -703,18 +604,18 @@ body.dark-mode .fade-overlay {
     transition: var(--transition);
 }
 
-.mi9-featured__card:hover {
+.featured__card:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-.mi9-featured__thumb-wrap {
+.featured__thumb-wrap {
     width: 100%;
     aspect-ratio: 1 / 1;
     margin-bottom: 8px;
 }
 
-.mi9-featured__thumb {
+.featured__thumb {
     display: block;
     width: 100%;
     height: 100%;
@@ -723,7 +624,7 @@ body.dark-mode .fade-overlay {
     background: var(--bg-color);
 }
 
-.mi9-featured__name {
+.featured__name {
     margin: 0 0 4px;
     font-size: 14px;
     line-height: 1.35;
@@ -733,27 +634,13 @@ body.dark-mode .fade-overlay {
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    min-height: 35px;
 }
 
-.mi9-featured__meta {
-    font-size: 12px;
-    line-height: 1.4;
-    color: var(--text-light);
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
 
 /* =========================
    MORE APP HERO STYLES
 ========================= */
-.hero__version{
-	
-	font-weight: 600;
-}
-.mi9-rec-header {
+.rec-header {
     margin-bottom: 20px;
     border-bottom: 1px solid var(--border-color);
     padding-bottom: 5px;
@@ -818,19 +705,6 @@ body.dark-mode .fade-overlay {
     letter-spacing: -0.02em;
 }
 
-.apk-hero__publisher {
-    font-size: 14px;
-}
-
-.apk-hero__publisher a {
-    text-decoration: none;
-	color: var(--primary-hover);
-}
-
-.apk-hero__publisher a:hover {
-    text-decoration: underline;
-}
-
 .apk-hero__actions {
     display: flex;
     flex-direction: column;
@@ -844,7 +718,7 @@ body.dark-mode .fade-overlay {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    min-height: 45px;
+    min-height: 40px;
     padding: 0 22px;
     border-radius: 5px;
     background: var(--downbg);
@@ -855,12 +729,6 @@ body.dark-mode .fade-overlay {
     transition: all .2s ease;
 	    max-width: 320px;
     width: 100%;
-}
-
-.apk-hero__media {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .apk-hero__figure {
@@ -925,13 +793,6 @@ body.dark-mode .fade-overlay {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-}
-
-.apk-meta-strip__star {
-    font-size: 14px;
-    line-height: 1;
-    color: var(--warning-color);
-    transform: translateY(-1px);
 }
 
 .apk-meta-strip__item:not(:last-child)::after {
@@ -1037,7 +898,7 @@ body.dark-mode .fade-overlay {
     background: var(--muted-bg);
 }
 
-.mi9-rec-box {
+.rec-box {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
     padding: 14px;
@@ -1046,132 +907,10 @@ body.dark-mode .fade-overlay {
 }
 
 /* =========================
-   DOWNLOAD BOX
-========================= */
-
-.apkdl-box {
-    margin-top: 24px;
-    padding: 22px;
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-        box-shadow: var(--shadow-sm);
-}
-
-.apkdl-inner {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-}
-
-.apkdl-icon {
-    width: 72px;
-    height: 72px;
-    border-radius: 18px;
-    flex-shrink: 0;
-    object-fit: cover;
-    background: var(--soft-bg);
-}
-
-.apkdl-content {
-    flex: 1;
-    min-width: 0;
-}
-
-.apkdl-title {
-    margin: 0 0 8px;
-    font-size: 19px;
-    font-weight: 700;
-    line-height: 1.35;
-    color: var(--app-title-color);
-}
-
-.apkdl-text {
-    max-width: 980px;
-    margin: 0;
-    font-size: 14px;
-    line-height: 1.7;
-    color: var(--text-light);
-}
-
-.apkdl-text strong {
-    color: var(--text-dark);
-    font-weight: 700;
-}
-
-.apkdl-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    margin-top: 16px;
-    min-height: 44px;
-    padding: 0 20px;
-
-    background: var(--download-bg);
-    color: var(--download-text);
-
-    font-size: 14px;
-    font-weight: 600;
-    text-decoration: none;
-
-    border-radius: 10px;
-    transition: var(--transition);
-}
-
-.apkdl-btn:hover {
-    background: var(--download-bg-hover);
-    color: var(--download-text);
-    transform: translateY(-1px);
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 640px) {
-
-    .apkdl-box {
-        margin-top: 18px;
-        padding: 16px;
-       
-    }
-
-    .apkdl-inner {
-        align-items: flex-start;
-        gap: 14px;
-    }
-
-    .apkdl-icon {
-        width: 56px;
-        height: 56px;
-        border-radius: 14px;
-    }
-
-    .apkdl-title {
-        margin-bottom: 6px;
-        font-size: 16px;
-        line-height: 1.4;
-    }
-
-    .apkdl-text {
-        font-size: 13.5px;
-        line-height: 1.6;
-    }
-
-    .apkdl-btn {
-        width: 100%;
-        margin-top: 14px;
-        min-height: 42px;
-        padding: 0 16px;
-        border-radius: 9px;
-    }
-}
-
-/* =========================
    RESPONSIVE
 ========================= */
 @media (max-width: 1200px) {
-    .mi9-featured__grid {
+    .featured__grid {
         grid-template-columns: repeat(7, minmax(0, 1fr));
     }
 }
@@ -1190,13 +929,13 @@ body.dark-mode .fade-overlay {
 }
 
 @media (max-width: 992px) {
-    .mi9-featured__grid {
+    .featured__grid {
         grid-template-columns: repeat(5, minmax(0, 1fr));
     }
 }
 
 @media (max-width: 768px) {
-    .mi9-rec-list {
+    .rec-list {
         display: flex;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
@@ -1205,17 +944,17 @@ body.dark-mode .fade-overlay {
         scrollbar-width: none;
     }
 
-    .mi9-rec-list::-webkit-scrollbar {
+    .rec-list::-webkit-scrollbar {
         display: none;
     }
 
-    .mi9-rec-item {
+    .rec-item {
         min-width: 260px;
         max-width: 260px;
         scroll-snap-align: start;
     }
 
-    .mi9-rec-thumb {
+    .rec-thumb {
         width: 54px;
         height: 54px;
     }
@@ -1228,32 +967,22 @@ body.dark-mode .fade-overlay {
         font-size: 14px;
     }
 
-    .mi9-panel {
-        padding: 12px;
-        border-radius: 10px;
-    }
-
-    .mi9-panel__head {
+    .panel__head {
         align-items: flex-start;
         gap: 10px;
     }
 
-    .mi9-featured__grid {
+    .featured__grid {
         grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: 10px;
     }
 
-    .mi9-featured__card {
+    .featured__card {
         padding: 8px;
     }
 
-    .mi9-featured__name {
+    .featured__name {
         font-size: 12px;
-        min-height: 32px;
-    }
-
-    .mi9-featured__meta {
-        font-size: 11px;
     }
 }
 
@@ -1326,27 +1055,17 @@ body.dark-mode .fade-overlay {
     }
 }
 
-@media (max-width: 700px) {
-    .mi9-breadcrumb__item {
-        font-size: 12px;
-    }
-}
-
 @media (max-width: 480px) {
     .svg-icon {
         width: 14px;
         height: 14px;
     }
 
-    .mi9-breadcrumb__item {
-        font-size: 12px;
-    }
-
-    .mi9-panel__title {
+    .panel__title {
         font-size: 14px;
     }
 
-    .mi9-featured__grid {
+    .featured__grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 10px;
     }
@@ -1357,185 +1076,6 @@ body.dark-mode .fade-overlay {
 
     .apk-meta-strip__sub {
         font-size: 12px;
-    }
-}
-
-/* =========================
-   BOX VERSIONS
-========================= */
-.vx-box {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    box-shadow: var(--shadow-sm);
-    margin-top: 10px;
-}
-
-.vx-head {
-    padding: 16px 18px 12px;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.vx-title {
-    margin: 0;
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--text-dark);
-}
-
-.vx-desc {
-    margin: 4px 0 0;
-    font-size: 0.9rem;
-    color: var(--text-light);
-}
-
-.vx-list {
-    display: flex;
-    flex-direction: column;
-}
-
-.vx-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.vx-list__item {
-    margin: 0;
-    padding: 0;
-}
-
-.vx-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 12px 16px;
-    border-bottom: 1px solid var(--border-color);
-    text-decoration: none;
-    color: inherit;
-    transition: var(--transition);
-}
-
-.vx-list__item:last-child .vx-item {
-    border-bottom: none;
-}
-
-.vx-item:hover {
-    background: var(--hover-bg);
-}
-
-.vx-icon img {
-    width: 40px;
-    height: 40px;
-    border-radius: 8px;
-    object-fit: cover;
-}
-
-.vx-main {
-    flex: 1;
-    min-width: 0;
-}
-
-.vx-top {
-    display: flex;
-    gap: 6px;
-    align-items: center;
-}
-
-.vx-name {
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: var(--linkweb);
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-.vx-code {
-    font-size: 0.8rem;
-    color: var(--text-light);
-}
-
-.vx-meta {
-    margin-top: 4px;
-    font-size: 0.82rem;
-    color: var(--text-light);
-    display: flex;
-    gap: 6px;
-    align-items: center;
-}
-
-.vx-dot {
-    opacity: 0.4;
-}
-
-.vx-action {
-    width: 34px;
-    height: 34px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--download-bg);
-    border-radius: 6px;
-}
-
-.vx-action svg {
-    width: 18px;
-    height: 18px;
-    fill: currentColor;
-}
-
-.vx-item:hover .vx-action {
-    background: var(--hover-bg);
-}
-
-.vx-more {
-    padding: 16px;
-    text-align: center;
-    border-top: 1px solid var(--border-color);
-}
-
-.vx-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 24px;
-    background-color: var(--soft-bg);
-    color: var(--text-dark);
-    border: 1px solid transparent;
-    font-size: 14px;
-    font-weight: 600;
-    border-radius: 99px;
-    transition: var(--transition);
-    cursor: pointer;
-}
-
-.vx-btn:hover {
-    background-color: var(--hover-bg);
-    color: var(--text-dark);
-}
-
-.vx-status {
-    margin-top: 8px;
-    font-size: 0.85rem;
-    color: var(--text-light);
-}
-
-/* App name (desktop only) */
-.d-desktop {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 160px;
-}
-
-.vx-version {
-    color: var(--primary-color);
-    font-weight: 600;
-    white-space: nowrap;
-}
-@media (max-width: 768px) {
-    .d-desktop {
-        display: none;
     }
 }
 
@@ -1646,107 +1186,21 @@ body.dark-mode .fade-overlay {
     }
 }
 
-.apk-mini-nav {
-    display: flex;
-    gap: 8px;
-    width: 100%;
-    max-width: 320px;
-}
-
-.apk-mini-nav__link {
-    flex: 1;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-
-    min-height: 42px;
-    padding: 0 10px;
-
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-
-    color: var(--text-dark);
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 600;
-
-    transition: all .2s ease;
-}
-
-.apk-mini-nav__link:hover {
-    background: var(--hover-bg);
-    border-color: var(--primary-color);
-}
-
-.apk-mini-nav__link svg {
-    width: 16px;
-    height: 16px;
-    flex-shrink: 0;
-
-    fill: currentColor;
-    stroke: none;
-}
-
-.apk-mini-nav__link span {
-    white-space: nowrap;
-}
-
 @media (max-width: 960px) {
     .apk-hero__actions {
         align-items: center;
     }
 }
 
+@media (max-width: 767px) {
+    .apk-hero__btn {
+        width: 60%;
+        max-width: 320px;
+    }
+}
+
 @media (max-width: 520px) {
-    .apk-hero__btn{
+    .apk-hero__btn {
         width: 100%;
     }
-
-    
-    .apk-mini-nav {
-        max-width: none;
-    }
-
-    .apk-mini-nav__link {
-        font-size: 13px;
-        padding: 0 8px;
-    }
-
-    .apk-mini-nav__link svg {
-        width: 14px;
-        height: 14px;
-    }
 }
-
-.apk-hero__btn--googleplay {
-    background: var(--primary-color);
-    color: var(--gp-text);
-    
-    position: relative;
-    overflow: hidden;
-
-    font-weight: 600;
-    box-shadow: 0 2px 8px rgba(0,0,0,.12);
-}
-
-.apk-hero__btn--googleplay:hover {
-    background: var(--gp-bg-hover);
-    color: var(--gp-text);
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(0,0,0,.18);
-}
-
-.apk-hero__btn--googleplay:active {
-    transform: translateY(0);
-}
-
-.apk-hero__btn--googleplay svg {
-    width: 18px;
-    height: 18px;
-    fill: currentColor;
-    flex-shrink: 0;
-}
-
