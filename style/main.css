@@ -48,7 +48,6 @@
     --note:#ff0000;
 }
 
-
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
@@ -56,13 +55,13 @@ body {
     background-color: var(--bg-color);
     color: var(--text-dark);
     line-height: 1.6;
-    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 a { text-decoration: none; color: inherit; }
 
-
-
+/* ============================
+   2. SEARCH SUGGESTIONS BOX 
+   ============================ */
 .suggestions-box {
   position: absolute;
   top: calc(100% + 8px);
