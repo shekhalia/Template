@@ -48,48 +48,6 @@
     --note:#ff0000;
 }
 
-body.dark-mode {
-    --brand-color: #007bff;
-    --brand-dark: #60a5fa;
-
-    --primary-color: #10b981;
-    --primary-hover: #34d399;
-
-    --text-dark: #f8f9fa;
-    --text-light: #f8f9fa;
-
-    --bg-color: #0f172a;
-    --card-bg: #1e293b;
-    --border-color: #334155;
-
-    --muted-bg: #182334;
-    --soft-bg: #162033;
-    --hover-bg: #223049;
-    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.2);
-    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.28);
-    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.38);
-
-    --success-color: #2dd4bf;
-    --warning-color: #facc15;
-
-    --overlay-dark: rgba(2, 6, 23, 0.88);
-    --backdrop-dark: rgba(2, 6, 23, 0.75);
-
-    --gold-color: #facc15;
-    --silver-color: #cbd5e1;
-    --bronze-color: #fb923c;
-    --bg-oldbg:#162033;
-    --bg-hero:#000;
-    --linkweb:#70b1ff;
-	
-    --downbg:#fff;
-    --downtext:#000;
-	
-    --download-bg: #3b82f6;
-    --download-bg-hover: #2563eb;
-	
-    --note:#ff6f6f;
-}
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
