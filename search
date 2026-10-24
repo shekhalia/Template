@@ -16,14 +16,6 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="stylesheet" href="../style/main.css?v=1778210460">
 <link rel="stylesheet" href="../style/search.css?v=1776308099">
-<script>
-(() => {
-  const theme = localStorage.getItem('theme');
-  document.documentElement.classList.add(
-    theme === 'dark-mode' ? 'dark-mode' : 'light-mode'
-  );
-})();
-</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RL58EYVK41"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -74,14 +66,6 @@
             </nav>  
             
             <div class="acclogin">
-				<button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
-				<svg class="sun-icon" width="22" height="22">
-				<use href="/assets/ic.svg#svg-sun"></use>
-				</svg>    
-				<svg class="moon-icon" width="22" height="22">
-				<use href="/assets/ic.svg#svg-moon"></use>
-				</svg>
-				</button>
 				<div id="account-box">
 					<a class="loginBtn"
 					   href="/login?redirect=%2Fsearch%3Fq%3Ddevice%2Bid"
