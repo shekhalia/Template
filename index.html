@@ -60,560 +60,238 @@
     <section class="head">
         <div class="head__top">
             <h1 class="head__title">All Games</h1>
-
         </div>
+        <p class="head__desc">Browse popular action games for Android.</p>
+    </section>
 
-                    <p class="head__desc">Browse popular action games for Android.</p>
-            </section>
-
-            <section class="category category--scroll">
-            <div class="category__scroller">
-                                    <a
-                        class="category__link category__link--active"
-                        href="/"
-                        aria-current="page"                    >
-                        All Games                    </a>
-                                    <a
-                        class="category__link"
-                        href="/yono"
-                                            >
-                        Yono Games                    </a>
-                                    <a
-                        class="category__link"
-                        href="/diwa"
-                                            >
-                        Diwa Games                    </a>
-                                    <a
-                        class="category__link"
-                        href="/casual"
-                                            >
-                        Casual                    </a>
-                                    <a
-                        class="category__link"
-                        href="/puzzle"
-                                            >
-                        Puzzle                    </a>
-                                    <a
-                        class="category__link"
-                        href="/racing"
-                                            >
-                        Racing                    </a>
-                                    <a
-                        class="category__link"
-                        href="/role_playing"
-                                            >
-                        RPG                    </a>
-                                    <a
-                        class="category__link"
-                        href="/simulation"
-                                            >
-                        Simulation                    </a>
-                                    <a
-                        class="category__link"
-                        href="/sports"
-                                            >
-                        Sports                    </a>
-                                    <a
-                        class="category__link"
-                        href="/strategy"
-                                            >
-                        Strategy                    </a>
-                                    <a
-                        class="category__link"
-                        href="/board"
-                                            >
-                        Board                    </a>
-                                    <a
-                        class="category__link"
-                        href="/card"
-                                            >
-                        Card                    </a>
-                                    <a
-                        class="category__link"
-                        href="/trivia"
-                                            >
-                        Trivia                    </a>
-                                    <a
-                        class="category__link"
-                        href="/word"
-                                            >
-                        Word                    </a>
-                            </div>
-        </section>
+    <section class="category category--scroll">
+        <div class="category__scroller">
+            <a class="category__link category__link--active" href="/" aria-current="page">All Games</a>
+            <a class="category__link" href="/yono">Yono Games</a>
+            <a class="category__link" href="/diwa">Diwa Games</a>
+            <a class="category__link" href="/casual">Casual</a>
+            <a class="category__link" href="/puzzle">Puzzle</a>
+            <a class="category__link" href="/racing">Racing</a>
+            <a class="category__link" href="/role_playing">RPG</a>
+            <a class="category__link" href="/simulation">Simulation</a>
+            <a class="category__link" href="/sports">Sports</a>
+            <a class="category__link" href="/strategy">Strategy</a>
+            <a class="category__link" href="/board">Board</a>
+            <a class="category__link" href="/card">Card</a>
+            <a class="category__link" href="/trivia">Trivia</a>
+            <a class="category__link" href="/word">Word</a>
+        </div>
+    </section>
     
     <section class="panel">
-<div class="panel__head">
-    <h2 class="panel__title">Games</h2>
+        <div class="panel__head">
+            <h2 class="panel__title">Games</h2>
+            <div class="view-select">
+                <label class="view-select__label sr-only" for="view-select">Choose view</label>
+                <select id="view-select" class="view-select__control" aria-label="Sort items" onchange="if(this.value){window.location.href=this.value;}">
+                    <option value="/" selected>New Releases</option>
+                    <option value="popular/">Popular</option>
+                </select>
+            </div>
+        </div>
 
-    <div class="view-select">
-        <label class="view-select__label sr-only" for="view-select">Choose view</label>
-        <select
-            id="view-select"
-            class="view-select__control"
-            aria-label="Sort items"
-            onchange="if(this.value){window.location.href=this.value;}"
-        >
-            <option value="/" selected>
-                New Releases
-            </option>
-            <option value="popular/">
-                Popular 
-            </option>
-        </select>
-    </div>
-</div>
-
-<div
-    id="list"
-    class="featured__grid"
-    data-json-file="/games.json"
-    data-offset="24"
-    data-limit="24"
->
-
-                            <a class="featured__item" href="/package/com.dts.freefireth/">
-                    <article class="featured__card">
-                        <div class="featured__thumb-wrap">
-                            <img
-                                class="featured__thumb"
-                                src="https://play-lh.googleusercontent.com/1wE91ae_1YIJtIjQ1YJz5RhAajxEpF1TfrXGg7tcrKl90MOnF7XdFj71pw_MSQbyhM5PYz-eRdeBFQBzSGrV=w180"
-                                alt="Free Fire: Winterlands"
-                                loading="lazy"
-                                decoding="async"
-                                width="180"
-                                height="180"
-                            >
-                        </div>
-
-                        <h3 class="featured__name">Free Fire</h3>
-							
-                    </article>
-                </a>
-                            <a class="featured__item" href="/package/com.imangi.templerun2/">
-                    <article class="featured__card">
-                        <div class="featured__thumb-wrap">
-                            <img
-                                class="featured__thumb"
-                                src="https://play-lh.googleusercontent.com/go4XqS4mYs-G2tZymiVLF4wJYXIi5QrvwixNRzssk4G_vRBHrAdg4E1ddNwy9c2cZA=w180"
-                                alt="Temple Run 2: Endless Escape"
-                                loading="lazy"
-                                decoding="async"
-                                width="180"
-                                height="180"
-                            >
-                        </div>
-
-                        <h3 class="featured__name">Temple Run 2</h3>
-							
-                    </article>
-                </a>
-                            <a class="featured__item" href="/package/com.innersloth.spacemafia/">
-                    <article class="featured__card">
-                        <div class="featured__thumb-wrap">
-                            <img
-                                class="featured__thumb"
-                                src="https://play-lh.googleusercontent.com/8ddL1kuoNUB5vUvgDVjYY3_6HwQcrg1K2fd_R8soD-e2QYj8fT9cfhfh3G0hnSruLKec=w180"
-                                alt="Among Us"
-                                loading="lazy"
-                                decoding="async"
-                                width="180"
-                                height="180"
-                            >
-                        </div>
-
-                        <h3 class="featured__name">Among Us</h3>
-							
-                    </article>
-                </a>
-                            <a class="featured__item" href="/package/com.dts.freefiremax/">
-                    <article class="featured__card">
-                        <div class="featured__thumb-wrap">
-                            <img
-                                class="featured__thumb"
-                                src="https://play-lh.googleusercontent.com/fPV15zPzpECONm08K6BUS5EqD1A1Ir_hxsOaaJF7hOIK-BNDpFO-i3MAvUVM7952JJyGAhg1VJwzDKtYT2QB8Ns=w180"
-                                alt="Free Fire MAX: Winterlands"
-                                loading="lazy"
-                                decoding="async"
-                                width="180"
-                                height="180"
-                            >
-                        </div>
-
-                        <h3 class="featured__name">Free Fire MAX</h3>
-							
-                    </article>
-                </a>
-                            <a class="featured__item" href="/package/com.rubygames.assassin/">
-                    <article class="featured__card">
-                        <div class="featured__thumb-wrap">
-                            <img
-                                class="featured__thumb"
-                                src="https://play-lh.googleusercontent.com/PTxkeud-aHNGqo85reN70CUWs5DF0HTKNMIbM7lrxS1WdTD-G2X8X6szmD4CGlI7wg=w180"
-                                alt="Hunter Assassin"
-                                loading="lazy"
-                                decoding="async"
-                                width="180"
-                                height="180"
-                            >
-                        </div>
-
-                        <h3 class="featured__name">Hunter Assassin</h3>
-							
-                    </article>
-                </a>
-                            <a class="featured__item" href="/package/com.mobile.legends/">
-                    <article class="featured__card">
-                        <div class="featured__thumb-wrap">
-                            <img
-                                class="featured__thumb"
-                                src="https://play-lh.googleusercontent.com/NiIHdrOS85r76ggTpn1uLxslWAfmvi1WVVQY5Enrj3ZAcVBcb11RkkTFbej8qxB9UK0JPDhRVajVz_ogmqiC=w180"
-                                alt="Mobile Legends: Bang Bang"
-                                loading="lazy"
-                                decoding="async"
-                                width="180"
-                                height="180"
-                            >
-                        </div>
-
-                        <h3 class="featured__name">Mobile Legends</h3>
-							
-                    </article>
-                </a>
-                            <a class="featured__item" href="/package/com.tencent.ig/">
-                    <article class="featured__card">
-                        <div class="featured__thumb-wrap">
-                            <img
-                                class="featured__thumb"
-                                src="https://play-lh.googleusercontent.com/zCSGnBtZk0Lmp1BAbyaZfLktDzHmC6oke67qzz3G1lBegAF2asyt5KzXOJ2PVdHDYkU=w180"
-                                alt="PUBG MOBILE"
-                                loading="lazy"
-                                decoding="async"
-                                width="180"
-                                height="180"
-                            >
-                        </div>
-
-                        <h3 class="featured__name">PUBG MOBILE</h3>
-							
-                    </article>
-                </a>
-                            <a class="featured__item" href="/package/air.com.hypah.io.slither/">
-                    <article class="featured__card">
-                        <div class="featured__thumb-wrap">
-                            <img
-                                class="featured__thumb"
-                                src="https://play-lh.googleusercontent.com/tRpviKT0mUi47iAaBne_yhe_xIuFzpW1mCIqoW457tNsKZddZHwiCUR2ga-rU3VXw04=w180"
-                                alt="slither.io"
-                                loading="lazy"
-                                decoding="async"
-                                width="180"
-                                height="180"
-                            >
-                        </div>
-
-                        <h3 class="featured__name">slither</h3>
-							
-                    </article>
-                </a>
-                            <a class="featured__item" href="/package/com.fungames.sniper3d/">
-                    <article class="featured__card">
-                        <div class="featured__thumb-wrap">
-                            <img
-                                class="featured__thumb"
-                                src="https://play-lh.googleusercontent.com/8gHksx7nW7IK09ThtTM_f1Pgjblh5to4-q9pdsJQMb2zxDZ7VnFObxaihhAr-_HBf6E=w180"
-                                alt="Sniper 3D：Gun Shooting Games"
-                                loading="lazy"
-                                decoding="async"
-                                width="180"
-                                height="180"
-                            >
-                        </div>
-
-                        <h3 class="featured__name">Sniper 3D</h3>
-							
-                    </article>
-                </a>
-                            <a class="featured__item" href="/package/com.outfit7.talkingtomgoldrun/">
-                    <article class="featured__card">
-                        <div class="featured__thumb-wrap">
-                            <img
-                                class="featured__thumb"
-                                src="https://play-lh.googleusercontent.com/RUUUGb-vhnk7sLPB39H9QM8JYtkzH0CLKbPt7r-2RDHslqFAjY11-uNX_dmtLRWvcskf=w180"
-                                alt="Talking Tom Gold Run"
-                                loading="lazy"
-                                decoding="async"
-                                width="180"
-                                height="180"
-                            >
-                        </div>
-
-                        <h3 class="featured__name">Talking Tom</h3>
-							
-                    </article>
-                </a>
-                            <a class="featured__item" href="/package/com.outfit7.herodash/">
-                    <article class="featured__card">
-                        <div class="featured__thumb-wrap">
-                            <img
-                                class="featured__thumb"
-                                src="https://play-lh.googleusercontent.com/VlaJtKyFJsTTaVMK2N1QN_mKGndN7Erv2QoTq-qayeKZ1XxZNk_Xyrv2XirSNKFrkaeNBuM75rEi5yEXrCc2=w180"
-                                alt="Talking Tom: Hero Dash Run"
-                                loading="lazy"
-                                decoding="async"
-                                width="180"
-                                height="180"
-                            >
-                        </div>
-
-                        <h3 class="featured__name">Talking Tom</h3>
-							
-                    </article>
-                </a>
-                            <a class="featured__item" href="/package/com.wildspike.wormszone/">
-                    <article class="featured__card">
-                        <div class="featured__thumb-wrap">
-                            <img
-                                class="featured__thumb"
-                                src="https://play-lh.googleusercontent.com/zzZGooAZam4PFxZwOOPz-hRxODyakOtGChSbZaPmOdT3Zuu-zpivvMb5nP9rjvCN_A=w180"
-                                alt="Worms Zone .io - Hungry Snake"
-                                loading="lazy"
-                                decoding="async"
-                                width="180"
-                                height="180"
-                            >
-                        </div>
-
-                        <h3 class="featured__name">Worms Zone</h3>
-							
-                    </article>
-                </a>
-                            <a class="featured__item" href="/package/com.miniclip.agar.io/">
-                    <article class="featured__card">
-                        <div class="featured__thumb-wrap">
-                            <img
-                                class="featured__thumb"
-                                src="https://play-lh.googleusercontent.com/Vcje9CX1tdzivjyvaKqkyLXFWbDWt8IK2lU0c0VfkvHoTStv3BXc20jcqjGQoEC7A_U=w180"
-                                alt="Agar.io"
-                                loading="lazy"
-                                decoding="async"
-                                width="180"
-                                height="180"
-                            >
-                        </div>
-
-                        <h3 class="featured__name">Agar</h3>
-							
-                    </article>
-                </a>
-                            <a class="featured__item" href="/package/com.gnarlygamestudio.agenthunt/">
-                    <article class="featured__card">
-                        <div class="featured__thumb-wrap">
-                            <img
-                                class="featured__thumb"
-                                src="https://play-lh.googleusercontent.com/Rq8czpfMOY4V0LK5RzcsQxnVMWradxZF_L4hfEVb8EEaFi-bqDAirseV43Wea1zeNw=w180"
-                                alt="Agent Hunt – Hitman Shooter"
-                                loading="lazy"
-                                decoding="async"
-                                width="180"
-                                height="180"
-                            >
-                        </div>
-
-                        <h3 class="featured__name">Agent Hunt</h3>
-							
-                    </article>
-                </a>
-                            <a class="featured__item" href="/package/jpark.AOS5/">
-                    <article class="featured__card">
-                        <div class="featured__thumb-wrap">
-                            <img
-                                class="featured__thumb"
-                                src="https://play-lh.googleusercontent.com/oO2C5Re7SMZvbOT_FM9CG6q4FglmBKCyygSkQ9_zEIC2DtV1d_OAmN9f703z9-hB59kH=w180"
-                                alt="Anger of stick 5 : zombie"
-                                loading="lazy"
-                                decoding="async"
-                                width="180"
-                                height="180"
-                            >
-                        </div>
-
-                        <h3 class="featured__name">Anger of stick</h3>
-							
-                    </article>
-                </a>
-                            <a class="featured__item" href="/package/com.cassette.aquapark/">
-                    <article class="featured__card">
-                        <div class="featured__thumb-wrap">
-                            <img
-                                class="featured__thumb"
-                                src="https://play-lh.googleusercontent.com/aS9q4iI8v9udNmvaYmiX8k5svSlBc7K-AIKKMHOL_db2BBDeOlk37FglFdeeqVj1rX4=w180"
-                                alt="aquapark.io"
-                                loading="lazy"
-                                decoding="async"
-                                width="180"
-                                height="180"
-                            >
-                        </div>
-
-                        <h3 class="featured__name">Aquapark</h3>
-							
-                    </article>
-                </a>
-                            <a class="featured__item" href="/package/com.fdgentertainment.bananakong/">
-                    <article class="featured__card">
-                        <div class="featured__thumb-wrap">
-                            <img
-                                class="featured__thumb"
-                                src="https://play-lh.googleusercontent.com/JC2nrEFjMfyE1ViyhH3oOwrt20L9nv90alE5hM-9uuBc3ron78s2c5Q_-N8UTWUHp1U=w180"
-                                alt="Banana Kong"
-                                loading="lazy"
-                                decoding="async"
-                                width="180"
-                                height="180"
-                            >
-                        </div>
-
-                        <h3 class="featured__name">Banana Kong</h3>
-							
-                    </article>
-                </a>
-                            <a class="featured__item" href="/package/com.sandboxol.indiegame.bedwar/">
-                    <article class="featured__card">
-                        <div class="featured__thumb-wrap">
-                            <img
-                                class="featured__thumb"
-                                src="https://play-lh.googleusercontent.com/Rf2Tl6OBOhh-phuWcdQUdOFGZBNZf8ElcbTg9XNkt-Tv4YpnDMn7EGTk5QEeYTrlKJ3srZTiI4myG_NuS8sID-I=w180"
-                                alt="Bed Wars"
-                                loading="lazy"
-                                decoding="async"
-                                width="180"
-                                height="180"
-                            >
-                        </div>
-
-                        <h3 class="featured__name">Bed Wars</h3>
-							
-                    </article>
-                </a>
-                            <a class="featured__item" href="/package/com.pubg.imobile/">
-                    <article class="featured__card">
-                        <div class="featured__thumb-wrap">
-                            <img
-                                class="featured__thumb"
-                                src="https://play-lh.googleusercontent.com/KieTROLwzhE25mwyHBAvH9MrxynZm3DIeGwuZKBarh4kVLoiRakxr2v7yZ0TwUmdulKN3eopWKThrdos2JaEoQ=w180"
-                                alt="BGMI: Online Multiplayer Game"
-                                loading="lazy"
-                                decoding="async"
-                                width="180"
-                                height="180"
-                            >
-                        </div>
-
-                        <h3 class="featured__name">BGMI</h3>
-							
-                    </article>
-                </a>
-                            <a class="featured__item" href="/package/com.hyperkani.bomberfriends/">
-                    <article class="featured__card">
-                        <div class="featured__thumb-wrap">
-                            <img
-                                class="featured__thumb"
-                                src="https://play-lh.googleusercontent.com/Ld3UVdsryjuoK_FEhT0eroDFqno8pVLMxfeYdGEGDva88i3aJ5FlyPv71M5oVsM9Qkw=w180"
-                                alt="Bomber Friends"
-                                loading="lazy"
-                                decoding="async"
-                                width="180"
-                                height="180"
-                            >
-                        </div>
-
-                        <h3 class="featured__name">Bomber Friends</h3>
-							
-                    </article>
-                </a>
-                            <a class="featured__item" href="/package/com.playgendary.bowmasters/">
-                    <article class="featured__card">
-                        <div class="featured__thumb-wrap">
-                            <img
-                                class="featured__thumb"
-                                src="https://play-lh.googleusercontent.com/rsQyCuie6S8Munc2Hv6IMpePP1g3c0okLkyKRXd1IimOryIBMZqymGKaOg7bZ6NMkhj3=w180"
-                                alt="Bowmasters: Archery Shooting"
-                                loading="lazy"
-                                decoding="async"
-                                width="180"
-                                height="180"
-                            >
-                        </div>
-
-                        <h3 class="featured__name">Bowmasters</h3>
-							
-                    </article>
-                </a>
-                            <a class="featured__item" href="/package/com.supercell.brawlstars/">
-                    <article class="featured__card">
-                        <div class="featured__thumb-wrap">
-                            <img
-                                class="featured__thumb"
-                                src="https://play-lh.googleusercontent.com/tYB_jWhdJuauLSPJ7LVj_5dUq6g_eQwj2wPNG9jFN78zKbDqMNfnEU2fUGiDQtYAy0yHn4SMnaF0lhanJpm0=w180"
-                                alt="Brawl Stars"
-                                loading="lazy"
-                                decoding="async"
-                                width="180"
-                                height="180"
-                            >
-                        </div>
-
-                        <h3 class="featured__name">Brawl Stars</h3>
-							
-                    </article>
-                </a>
-                            <a class="featured__item" href="/package/com.activision.callofduty.shooter/">
-                    <article class="featured__card">
-                        <div class="featured__thumb-wrap">
-                            <img
-                                class="featured__thumb"
-                                src="https://play-lh.googleusercontent.com/uPRFWFbiASqohiTMTKrD5gErGrKxq_1DgH0npRQcvUEDDLMLTECh3xXl0STPBZZseA=w180"
-                                alt="Call of Duty®: Mobile"
-                                loading="lazy"
-                                decoding="async"
-                                width="180"
-                                height="180"
-                            >
-                        </div>
-
-                        <h3 class="featured__name">Call of Duty®</h3>
-							
-                    </article>
-                </a>
-                            <a class="featured__item" href="/package/freeplay.crowdrun.com/">
-                    <article class="featured__card">
-                        <div class="featured__thumb-wrap">
-                            <img
-                                class="featured__thumb"
-                                src="https://play-lh.googleusercontent.com/5NQbz-hljy5XXe7hWsE7xVzjQ1j_qH-N9lTaqWuIgQ-ZfTUcC_31T4zUoiD3UT-Pyc0=w180"
-                                alt="Count Masters: Stickman Games"
-                                loading="lazy"
-                                decoding="async"
-                                width="180"
-                                height="180"
-                            >
-                        </div>
-
-                        <h3 class="featured__name">Count Masters</h3>
-							
-                    </article>
-                </a>
+        <div id="list" class="featured__grid" data-json-file="/games.json" data-offset="24" data-limit="24">
+            <a class="featured__item" href="/package/com.dts.freefireth/">
+                <article class="featured__card">
+                    <div class="featured__thumb-wrap">
+                        <img class="featured__thumb" src="https://play-lh.googleusercontent.com/1wE91ae_1YIJtIjQ1YJz5RhAajxEpF1TfrXGg7tcrKl90MOnF7XdFj71pw_MSQbyhM5PYz-eRdeBFQBzSGrV=w180" alt="Free Fire: Winterlands" loading="lazy" decoding="async" width="180" height="180">
                     </div>
+                    <h3 class="featured__name">Free Fire</h3>
+                </article>
+            </a>
+            <a class="featured__item" href="/package/com.imangi.templerun2/">
+                <article class="featured__card">
+                    <div class="featured__thumb-wrap">
+                        <img class="featured__thumb" src="https://play-lh.googleusercontent.com/go4XqS4mYs-G2tZymiVLF4wJYXIi5QrvwixNRzssk4G_vRBHrAdg4E1ddNwy9c2cZA=w180" alt="Temple Run 2: Endless Escape" loading="lazy" decoding="async" width="180" height="180">
+                    </div>
+                    <h3 class="featured__name">Temple Run 2</h3>
+                </article>
+            </a>
+            <a class="featured__item" href="/package/com.innersloth.spacemafia/">
+                <article class="featured__card">
+                    <div class="featured__thumb-wrap">
+                        <img class="featured__thumb" src="https://play-lh.googleusercontent.com/8ddL1kuoNUB5vUvgDVjYY3_6HwQcrg1K2fd_R8soD-e2QYj8fT9cfhfh3G0hnSruLKec=w180" alt="Among Us" loading="lazy" decoding="async" width="180" height="180">
+                    </div>
+                    <h3 class="featured__name">Among Us</h3>
+                </article>
+            </a>
+            <a class="featured__item" href="/package/com.dts.freefiremax/">
+                <article class="featured__card">
+                    <div class="featured__thumb-wrap">
+                        <img class="featured__thumb" src="https://play-lh.googleusercontent.com/fPV15zPzpECONm08K6BUS5EqD1A1Ir_hxsOaaJF7hOIK-BNDpFO-i3MAvUVM7952JJyGAhg1VJwzDKtYT2QB8Ns=w180" alt="Free Fire MAX: Winterlands" loading="lazy" decoding="async" width="180" height="180">
+                    </div>
+                    <h3 class="featured__name">Free Fire MAX</h3>
+                </article>
+            </a>
+            <a class="featured__item" href="/package/com.rubygames.assassin/">
+                <article class="featured__card">
+                    <div class="featured__thumb-wrap">
+                        <img class="featured__thumb" src="https://play-lh.googleusercontent.com/PTxkeud-aHNGqo85reN70CUWs5DF0HTKNMIbM7lrxS1WdTD-G2X8X6szmD4CGlI7wg=w180" alt="Hunter Assassin" loading="lazy" decoding="async" width="180" height="180">
+                    </div>
+                    <h3 class="featured__name">Hunter Assassin</h3>
+                </article>
+            </a>
+            <a class="featured__item" href="/package/com.mobile.legends/">
+                <article class="featured__card">
+                    <div class="featured__thumb-wrap">
+                        <img class="featured__thumb" src="https://play-lh.googleusercontent.com/NiIHdrOS85r76ggTpn1uLxslWAfmvi1WVVQY5Enrj3ZAcVBcb11RkkTFbej8qxB9UK0JPDhRVajVz_ogmqiC=w180" alt="Mobile Legends: Bang Bang" loading="lazy" decoding="async" width="180" height="180">
+                    </div>
+                    <h3 class="featured__name">Mobile Legends</h3>
+                </article>
+            </a>
+            <a class="featured__item" href="/package/com.tencent.ig/">
+                <article class="featured__card">
+                    <div class="featured__thumb-wrap">
+                        <img class="featured__thumb" src="https://play-lh.googleusercontent.com/zCSGnBtZk0Lmp1BAbyaZfLktDzHmC6oke67qzz3G1lBegAF2asyt5KzXOJ2PVdHDYkU=w180" alt="PUBG MOBILE" loading="lazy" decoding="async" width="180" height="180">
+                    </div>
+                    <h3 class="featured__name">PUBG MOBILE</h3>
+                </article>
+            </a>
+            <a class="featured__item" href="/package/air.com.hypah.io.slither/">
+                <article class="featured__card">
+                    <div class="featured__thumb-wrap">
+                        <img class="featured__thumb" src="https://play-lh.googleusercontent.com/tRpviKT0mUi47iAaBne_yhe_xIuFzpW1mCIqoW457tNsKZddZHwiCUR2ga-rU3VXw04=w180" alt="slither.io" loading="lazy" decoding="async" width="180" height="180">
+                    </div>
+                    <h3 class="featured__name">slither</h3>
+                </article>
+            </a>
+            <a class="featured__item" href="/package/com.fungames.sniper3d/">
+                <article class="featured__card">
+                    <div class="featured__thumb-wrap">
+                        <img class="featured__thumb" src="https://play-lh.googleusercontent.com/8gHksx7nW7IK09ThtTM_f1Pgjblh5to4-q9pdsJQMb2zxDZ7VnFObxaihhAr-_HBf6E=w180" alt="Sniper 3D：Gun Shooting Games" loading="lazy" decoding="async" width="180" height="180">
+                    </div>
+                    <h3 class="featured__name">Sniper 3D</h3>
+                </article>
+            </a>
+            <a class="featured__item" href="/package/com.outfit7.talkingtomgoldrun/">
+                <article class="featured__card">
+                    <div class="featured__thumb-wrap">
+                        <img class="featured__thumb" src="https://play-lh.googleusercontent.com/RUUUGb-vhnk7sLPB39H9QM8JYtkzH0CLKbPt7r-2RDHslqFAjY11-uNX_dmtLRWvcskf=w180" alt="Talking Tom Gold Run" loading="lazy" decoding="async" width="180" height="180">
+                    </div>
+                    <h3 class="featured__name">Talking Tom</h3>
+                </article>
+            </a>
+            <a class="featured__item" href="/package/com.outfit7.herodash/">
+                <article class="featured__card">
+                    <div class="featured__thumb-wrap">
+                        <img class="featured__thumb" src="https://play-lh.googleusercontent.com/VlaJtKyFJsTTaVMK2N1QN_mKGndN7Erv2QoTq-qayeKZ1XxZNk_Xyrv2XirSNKFrkaeNBuM75rEi5yEXrCc2=w180" alt="Talking Tom: Hero Dash Run" loading="lazy" decoding="async" width="180" height="180">
+                    </div>
+                    <h3 class="featured__name">Talking Tom</h3>
+                </article>
+            </a>
+            <a class="featured__item" href="/package/com.wildspike.wormszone/">
+                <article class="featured__card">
+                    <div class="featured__thumb-wrap">
+                        <img class="featured__thumb" src="https://play-lh.googleusercontent.com/zzZGooAZam4PFxZwOOPz-hRxODyakOtGChSbZaPmOdT3Zuu-zpivvMb5nP9rjvCN_A=w180" alt="Worms Zone .io - Hungry Snake" loading="lazy" decoding="async" width="180" height="180">
+                    </div>
+                    <h3 class="featured__name">Worms Zone</h3>
+                </article>
+            </a>
+            <a class="featured__item" href="/package/com.miniclip.agar.io/">
+                <article class="featured__card">
+                    <div class="featured__thumb-wrap">
+                        <img class="featured__thumb" src="https://play-lh.googleusercontent.com/Vcje9CX1tdzivjyvaKqkyLXFWbDWt8IK2lU0c0VfkvHoTStv3BXc20jcqjGQoEC7A_U=w180" alt="Agar.io" loading="lazy" decoding="async" width="180" height="180">
+                    </div>
+                    <h3 class="featured__name">Agar</h3>
+                </article>
+            </a>
+            <a class="featured__item" href="/package/com.gnarlygamestudio.agenthunt/">
+                <article class="featured__card">
+                    <div class="featured__thumb-wrap">
+                        <img class="featured__thumb" src="https://play-lh.googleusercontent.com/Rq8czpfMOY4V0LK5RzcsQxnVMWradxZF_L4hfEVb8EEaFi-bqDAirseV43Wea1zeNw=w180" alt="Agent Hunt – Hitman Shooter" loading="lazy" decoding="async" width="180" height="180">
+                    </div>
+                    <h3 class="featured__name">Agent Hunt</h3>
+                </article>
+            </a>
+            <a class="featured__item" href="/package/jpark.AOS5/">
+                <article class="featured__card">
+                    <div class="featured__thumb-wrap">
+                        <img class="featured__thumb" src="https://play-lh.googleusercontent.com/oO2C5Re7SMZvbOT_FM9CG6q4FglmBKCyygSkQ9_zEIC2DtV1d_OAmN9f703z9-hB59kH=w180" alt="Anger of stick 5 : zombie" loading="lazy" decoding="async" width="180" height="180">
+                    </div>
+                    <h3 class="featured__name">Anger of stick</h3>
+                </article>
+            </a>
+            <a class="featured__item" href="/package/com.cassette.aquapark/">
+                <article class="featured__card">
+                    <div class="featured__thumb-wrap">
+                        <img class="featured__thumb" src="https://play-lh.googleusercontent.com/aS9q4iI8v9udNmvaYmiX8k5svSlBc7K-AIKKMHOL_db2BBDeOlk37FglFdeeqVj1rX4=w180" alt="aquapark.io" loading="lazy" decoding="async" width="180" height="180">
+                    </div>
+                    <h3 class="featured__name">Aquapark</h3>
+                </article>
+            </a>
+            <a class="featured__item" href="/package/com.fdgentertainment.bananakong/">
+                <article class="featured__card">
+                    <div class="featured__thumb-wrap">
+                        <img class="featured__thumb" src="https://play-lh.googleusercontent.com/JC2nrEFjMfyE1ViyhH3oOwrt20L9nv90alE5hM-9uuBc3ron78s2c5Q_-N8UTWUHp1U=w180" alt="Banana Kong" loading="lazy" decoding="async" width="180" height="180">
+                    </div>
+                    <h3 class="featured__name">Banana Kong</h3>
+                </article>
+            </a>
+            <a class="featured__item" href="/package/com.sandboxol.indiegame.bedwar/">
+                <article class="featured__card">
+                    <div class="featured__thumb-wrap">
+                        <img class="featured__thumb" src="https://play-lh.googleusercontent.com/Rf2Tl6OBOhh-phuWcdQUdOFGZBNZf8ElcbTg9XNkt-Tv4YpnDMn7EGTk5QEeYTrlKJ3srZTiI4myG_NuS8sID-I=w180" alt="Bed Wars" loading="lazy" decoding="async" width="180" height="180">
+                    </div>
+                    <h3 class="featured__name">Bed Wars</h3>
+                </article>
+            </a>
+            <a class="featured__item" href="/package/com.pubg.imobile/">
+                <article class="featured__card">
+                    <div class="featured__thumb-wrap">
+                        <img class="featured__thumb" src="https://play-lh.googleusercontent.com/KieTROLwzhE25mwyHBAvH9MrxynZm3DIeGwuZKBarh4kVLoiRakxr2v7yZ0TwUmdulKN3eopWKThrdos2JaEoQ=w180" alt="BGMI: Online Multiplayer Game" loading="lazy" decoding="async" width="180" height="180">
+                    </div>
+                    <h3 class="featured__name">BGMI</h3>
+                </article>
+            </a>
+            <a class="featured__item" href="/package/com.hyperkani.bomberfriends/">
+                <article class="featured__card">
+                    <div class="featured__thumb-wrap">
+                        <img class="featured__thumb" src="https://play-lh.googleusercontent.com/Ld3UVdsryjuoK_FEhT0eroDFqno8pVLMxfeYdGEGDva88i3aJ5FlyPv71M5oVsM9Qkw=w180" alt="Bomber Friends" loading="lazy" decoding="async" width="180" height="180">
+                    </div>
+                    <h3 class="featured__name">Bomber Friends</h3>
+                </article>
+            </a>
+            <a class="featured__item" href="/package/com.playgendary.bowmasters/">
+                <article class="featured__card">
+                    <div class="featured__thumb-wrap">
+                        <img class="featured__thumb" src="https://play-lh.googleusercontent.com/rsQyCuie6S8Munc2Hv6IMpePP1g3c0okLkyKRXd1IimOryIBMZqymGKaOg7bZ6NMkhj3=w180" alt="Bowmasters: Archery Shooting" loading="lazy" decoding="async" width="180" height="180">
+                    </div>
+                    <h3 class="featured__name">Bowmasters</h3>
+                </article>
+            </a>
+            <a class="featured__item" href="/package/com.supercell.brawlstars/">
+                <article class="featured__card">
+                    <div class="featured__thumb-wrap">
+                        <img class="featured__thumb" src="https://play-lh.googleusercontent.com/tYB_jWhdJuauLSPJ7LVj_5dUq6g_eQwj2wPNG9jFN78zKbDqMNfnEU2fUGiDQtYAy0yHn4SMnaF0lhanJpm0=w180" alt="Brawl Stars" loading="lazy" decoding="async" width="180" height="180">
+                    </div>
+                    <h3 class="featured__name">Brawl Stars</h3>
+                </article>
+            </a>
+            <a class="featured__item" href="/package/com.activision.callofduty.shooter/">
+                <article class="featured__card">
+                    <div class="featured__thumb-wrap">
+                        <img class="featured__thumb" src="https://play-lh.googleusercontent.com/uPRFWFbiASqohiTMTKrD5gErGrKxq_1DgH0npRQcvUEDDLMLTECh3xXl0STPBZZseA=w180" alt="Call of Duty®: Mobile" loading="lazy" decoding="async" width="180" height="180">
+                    </div>
+                    <h3 class="featured__name">Call of Duty®</h3>
+                </article>
+            </a>
+            <a class="featured__item" href="/package/freeplay.crowdrun.com/">
+                <article class="featured__card">
+                    <div class="featured__thumb-wrap">
+                        <img class="featured__thumb" src="https://play-lh.googleusercontent.com/5NQbz-hljy5XXe7hWsE7xVzjQ1j_qH-N9lTaqWuIgQ-ZfTUcC_31T4zUoiD3UT-Pyc0=w180" alt="Count Masters: Stickman Games" loading="lazy" decoding="async" width="180" height="180">
+                    </div>
+                    <h3 class="featured__name">Count Masters</h3>
+                </article>
+            </a>
+        </div>
 
         <div class="loadmore-wrap">
-            <button
-                id="loadmore"
-                class="loadmore-btn"
-                type="button"
-                            >
-                Load More
-            </button>
-
+            <button id="loadmore" class="loadmore-btn" type="button">Load More</button>
             <div id="loadmore-status" class="loadmore-status" hidden></div>
         </div>
     </section>
@@ -714,30 +392,29 @@
 })();
 </script>
  
-<footer class="site-footer" role="contentinfo" style="background-color: var(--card-bg, #ffffff); color: var(--text-dark, #202124); padding: 40px 0 20px; margin-top: 50px; font-size: 0.95rem; border-top: 1px solid var(--border-color, #e5e7eb); transition: background-color 0.3s ease, color 0.3s ease; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+<footer class="site-footer" role="contentinfo" style="background-color: #ffffff; color: #202124; padding: 40px 0 20px; margin-top: 50px; font-size: 0.95rem; border-top: 1px solid #e5e7eb; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
   <div class="footer-nav" aria-label="Footer navigation" style="max-width: 1200px; margin: 0 auto; padding: 0 20px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; box-sizing: border-box;">
 
     <div class="footer-col" style="box-sizing: border-box;">
-      <div class="footer-title" style="font-size: 15px; margin-bottom: 15px; font-weight: 500; color: var(--text-dark, #202124); box-sizing: border-box;">Legal</div>
+      <div class="footer-title" style="font-size: 15px; margin-bottom: 15px; font-weight: 500; color: #202124; box-sizing: border-box;">Legal</div>
       <ul class="footer-list" style="list-style: none; margin: 0; padding: 0; box-sizing: border-box;">
-        <li style="margin-bottom: 10px; box-sizing: border-box;"><a href="terms.html" onmouseover="this.style.color='var(--brand-color, #007bff)'; this.style.paddingLeft='5px';" onmouseout="this.style.color='var(--text-light, #202124)'; this.style.paddingLeft='0';" style="color: var(--text-light, #202124); text-decoration: none; transition: all 0.3s ease; box-sizing: border-box; display: inline-block;">Terms</a></li>
-        <li style="margin-bottom: 10px; box-sizing: border-box;"><a href="disclaimer.html" onmouseover="this.style.color='var(--brand-color, #007bff)'; this.style.paddingLeft='5px';" onmouseout="this.style.color='var(--text-light, #202124)'; this.style.paddingLeft='0';" style="color: var(--text-light, #202124); text-decoration: none; transition: all 0.3s ease; box-sizing: border-box; display: inline-block;">Disclaimer</a></li>
-        <li style="margin-bottom: 10px; box-sizing: border-box;"><a href="privacy-policy.html" onmouseover="this.style.color='var(--brand-color, #007bff)'; this.style.paddingLeft='5px';" onmouseout="this.style.color='var(--text-light, #202124)'; this.style.paddingLeft='0';" style="color: var(--text-light, #202124); text-decoration: none; transition: all 0.3s ease; box-sizing: border-box; display: inline-block;">Privacy Policy</a></li>
+        <li style="margin-bottom: 10px; box-sizing: border-box;"><a href="terms.html" onmouseover="this.style.color='#007bff'; this.style.paddingLeft='5px';" onmouseout="this.style.color='#202124'; this.style.paddingLeft='0';" style="color: #202124; text-decoration: none; transition: all 0.3s ease; box-sizing: border-box; display: inline-block;">Terms</a></li>
+        <li style="margin-bottom: 10px; box-sizing: border-box;"><a href="disclaimer.html" onmouseover="this.style.color='#007bff'; this.style.paddingLeft='5px';" onmouseout="this.style.color='#202124'; this.style.paddingLeft='0';" style="color: #202124; text-decoration: none; transition: all 0.3s ease; box-sizing: border-box; display: inline-block;">Disclaimer</a></li>
+        <li style="margin-bottom: 10px; box-sizing: border-box;"><a href="privacy-policy.html" onmouseover="this.style.color='#007bff'; this.style.paddingLeft='5px';" onmouseout="this.style.color='#202124'; this.style.paddingLeft='0';" style="color: #202124; text-decoration: none; transition: all 0.3s ease; box-sizing: border-box; display: inline-block;">Privacy Policy</a></li>
       </ul>
     </div>
     <div class="footer-col" style="box-sizing: border-box;">
-      <div class="footer-title" style="font-size: 15px; margin-bottom: 15px; font-weight: 500; color: var(--text-dark, #202124); box-sizing: border-box;">MI9</div>
+      <div class="footer-title" style="font-size: 15px; margin-bottom: 15px; font-weight: 500; color: #202124; box-sizing: border-box;">MI9</div>
       <ul class="footer-list" style="list-style: none; margin: 0; padding: 0; box-sizing: border-box;">
-        <li style="margin-bottom: 10px; box-sizing: border-box;"><a href="about.html" onmouseover="this.style.color='var(--brand-color, #007bff)'; this.style.paddingLeft='5px';" onmouseout="this.style.color='var(--text-light, #202124)'; this.style.paddingLeft='0';" style="color: var(--text-light, #202124); text-decoration: none; transition: all 0.3s ease; box-sizing: border-box; display: inline-block;">About Us</a></li>
-        <li style="margin-bottom: 10px; box-sizing: border-box;"><a href="contact.html" onmouseover="this.style.color='var(--brand-color, #007bff)'; this.style.paddingLeft='5px';" onmouseout="this.style.color='var(--text-light, #202124)'; this.style.paddingLeft='0';" style="color: var(--text-light, #202124); text-decoration: none; transition: all 0.3s ease; box-sizing: border-box; display: inline-block;">Contact Us</a></li>
-        <li style="margin-bottom: 10px; box-sizing: border-box;"><a href="telegram.com" onmouseover="this.style.color='var(--brand-color, #007bff)'; this.style.paddingLeft='5px';" onmouseout="this.style.color='var(--text-light, #202124)'; this.style.paddingLeft='0';" style="color: var(--text-light, #202124); text-decoration: none; transition: all 0.3s ease; box-sizing: border-box; display: inline-block;">Join Telegram</a></li>
-
+        <li style="margin-bottom: 10px; box-sizing: border-box;"><a href="about.html" onmouseover="this.style.color='#007bff'; this.style.paddingLeft='5px';" onmouseout="this.style.color='#202124'; this.style.paddingLeft='0';" style="color: #202124; text-decoration: none; transition: all 0.3s ease; box-sizing: border-box; display: inline-block;">About Us</a></li>
+        <li style="margin-bottom: 10px; box-sizing: border-box;"><a href="contact.html" onmouseover="this.style.color='#007bff'; this.style.paddingLeft='5px';" onmouseout="this.style.color='#202124'; this.style.paddingLeft='0';" style="color: #202124; text-decoration: none; transition: all 0.3s ease; box-sizing: border-box; display: inline-block;">Contact Us</a></li>
+        <li style="margin-bottom: 10px; box-sizing: border-box;"><a href="telegram.com" onmouseover="this.style.color='#007bff'; this.style.paddingLeft='5px';" onmouseout="this.style.color='#202124'; this.style.paddingLeft='0';" style="color: #202124; text-decoration: none; transition: all 0.3s ease; box-sizing: border-box; display: inline-block;">Join Telegram</a></li>
       </ul>
     </div>
 
   </div>
 
-  <div class="footer-bottom" style="max-width: 1200px; margin: 30px auto 0; padding: 20px 20px 0; text-align: center; border-top: 1px solid var(--border-color, #e5e7eb); box-sizing: border-box;">
+  <div class="footer-bottom" style="max-width: 1200px; margin: 30px auto 0; padding: 20px 20px 0; text-align: center; border-top: 1px solid #e5e7eb; box-sizing: border-box;">
     <p class="footer-copy" style="margin: 0; box-sizing: border-box;">
       © 2026 MI9. All rights reserved.
     </p>
