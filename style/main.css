@@ -61,9 +61,8 @@ body {
 
 a { text-decoration: none; color: inherit; }
 
-/* ==========================================================================
-   2. SEARCH SUGGESTIONS BOX (Zaroori hai kyunki app-main.js iska use karta hai)
-   ========================================================================== */
+
+
 .suggestions-box {
   position: absolute;
   top: calc(100% + 8px);
