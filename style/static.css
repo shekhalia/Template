@@ -510,7 +510,7 @@ body.dark-mode .dmca-list{
     background: rgba(16,185,129,.08);
 }
 
-.mi9-about {
+.about {
   max-width: 1120px;
   margin: 0 auto;
   padding: 48px 16px 64px;
@@ -518,13 +518,13 @@ body.dark-mode .dmca-list{
 }
 
 /* HERO */
-.mi9-about__hero {
+.about__hero {
   max-width: 760px;
   margin: 0 auto 40px;
   text-align: center;
 }
 
-.mi9-about__eyebrow {
+.about__eyebrow {
   display: inline-block;
   margin-bottom: 10px;
   padding: 5px 12px;
@@ -535,34 +535,34 @@ body.dark-mode .dmca-list{
   font-weight: 600;
 }
 
-.mi9-about__hero h1 {
+.about__hero h1 {
   margin: 0 0 16px;
   font-size: clamp(30px, 5vw, 48px);
   line-height: 1.15;
 }
 
-.mi9-about__hero p {
+.about__hero p {
   margin: 0 0 14px;
   color: var(--text-light);
   line-height: 1.7;
 }
 
 /* TIMELINE */
-.mi9-about__timeline {
+.about__timeline {
   margin-bottom: 48px;
 }
 
-.mi9-about__timeline h2 {
+.about__timeline h2 {
   margin-bottom: 20px;
   font-size: 28px;
 }
 
-.mi9-timeline {
+.timeline {
   display: grid;
   gap: 14px;
 }
 
-.mi9-timeline__item {
+.timeline__item {
   padding: 16px 18px;
   border-radius: var(--border-radius);
   background: var(--card-bg);
@@ -570,28 +570,28 @@ body.dark-mode .dmca-list{
   box-shadow: var(--shadow-sm);
 }
 
-.mi9-timeline__item strong {
+.timeline__item strong {
   display: block;
   margin-bottom: 6px;
   color: var(--brand-color);
   font-size: 14px;
 }
 
-.mi9-timeline__item p {
+.timeline__item p {
   margin: 0;
   color: var(--text-light);
   font-size: 14px;
 }
 
 /* GRID */
-.mi9-about__grid {
+.about__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   margin-bottom: 48px;
 }
 
-.mi9-about__card {
+.about__card {
   padding: 22px;
   border-radius: var(--border-radius);
   background: var(--card-bg);
@@ -600,17 +600,17 @@ body.dark-mode .dmca-list{
   transition: var(--transition);
 }
 
-.mi9-about__card:hover {
+.about__card:hover {
   background: var(--hover-bg);
   box-shadow: var(--shadow-md);
 }
 
-.mi9-about__card h2 {
+.about__card h2 {
   margin: 0 0 10px;
   font-size: 18px;
 }
 
-.mi9-about__card p {
+.about__card p {
   margin: 0;
   color: var(--text-light);
   font-size: 14px;
@@ -618,30 +618,30 @@ body.dark-mode .dmca-list{
 }
 
 /* TEAM */
-.mi9-about__section {
+.about__section {
   text-align: center;
   margin-bottom: 48px;
 }
 
-.mi9-about__section h2 {
+.about__section h2 {
   margin-bottom: 10px;
   font-size: 28px;
 }
 
-.mi9-about__section-desc {
+.about__section-desc {
   max-width: 640px;
   margin: 0 auto 24px;
   color: var(--text-light);
   font-size: 14px;
 }
 
-.mi9-team {
+.team {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 16px;
 }
 
-.mi9-team__card {
+.team__card {
   padding: 18px 12px;
   border-radius: var(--border-radius);
   background: var(--card-bg);
@@ -650,12 +650,12 @@ body.dark-mode .dmca-list{
   transition: var(--transition);
 }
 
-.mi9-team__card:hover {
+.team__card:hover {
   box-shadow: var(--shadow-md);
   transform: translateY(-2px);
 }
 
-.mi9-team__card img {
+.team__card img {
   width: 72px;
   height: 72px;
   margin-bottom: 10px;
@@ -663,18 +663,18 @@ body.dark-mode .dmca-list{
   object-fit: cover;
 }
 
-.mi9-team__card h3 {
+.team__card h3 {
   margin: 0 0 4px;
   font-size: 15px;
 }
 
-.mi9-team__card p {
+.team__card p {
   margin: 0 0 6px;
   font-size: 13px;
   color: var(--text-light);
 }
 
-.mi9-team__card small {
+.team__card small {
   display: block;
   font-size: 12px;
   color: #6b7280;
@@ -682,7 +682,7 @@ body.dark-mode .dmca-list{
 }
 
 /* SUPPORT */
-.mi9-about__support {
+.about__support {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -693,18 +693,18 @@ body.dark-mode .dmca-list{
   border: 1px solid var(--border-color);
 }
 
-.mi9-about__support h2 {
+.about__support h2 {
   margin: 0 0 6px;
   font-size: 22px;
 }
 
-.mi9-about__support p {
+.about__support p {
   margin: 0;
   color: var(--text-light);
   font-size: 14px;
 }
 
-.mi9-about__button {
+.about__button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -718,40 +718,40 @@ body.dark-mode .dmca-list{
   transition: var(--transition);
 }
 
-.mi9-about__button:hover {
+.about__button:hover {
   background: var(--download-bg-hover);
 }
 
 /* RESPONSIVE */
 @media (max-width: 1024px) {
-  .mi9-about__grid {
+  .about__grid {
     grid-template-columns: 1fr;
   }
 
-  .mi9-team {
+  .team {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (max-width: 640px) {
-  .mi9-about {
+  .about {
     padding-top: 32px;
   }
 
-  .mi9-about__hero {
+  .about__hero {
     text-align: left;
   }
 
-  .mi9-team {
+  .team {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .mi9-about__support {
+  .about__support {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .mi9-about__button {
+  .about__button {
     width: 100%;
     margin-top: 12px;
   }
