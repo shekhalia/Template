@@ -1,0 +1,18 @@
+[
+  {
+    "pkg_id": "moneyrummy",
+    "game_name": "Money Rummy",
+    "logo": "moneyrummy.webp",
+    "category": "yono",
+    "new_release": true,
+    "popular": true
+  },
+  {
+    "pkg_id": "anothergame",
+    "game_name": "Another Game",
+    "logo": "anothergame.webp",
+    "category": "diwa",
+    "new_release": true,
+    "popular": false
+  }
+]
