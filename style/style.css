@@ -30,41 +30,61 @@
 /* =========================
    categories
    ========================= */
-.category{margin-bottom:18px}
-
-.category__title{
-    margin-bottom:10px;
-    font-size:17px;
-    font-weight:700;
+.category {
+    margin: 0 0 18px;
 }
 
-.category__scroller{
-    display:flex;
-    gap:10px;
-    overflow-x:auto;
-    padding-bottom:6px;
+.category--scroll {
+    overflow: hidden;
 }
 
-.category__link{
-    display:inline-flex;
-    align-items:center;
-    padding:0 14px;
-    height:34px;
-    border:1px solid var(--border-color);
-    border-radius:999px;
-    font-size:13px;
-    font-weight:600;
-    white-space:nowrap;
-    transition:var(--transition);
+.category__scroller {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 10px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border-color) transparent;
 }
 
-.category__link:hover,
-.category__link--active{
-    border-color:var(--brand-color);
-    background:var(--bg-color);
-    color:var(--brand-color);
+.category__scroller::-webkit-scrollbar {
+    height: 6px;
 }
 
+.category__scroller::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 999px;
+}
+
+.category__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 34px;
+    padding: 0 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    background: var(--card-bg);
+    color: var(--text-dark);
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: var(--transition);
+}
+
+.category__link:hover {
+    border-color: var(--brand-color);
+    color: var(--brand-color);
+}
+
+.category__link--active {
+    background: var(--bg-color);
+    color: var(--brand-color);
+    border-color: var(--brand-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
 
 /* =========================
    5. PANEL & HEADERS
