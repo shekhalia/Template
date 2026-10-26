@@ -30,14 +30,15 @@
 /* =========================
    categories
    ========================= */
-.category {
-    margin: 0 0 18px;
-}
+
+.category{margin-bottom:18px}
 
 .category__title{
     margin-bottom:10px;
     font-size:17px;
     font-weight:700;
+}
+
 
 .category--scroll {
     overflow: hidden;
