@@ -13,7 +13,11 @@ console.log(`Total ${games.length} games successfully load ho chuke hain.`);
 
 // Helper function: Game card ka HTML generate karne ke liye
 function createGameCard(game) {
-    const logoPath = `/logo/${game.logo}`;
+    // Smart logo path check: Agar link http/https se shuru ho toh direct use karein, warna /logo/ lagayein
+    const logoPath = game.logo && (game.logo.startsWith('http://') || game.logo.startsWith('https://'))
+        ? game.logo
+        : `/logo/${game.logo || 'default.png'}`;
+
     const pkgUrl = `/package/${game.pkg_id}/`;
     
     return `
