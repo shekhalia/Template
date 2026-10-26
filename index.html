@@ -133,8 +133,8 @@
     if (!list || !button) return;
 
     let allGames = [];
-    let currentView = 'new'; // 'new' ya 'popular'
-    let currentIndex = 24;   // Build time par pehle hi 24 items render ho chuke hain
+    let currentView = 'new'; 
+    let currentIndex = 24;   // Kyunki build.js pehle hi 24 items HTML mein inject kar chuka hai
     const limit = parseInt(list.dataset.limit || '24', 10);
     const jsonFile = list.dataset.jsonFile || '/games.json';
 
@@ -179,6 +179,17 @@
             const res = await fetch(jsonFile);
             if (res.ok) {
                 allGames = await res.json();
+                
+                // Check karein ki agar total games 24 ya usse kam hain, toh turant button hide kar dein
+                const filtered = getFilteredList();
+                if (currentIndex >= filtered.length) {
+                    button.style.display = 'none';
+                    status.style.display = 'block';
+                    status.textContent = 'No more items.';
+                } else {
+                    button.style.display = 'block';
+                    status.style.display = 'none';
+                }
             }
         } catch (e) {
             console.error("JSON load error:", e);
@@ -204,8 +215,8 @@
         }
 
         list.innerHTML = '';
-        button.hidden = false;
-        status.hidden = true;
+        button.style.display = 'block'; 
+        status.style.display = 'none';  
         
         loadMore();
     }
@@ -214,7 +225,7 @@
         if (!allGames.length) return;
 
         button.disabled = true;
-        status.hidden = false;
+        status.style.display = 'block';
         status.textContent = 'Loading...';
 
         const filtered = getFilteredList();
@@ -231,12 +242,14 @@
 
         currentIndex += nextItems.length;
 
+        // Button aur status message ka proper toggle logic
         if (currentIndex >= filtered.length) {
-            button.hidden = true;
-            status.hidden = false;
+            button.style.display = 'none'; // Button poori tarah hide ho jayega
+            status.style.display = 'block';
             status.textContent = 'No more items.';
         } else {
-            status.hidden = true;
+            button.style.display = 'block';
+            status.style.display = 'none';
             status.textContent = '';
         }
 
@@ -249,7 +262,6 @@
 
     button.addEventListener('click', loadMore);
 
-    // Initial load ke waqt json fetch kar lete hain taaki switch/loadmore bina error ke chale
     initData();
 })();
 </script>
