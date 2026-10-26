@@ -96,7 +96,6 @@
 
         <div id="list" class="featured__grid" data-json-file="/games.json" data-category="yono" data-limit="24">
             <!-- GAMES_START -->
-            <!-- Build script yahan initial 24 Yono games inject karega -->
             <!-- GAMES_END -->
         </div>
 
@@ -118,8 +117,8 @@
     if (!list || !button) return;
 
     let allGames = [];
-    let currentView = 'new';
-    let currentIndex = 24;
+    let currentView = 'new'; 
+    let currentIndex = 24;   // Kyunki build.js pehle hi 24 items HTML mein inject kar chuka hai
     const targetCategory = list.dataset.category || 'yono';
     const limit = parseInt(list.dataset.limit || '24', 10);
     const jsonFile = list.dataset.jsonFile || '/games.json';
@@ -138,7 +137,9 @@
         const name = String(item.game_name || '').trim();
         if (!pkgId || !name) return '';
 
-        const logo = item.logo ? `/logo/${item.logo}` : '/logo/default.png';
+        const logoPath = item.logo && (item.logo.startsWith('http://') || item.logo.startsWith('https://'))
+            ? item.logo
+            : `/logo/${item.logo || 'default.png'}`;
 
         return `
             <a class="featured__item" href="/package/${encodeURIComponent(pkgId)}/">
@@ -146,7 +147,7 @@
                     <div class="featured__thumb-wrap">
                         <img
                             class="featured__thumb"
-                            src="${esc(logo)}"
+                            src="${esc(logoPath)}"
                             alt="${esc(name)}"
                             loading="lazy"
                             decoding="async"
@@ -160,19 +161,8 @@
         `;
     }
 
-    async function initData() {
-        try {
-            const res = await fetch(jsonFile);
-            if (res.ok) {
-                allGames = await res.json();
-            }
-        } catch (e) {
-            console.error("JSON load error:", e);
-        }
-    }
-
     function getFilteredList() {
-        const categoryGames = allGames.filter(g => String(g.category).trim() === targetCategory);
+        const categoryGames = allGames.filter(g => String(g.category || '').trim() === targetCategory);
         
         if (currentView === 'popular') {
             return categoryGames.filter(g => g.popular);
@@ -181,9 +171,32 @@
         }
     }
 
+    async function initData() {
+        try {
+            const res = await fetch(jsonFile);
+            if (res.ok) {
+                allGames = await res.json();
+                
+                // Homepage ki tarah exact check taaki button aur status message sahi se toggle ho
+                const filtered = getFilteredList();
+                if (currentIndex >= filtered.length) {
+                    button.style.display = 'none';
+                    status.style.display = 'block';
+                    status.textContent = 'No more items.';
+                } else {
+                    button.style.display = 'block';
+                    status.style.display = 'none';
+                    status.textContent = '';
+                }
+            }
+        } catch (e) {
+            console.error("JSON load error:", e);
+        }
+    }
+
     function switchView(viewType) {
         currentView = viewType;
-        currentIndex = 0;
+        currentIndex = 0; // View change hone par index reset hoga taaki shuru se load ho sake
         
         if (currentView === 'popular') {
             sectionHeading.textContent = 'Popular Games';
@@ -192,10 +205,31 @@
         }
 
         list.innerHTML = '';
-        button.style.display = 'block'; // View badalne par button wapas show hoga
-        status.style.display = 'none';
         
-        loadMore();
+        // Homepage ki tarah view switch hone par turant pehle batch ke games render honge
+        const filtered = getFilteredList();
+        const nextItems = filtered.slice(currentIndex, currentIndex + limit);
+        let html = '';
+
+        nextItems.forEach(function (item) {
+            html += createCardHtml(item);
+        });
+
+        if (html !== '') {
+            list.insertAdjacentHTML('beforeend', html);
+        }
+
+        currentIndex += nextItems.length;
+
+        if (currentIndex >= filtered.length) {
+            button.style.display = 'none';
+            status.style.display = 'block';
+            status.textContent = 'No more items.';
+        } else {
+            button.style.display = 'block';
+            status.style.display = 'none';
+            status.textContent = '';
+        }
     }
 
     function loadMore() {
@@ -219,13 +253,12 @@
 
         currentIndex += nextItems.length;
 
-        // Agar saare items khatam ho gaye hain
         if (currentIndex >= filtered.length) {
-            button.style.display = 'none'; // Load More button gayab ho jayega
+            button.style.display = 'none';
             status.style.display = 'block';
             status.textContent = 'No more items.';
         } else {
-            button.style.display = 'block'; // Agar aur items baaki hain toh button dikhega
+            button.style.display = 'block';
             status.style.display = 'none';
             status.textContent = '';
         }
@@ -242,7 +275,7 @@
     initData();
 })();
 </script>
- 
+
 <footer class="site-footer" role="contentinfo" style="background-color: #ffffff; color: #202124; padding: 40px 0 20px; margin-top: 50px; font-size: 0.95rem; border-top: 1px solid #e5e7eb; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
   <div class="footer-nav" aria-label="Footer navigation" style="max-width: 1200px; margin: 0 auto; padding: 0 20px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; box-sizing: border-box;">
 
