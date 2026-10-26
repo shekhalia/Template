@@ -28,24 +28,24 @@
 }
 
 /* =========================
-   Subcategories
+   categories
    ========================= */
-.subcats{margin-bottom:18px}
+.cats{margin-bottom:18px}
 
-.subcats__title{
+.cats__title{
     margin-bottom:10px;
     font-size:17px;
     font-weight:700;
 }
 
-.subcats__scroller{
+.cats__scroller{
     display:flex;
     gap:10px;
     overflow-x:auto;
     padding-bottom:6px;
 }
 
-.subcats__link{
+.cats__link{
     display:inline-flex;
     align-items:center;
     padding:0 14px;
@@ -58,8 +58,8 @@
     transition:var(--transition);
 }
 
-.subcats__link:hover,
-.subcats__link--active{
+.cats__link:hover,
+.cats__link--active{
     border-color:var(--brand-color);
     background:var(--bg-color);
     color:var(--brand-color);
