@@ -30,22 +30,22 @@
 /* =========================
    categories
    ========================= */
-.cats{margin-bottom:18px}
+.category{margin-bottom:18px}
 
-.cats__title{
+.category__title{
     margin-bottom:10px;
     font-size:17px;
     font-weight:700;
 }
 
-.cats__scroller{
+.category__scroller{
     display:flex;
     gap:10px;
     overflow-x:auto;
     padding-bottom:6px;
 }
 
-.cats__link{
+.category__link{
     display:inline-flex;
     align-items:center;
     padding:0 14px;
@@ -58,8 +58,8 @@
     transition:var(--transition);
 }
 
-.cats__link:hover,
-.cats__link--active{
+.category__link:hover,
+.category__link--active{
     border-color:var(--brand-color);
     background:var(--bg-color);
     color:var(--brand-color);
