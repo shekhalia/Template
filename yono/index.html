@@ -172,7 +172,6 @@
     }
 
     function getFilteredList() {
-        // Sirf is specific category ke games filter honge
         const categoryGames = allGames.filter(g => String(g.category).trim() === targetCategory);
         
         if (currentView === 'popular') {
@@ -193,8 +192,8 @@
         }
 
         list.innerHTML = '';
-        button.hidden = false;
-        status.hidden = true;
+        button.style.display = 'block'; // View badalne par button wapas show hoga
+        status.style.display = 'none';
         
         loadMore();
     }
@@ -203,7 +202,7 @@
         if (!allGames.length) return;
 
         button.disabled = true;
-        status.hidden = false;
+        status.style.display = 'block';
         status.textContent = 'Loading...';
 
         const filtered = getFilteredList();
@@ -220,12 +219,14 @@
 
         currentIndex += nextItems.length;
 
+        // Agar saare items khatam ho gaye hain
         if (currentIndex >= filtered.length) {
-            button.hidden = true;
-            status.hidden = false;
+            button.style.display = 'none'; // Load More button gayab ho jayega
+            status.style.display = 'block';
             status.textContent = 'No more items.';
         } else {
-            status.hidden = true;
+            button.style.display = 'block'; // Agar aur items baaki hain toh button dikhega
+            status.style.display = 'none';
             status.textContent = '';
         }
 
