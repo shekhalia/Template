@@ -134,7 +134,7 @@
 
     let allGames = [];
     let currentView = 'new'; 
-    let currentIndex = 0;   // Shuruat 0 se karenge taaki JS khud render kare
+    let currentIndex = 24;   // Kyunki build.js pehle hi 24 items HTML mein inject kar chuka hai
     const limit = parseInt(list.dataset.limit || '24', 10);
     const jsonFile = list.dataset.jsonFile || '/games.json';
 
@@ -180,12 +180,17 @@
             if (res.ok) {
                 allGames = await res.json();
                 
-                // List ko pehle clear karenge aur index 0 se render start karenge
-                list.innerHTML = '';
-                currentIndex = 0;
-                
-                // Data aate hi turant pehle 24 games render kar do!
-                loadMore();
+                // Yahan HTML clear nahi karenge kyunki build.js ne pehle hi 24 games daal diye hain.
+                // Sirf check karenge ki agar total games 24 ya usse kam hain, toh button hide kar dein.
+                const filtered = getFilteredList();
+                if (currentIndex >= filtered.length) {
+                    button.style.display = 'none';
+                    status.style.display = 'block';
+                    status.textContent = 'No more items.';
+                } else {
+                    button.style.display = 'block';
+                    status.style.display = 'none';
+                }
             }
         } catch (e) {
             console.error("JSON load error:", e);
@@ -202,7 +207,7 @@
 
     function switchView(viewType) {
         currentView = viewType;
-        currentIndex = 0; 
+        currentIndex = 0; // View change hone par list reset hogi aur 0 se load hoga
         
         if (currentView === 'popular') {
             sectionHeading.textContent = 'Popular Games';
@@ -258,7 +263,6 @@
 
     button.addEventListener('click', loadMore);
 
-    // Page load hote hi data fetch karke render shuru karega
     initData();
 })();
 </script>
