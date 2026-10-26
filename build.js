@@ -11,9 +11,8 @@ if (!fs.existsSync(gamesFilePath)) {
 const games = JSON.parse(fs.readFileSync(gamesFilePath, 'utf8'));
 console.log(`Total ${games.length} games successfully load ho chuke hain.`);
 
-// Helper function: Game card ka HTML generate karne ke liye
+// Helper function: Game card ka HTML generate karne ke liye (Frontend template se matched)
 function createGameCard(game) {
-    // Smart logo path check: Agar link http/https se shuru ho toh direct use karein, warna /logo/ lagayein
     const logoPath = game.logo && (game.logo.startsWith('http://') || game.logo.startsWith('https://'))
         ? game.logo
         : `/logo/${game.logo || 'default.png'}`;
@@ -21,12 +20,12 @@ function createGameCard(game) {
     const pkgUrl = `/package/${game.pkg_id}/`;
     
     return `
-    <a class="featured__item" href="${pkgUrl}" title="${game.game_name}">
+    <a class="featured__item" href="${pkgUrl}">
         <article class="featured__card">
             <div class="featured__thumb-wrap">
                 <img class="featured__thumb" src="${logoPath}" alt="${game.game_name}" loading="lazy" decoding="async" width="180" height="180">
             </div>
-            <div class="featured__name">${game.game_name}</div>
+            <h3 class="featured__name">${game.game_name}</h3>
         </article>
     </a>`;
 }
@@ -49,12 +48,12 @@ if (fs.existsSync(indexPath)) {
 }
 
 // 3. Category Pages ko automatically detect karke update karna
-const uniqueCategories = [...new Set(games.map(g => g.category))];
+const uniqueCategories = [...new Set(games.map(g => String(g.category || '').trim()))].filter(Boolean);
 uniqueCategories.forEach(cat => {
     const catPath = path.join(__dirname, cat, 'index.html');
     if (fs.existsSync(catPath)) {
         let catHtml = fs.readFileSync(catPath, 'utf8');
-        const catGames = games.filter(g => g.category === cat && g.new_release).slice(0, 24);
+        const catGames = games.filter(g => String(g.category || '').trim() === cat && g.new_release).slice(0, 24);
         const catGamesHtml = catGames.map(createGameCard).join('\n');
 
         if (catHtml.includes('<!-- GAMES_START -->') && catHtml.includes('<!-- GAMES_END -->')) {
@@ -76,11 +75,10 @@ games.forEach(game => {
     if (fs.existsSync(pkgHtmlPath)) {
         let pkgContent = fs.readFileSync(pkgHtmlPath, 'utf8');
 
-        // Rules ke mutabiq 3 sections:
         const top12New = games.filter(g => g.new_release).slice(0, 12);
         const newHtml = top12New.map(createGameCard).join('\n');
 
-        const category4 = games.filter(g => g.category === game.category && g.pkg_id !== game.pkg_id).slice(0, 4);
+        const category4 = games.filter(g => String(g.category || '').trim() === String(game.category || '').trim() && g.pkg_id !== game.pkg_id).slice(0, 4);
         const cat4Html = category4.map(createGameCard).join('\n');
 
         const top12Popular = games.filter(g => g.popular).slice(0, 12);
