@@ -134,7 +134,7 @@
 
     let allGames = [];
     let currentView = 'new'; 
-    let currentIndex = 24;   // Kyunki build.js pehle hi 24 items HTML mein inject kar chuka hai
+    let currentIndex = 0;   // Shuruat 0 se karenge taaki JS khud render kare
     const limit = parseInt(list.dataset.limit || '24', 10);
     const jsonFile = list.dataset.jsonFile || '/games.json';
 
@@ -180,16 +180,12 @@
             if (res.ok) {
                 allGames = await res.json();
                 
-                // Check karein ki agar total games 24 ya usse kam hain, toh turant button hide kar dein
-                const filtered = getFilteredList();
-                if (currentIndex >= filtered.length) {
-                    button.style.display = 'none';
-                    status.style.display = 'block';
-                    status.textContent = 'No more items.';
-                } else {
-                    button.style.display = 'block';
-                    status.style.display = 'none';
-                }
+                // List ko pehle clear karenge aur index 0 se render start karenge
+                list.innerHTML = '';
+                currentIndex = 0;
+                
+                // Data aate hi turant pehle 24 games render kar do!
+                loadMore();
             }
         } catch (e) {
             console.error("JSON load error:", e);
@@ -206,7 +202,7 @@
 
     function switchView(viewType) {
         currentView = viewType;
-        currentIndex = 0; // View change hone par shuru se load hoga
+        currentIndex = 0; 
         
         if (currentView === 'popular') {
             sectionHeading.textContent = 'Popular Games';
@@ -244,7 +240,7 @@
 
         // Button aur status message ka proper toggle logic
         if (currentIndex >= filtered.length) {
-            button.style.display = 'none'; // Button poori tarah hide ho jayega
+            button.style.display = 'none';
             status.style.display = 'block';
             status.textContent = 'No more items.';
         } else {
@@ -262,6 +258,7 @@
 
     button.addEventListener('click', loadMore);
 
+    // Page load hote hi data fetch karke render shuru karega
     initData();
 })();
 </script>
