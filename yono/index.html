@@ -196,7 +196,7 @@
 
     function switchView(viewType) {
         currentView = viewType;
-        currentIndex = 0; // View change hone par index reset hoga taaki shuru se load ho sake
+        currentIndex = 0;
         
         if (currentView === 'popular') {
             sectionHeading.textContent = 'Popular Games';
@@ -206,7 +206,6 @@
 
         list.innerHTML = '';
         
-        // Homepage ki tarah view switch hone par turant pehle batch ke games render honge
         const filtered = getFilteredList();
         const nextItems = filtered.slice(currentIndex, currentIndex + limit);
         let html = '';
