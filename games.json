@@ -1,24 +1,24 @@
 [
   {
     "pkg_id": "com.mi9.yono1",
-    "game_name": "Yono Rummy Gold",
-    "logo": "https://images.unsplash.com/photo-1511193311914-0346f16efe90?w=180&h=180&fit=crop",
+    "game_name": "Rummy VIP",
+    "logo": "13.png",
     "new_release": true,
     "popular": true,
     "category": "yono"
   },
   {
     "pkg_id": "com.mi9.yono2",
-    "game_name": "Yono Teen Patti Pro",
-    "logo": "https://images.unsplash.com/photo-1541271900139-da21ba719d3c?w=180&h=180&fit=crop",
+    "game_name": "ET7.COM",
+    "logo": "12.jpeg",
     "new_release": true,
     "popular": false,
     "category": "yono"
   },
   {
     "pkg_id": "com.mi9.yono3",
-    "game_name": "Yono Spin Winner",
-    "logo": "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?w=180&h=180&fit=crop",
+    "game_name": "Money Rummy",
+    "logo": "11.jpeg",
     "new_release": false,
     "popular": true,
     "category": "yono"
