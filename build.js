@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 
-// 1. games.json file read karna
 const gamesFilePath = path.join(__dirname, 'games.json');
 if (!fs.existsSync(gamesFilePath)) {
     console.error('Error: games.json file nahi mili!');
@@ -11,7 +10,6 @@ if (!fs.existsSync(gamesFilePath)) {
 const games = JSON.parse(fs.readFileSync(gamesFilePath, 'utf8'));
 console.log(`Total ${games.length} games successfully load ho chuke hain.`);
 
-// Helper function: Game card ka HTML generate karne ke liye (Frontend template se matched)
 function createGameCard(game) {
     const logoPath = game.logo && (game.logo.startsWith('http://') || game.logo.startsWith('https://'))
         ? game.logo
@@ -30,7 +28,6 @@ function createGameCard(game) {
     </a>`;
 }
 
-// 2. Homepage (index.html) ko update karna
 const indexPath = path.join(__dirname, 'index.html');
 if (fs.existsSync(indexPath)) {
     let indexHtml = fs.readFileSync(indexPath, 'utf8');
@@ -47,7 +44,6 @@ if (fs.existsSync(indexPath)) {
     }
 }
 
-// 3. Category Pages ko automatically detect karke update karna
 const uniqueCategories = [...new Set(games.map(g => String(g.category || '').trim()))].filter(Boolean);
 uniqueCategories.forEach(cat => {
     const catPath = path.join(__dirname, cat, 'index.html');
@@ -67,7 +63,6 @@ uniqueCategories.forEach(cat => {
     }
 });
 
-// 4. Individual Game Pages (package/{pkg_id}/index.html) ko update karna
 games.forEach(game => {
     const pkgDir = path.join(__dirname, 'package', game.pkg_id);
     const pkgHtmlPath = path.join(pkgDir, 'index.html');
