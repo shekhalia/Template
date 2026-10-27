@@ -180,8 +180,6 @@
             if (res.ok) {
                 allGames = await res.json();
                 
-                // Yahan HTML clear nahi karenge kyunki build.js ne pehle hi 24 games daal diye hain.
-                // Sirf check karenge ki agar total games 24 ya usse kam hain, toh button hide kar dein.
                 const filtered = getFilteredList();
                 if (currentIndex >= filtered.length) {
                     button.style.display = 'none';
