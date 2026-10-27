@@ -10,7 +10,7 @@
   {
     "pkg_id": "com.mi9.yono2",
     "game_name": "ET7.COM",
-    "logo": "12.jpeg",
+    "logo": "12.jpg",
     "new_release": true,
     "popular": false,
     "category": "yono"
@@ -18,7 +18,7 @@
   {
     "pkg_id": "com.mi9.yono3",
     "game_name": "Money Rummy",
-    "logo": "11.jpeg",
+    "logo": "11.jpg",
     "new_release": false,
     "popular": true,
     "category": "yono"
