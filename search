@@ -14,8 +14,8 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="main.css">
-<link rel="stylesheet" href="search.css">
+<link rel="stylesheet" href="../style/main.css?v=1778210460">
+<link rel="stylesheet" href="../style/search.css?v=1776308099">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RL58EYVK41"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -313,6 +313,6 @@ function displayResults(items, query) {
     </p>
   </div>
 </footer>
-<script src="/jsai/app-main.js" defer></script>
+<script src="../jsai/app-main.js" defer></script>
 </body>
 </html>
