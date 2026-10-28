@@ -14,81 +14,43 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="../style/main.css?v=1778210460">
-<link rel="stylesheet" href="../style/search.css?v=1776308099">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RL58EYVK41"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-RL58EYVK41', {
-    transport_type: 'beacon'
-  });
-</script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1578001334377338"  crossorigin="anonymous" data-overlays="bottom"></script>
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="search.css">
 </head>
 <body>
-	<header>
-    <div class="header-container">  
-        
-<button id="mobile-toggle" class="mobile-toggle" aria-label="Open menu">
-    <span></span>
-    <span></span>
-    <span></span>
-</button>
-        
-        <div class="slog">
-<a href="/" class="logo">
-    <svg class="icon-mi9" width="30" height="30" aria-hidden="true">
-        <use href="/assets/ic.svg#svg-mi9-apk"></use>
-    </svg>    
-    <div class="wsname">
-        <span class="site-name">MI9</span>
-        <span class="brand-tag">APKs</span>
-    </div>
-</a>
-            
-            <form action="/search" method="GET" class="search-box">
-				<input type="text" name="q" id="search-input" placeholder="Search..." required autocomplete="off" value="" aria-label="Search apps and games" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suggestions-box">                <button type="submit" aria-label="Search APK">
-				<svg class="svg-icon" width="20" height="20" aria-hidden="true" focusable="false">
-				<use href="/assets/ic.svg#svg-search"></use>
-				</svg>
-                </button>   
-               <ul id="suggestions-box" class="suggestions-box is-hidden" role="listbox"></ul>
-            </form>
+<header style="background-color: #ffffff; box-shadow: 0 2px 10px rgba(0,0,0,0.05); margin-bottom: 1px; position: relative; z-index: 888; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; box-sizing: border-box;">
+    <div style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 20px; height: 70px; box-sizing: border-box;">  
+        <div style="display: flex; align-items: center; gap: 25px; box-sizing: border-box;">
+            <a href="/" style="display: flex; align-items: center; flex-shrink: 0; text-decoration: none; color: inherit; box-sizing: border-box;">
+                <img src="mi92026.svg" width="30" height="30" alt="MI9" style="box-sizing: border-box;">
+                <div style="display: flex; flex-direction: column; line-height: 1.1; box-sizing: border-box;">
+                    <span style="font-weight: bold; font-size: 1.4rem; color: #007bff; box-sizing: border-box;">MI9</span>
+                    <span style="font-size: 0.8rem; color: #5f6368; box-sizing: border-box;">Games</span>
+                </div>
+            </a>
         </div>
-
-                
-        <div class="slogr">
-            <nav class="nav" aria-label="Primary">
-                <a href="/app/" >Apps</a>
-                <a href="/game/" >Games</a>
-            </nav>  
-            
-            <div class="acclogin">
-				<div id="account-box">
-					<a class="loginBtn"
-					   href="/login?redirect=%2Fsearch%3Fq%3Ddevice%2Bid"
-					   title="Sign in with Google">
-						<svg class="acc-icon" width="24" height="24">
-							<use href="/assets/ic.svg#svg-account"></use>
-						</svg>
-					</a>
-				</div>
-
-            </div>
+        <div style="display: flex; flex: 1; justify-content: flex-end; max-width: 500px; margin: 0 0 0 15px; box-sizing: border-box;">
+            <form action="/search" method="GET" style="display: flex; width: 100%; position: relative; box-sizing: border-box;">
+                <input type="text" name="q" id="search-input" placeholder="Search..." required autocomplete="off" value="" aria-label="Search games" onfocus="this.style.borderColor='#007bff'; this.style.boxShadow='0 0 0 3px rgba(0, 123, 255, 0.1)';" onblur="this.style.borderColor='#e5e7eb'; this.style.boxShadow='none';" style="width: 100%; padding: 10px 45px 10px 18px; background-color: #f8f9fa; color: #202124; border: 1px solid #e5e7eb; border-radius: 50px; outline: none; font-size: 0.95rem; transition: all 0.3s ease; box-sizing: border-box;">
+                <button type="submit" aria-label="Search Game" style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%); background-color: transparent; color: #007bff; border: none; padding: 8px 12px; cursor: pointer; display: flex; align-items: center; justify-content: center; box-sizing: border-box;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" style="width: 20px; height: 20px; fill: currentColor; display: inline-block; box-sizing: border-box;">
+                        <path d="m229.66 218.34-50.07-50.06a88.11 88.11 0 1 0-11.31 11.31l50.06 50.07a8 8 0 0 0 11.32-11.32ZM40 112a72 72 0 1 1 72 72 72.08 72.08 0 0 1-72-72Z"/>
+                    </svg>
+                </button>   
+                <ul id="suggestions-box" class="suggestions-box" style="position: absolute; top: calc(100% + 8px); left: 0; width: 100%; margin: 0; padding: 6px 0; list-style: none; background: #ffffff; border: 1px solid #e5e7eb; border-radius: 12px; box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08); max-height: 280px; overflow-y: auto; z-index: 1000; box-sizing: border-box; display: none;"></ul>
+            </form>
         </div>
     </div>
 </header>
 <main class="site-main">
     <div class="centerx search-page">
-        <nav class="mi9-breadcrumb" aria-label="Breadcrumb">
-            <ol class="mi9-breadcrumb__list">
-                <li class="mi9-breadcrumb__item">
-                    <a class="mi9-breadcrumb__link" href="/">Home</a>
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol class="breadcrumb__list">
+                <li class="breadcrumb__item">
+                    <a class="breadcrumb__link" href="/">Home</a>
                 </li>
-                <li class="mi9-breadcrumb__item" aria-current="page">
-                    <span class="mi9-breadcrumb__current" id="breadcrumb-current">Search</span>
+                <li class="breadcrumb__item" aria-current="page">
+                    <span class="breadcrumb__current" id="breadcrumb-current">Search</span>
                 </li>
             </ol>
         </nav>
@@ -260,59 +222,42 @@ function displayResults(items, query) {
 })();
 </script>
 
-<footer class="site-footer" role="contentinfo">
-  <nav class="footer-nav" aria-label="Footer">
-    <div class="footer-col">
-      <div class="footer-title">MI9</div>
-      <ul class="footer-list">
-        <li><a href="/about.html">About Us</a></li>
-        <li><a href="/contact.html">Contact Us</a></li>
+<footer class="site-footer" role="contentinfo" style="background-color: #ffffff; color: #202124; padding: 40px 0 20px; margin-top: 50px; font-size: 0.95rem; border-top: 1px solid #e5e7eb; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <div class="footer-nav" aria-label="Footer navigation" style="max-width: 1200px; margin: 0 auto; padding: 0 20px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; box-sizing: border-box;">
+
+    <div class="footer-col" style="box-sizing: border-box;">
+      <div class="footer-title" style="font-size: 15px; margin-bottom: 15px; font-weight: 500; color: #202124; box-sizing: border-box;">Legal</div>
+      <ul class="footer-list" style="list-style: none; margin: 0; padding: 0; box-sizing: border-box;">
+        <li style="margin-bottom: 10px; box-sizing: border-box;"><a href="terms.html" onmouseover="this.style.color='#007bff'; this.style.paddingLeft='5px';" onmouseout="this.style.color='#202124'; this.style.paddingLeft='0';" style="color: #202124; text-decoration: none; transition: all 0.3s ease; box-sizing: border-box; display: inline-block;">Terms</a></li>
+        <li style="margin-bottom: 10px; box-sizing: border-box;"><a href="disclaimer.html" onmouseover="this.style.color='#007bff'; this.style.paddingLeft='5px';" onmouseout="this.style.color='#202124'; this.style.paddingLeft='0';" style="color: #202124; text-decoration: none; transition: all 0.3s ease; box-sizing: border-box; display: inline-block;">Disclaimer</a></li>
+        <li style="margin-bottom: 10px; box-sizing: border-box;"><a href="privacy-policy.html" onmouseover="this.style.color='#007bff'; this.style.paddingLeft='5px';" onmouseout="this.style.color='#202124'; this.style.paddingLeft='0';" style="color: #202124; text-decoration: none; transition: all 0.3s ease; box-sizing: border-box; display: inline-block;">Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-col" style="box-sizing: border-box;">
+      <div class="footer-title" style="font-size: 15px; margin-bottom: 15px; font-weight: 500; color: #202124; box-sizing: border-box;">MI9</div>
+      <ul class="footer-list" style="list-style: none; margin: 0; padding: 0; box-sizing: border-box;">
+        <li style="margin-bottom: 10px; box-sizing: border-box;"><a href="about.html" onmouseover="this.style.color='#007bff'; this.style.paddingLeft='5px';" onmouseout="this.style.color='#202124'; this.style.paddingLeft='0';" style="color: #202124; text-decoration: none; transition: all 0.3s ease; box-sizing: border-box; display: inline-block;">About Us</a></li>
+        <li style="margin-bottom: 10px; box-sizing: border-box;"><a href="contact.html" onmouseover="this.style.color='#007bff'; this.style.paddingLeft='5px';" onmouseout="this.style.color='#202124'; this.style.paddingLeft='0';" style="color: #202124; text-decoration: none; transition: all 0.3s ease; box-sizing: border-box; display: inline-block;">Contact Us</a></li>
       </ul>
     </div>
 
-    <div class="footer-col">
-      <div class="footer-title">Legal</div>
-      <ul class="footer-list">
-        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
-        <li><a href="/terms.html">Terms</a></li>
-        <li><a href="/dmca.html">DMCA</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-col">
-      <div class="footer-title">Tools</div>
-      <ul class="footer-list">
-        <li><a href="/install-apk-guide.html">Install APK Guide</a></li>
-        <li><a href="/apk-downloader">APK Downloader</a></li>
-        <li>
-          <a href="https://chromewebstore.google.com/detail/android-apps-old-versions/lbkmfiplnipaelaigddbcbpifncgkkpm?hl=en-US&utm_source=mi9.com"
-             rel="noopener" target="_blank">Chrome Extension</a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="footer-col">
-      <div class="footer-title">Connect</div>
-      <ul class="footer-list">
-        <li><a href="https://www.linkedin.com/company/mi9com" rel="noopener" target="_blank">LinkedIn</a></li>
-        <li><a href="https://www.facebook.com/apk.support" rel="noopener" target="_blank">Facebook</a></li>
-        <li><a href="https://x.com/googlecom" rel="noopener" target="_blank">X</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <div class="footer-bottom">
-    <p class="footer-copy">© 2026 MI9. All rights reserved.</p>
   </div>
 
-  <div class="footer-disclaimer">
-    <p>
+  <div class="footer-bottom" style="max-width: 1200px; margin: 30px auto 0; padding: 20px 20px 0; text-align: center; border-top: 1px solid #e5e7eb; box-sizing: border-box;">
+    <p class="footer-copy" style="margin: 0; box-sizing: border-box;">
+      © 2026 MI9. All rights reserved.
+    </p>
+  </div>
+
+  <div class="footer-disclaimer" style="max-width: 1000px; margin: 15px auto 0; padding: 0 20px; text-align: center; font-size: 0.85rem; color: #9ca3af; box-sizing: border-box;">
+    <p style="margin: 0; box-sizing: border-box;">
       Google Play and the Google Play logo are trademarks of Google LLC.
-      <strong>Mi9.com</strong> is not affiliated with, endorsed by, or sponsored by Google LLC.
-      We share original APK files for free apps only.
+      <strong style="box-sizing: border-box;">MI9.com</strong> is not affiliated with, endorsed by, or sponsored by Google LLC.
+      We provide original APK files for free Android apps.
     </p>
   </div>
 </footer>
-<script src="../jsai/app-main.js" defer></script>
+
+<script src="app-main.js" defer></script>
 </body>
 </html>
