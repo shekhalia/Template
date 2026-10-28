@@ -157,7 +157,8 @@
 }
 
 .result-card__body {
-    padding-top: 10px;
+    padding-top: 8px;
+    text-align: center;
 }
 
 .result-card__title {
@@ -166,11 +167,13 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     font-size: 14px;
-    line-height: 1.5;
+    line-height: 1.4;
     font-weight: 600;
     color: var(--text-dark);
     word-break: break-word;
+    text-align: center;
 }
+
 
 
 /* =========================
