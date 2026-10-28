@@ -19,7 +19,7 @@
     "pkg_id": "moneyrummy",
     "game_name": "Money Rummy",
     "logo": "moneyrummy.webp",
-    "new_release": false,
+    "new_release": true,
     "popular": true,
     "category": "yono"
   },
