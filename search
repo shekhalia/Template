@@ -14,8 +14,8 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="style/main.css">
-<link rel="stylesheet" href="style/search.css">
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="search.css">
 </head>
 <body>
 <header style="background-color: #ffffff; box-shadow: 0 2px 10px rgba(0,0,0,0.05); margin-bottom: 1px; position: relative; z-index: 888; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; box-sizing: border-box;">
@@ -84,9 +84,9 @@ function updateSearchHeading(query) {
     const breadcrumbEl = document.getElementById("breadcrumb-current");
 
     if (!safeQuery) {
-        if (titleEl) titleEl.textContent = "Search APK Files";
+        if (titleEl) titleEl.textContent = "Search Games";
         if (descEl) {
-            descEl.textContent = "Find Android apps and games by keyword. Browse APK search results, open package pages, and view available app details and updates.";
+            descEl.textContent = "Find Android games by keyword. Browse search results and open package pages.";
         }
         if (breadcrumbEl) breadcrumbEl.textContent = "Search";
         return;
@@ -94,7 +94,7 @@ function updateSearchHeading(query) {
 
     if (titleEl) titleEl.textContent = 'Search results for "' + safeQuery + '"';
     if (descEl) {
-        descEl.textContent = "Browse APK search results for " + safeQuery + ". Find Android apps and games, open package pages, and check app details and update information on MI9.";
+        descEl.textContent = "Browse search results for " + safeQuery + " on MI9 Games.";
     }
     if (breadcrumbEl) breadcrumbEl.textContent = safeQuery;
 }
@@ -111,30 +111,31 @@ async function search() {
         return;
     }
 
-    const rawQuery = input.value.trim();
+    const rawQuery = input.value.trim().toLowerCase();
 
     if (!rawQuery) {
         setStatus("Please enter a search query.");
         return;
     }
 
-    const apiUrl = "https://search.mi9.com/?q=" + encodeURIComponent(rawQuery);
-    setStatus("Searching APK files...");
+    setStatus("Searching games...");
 
     try {
-        const response = await fetch(apiUrl, {
-            method: "GET",
-            headers: {
-                "Accept": "application/json"
-            }
-        });
-
+        const response = await fetch("/games.json");
         if (!response.ok) {
-            throw new Error("Failed to fetch search results");
+            throw new Error("Failed to fetch games.json");
         }
 
-        const data = await response.json();
-        displayResults(data, rawQuery);
+        const allGames = await response.json();
+        
+        // Query ke adhar par game_name ya pkg_id mein filter karna
+        const filteredItems = allGames.filter(function(item) {
+            const name = item && item.game_name ? String(item.game_name).toLowerCase() : "";
+            const pkg = item && item.pkg_id ? String(item.pkg_id).toLowerCase() : "";
+            return name.includes(rawQuery) || pkg.includes(rawQuery);
+        });
+
+        displayResults(filteredItems, rawQuery);
     } catch (error) {
         console.error(error);
         setStatus("Unable to load search results right now. Please try again later.");
@@ -146,28 +147,33 @@ function displayResults(items, query) {
     results.innerHTML = "";
 
     if (!Array.isArray(items) || items.length === 0) {
-        results.innerHTML = '<div class="search-status">No APK results found for "' + escapeHtml(query) + '".</div>';
+        results.innerHTML = '<div class="search-status">No results found for "' + escapeHtml(query) + '".</div>';
         return;
     }
 
     const fragment = document.createDocumentFragment();
 
     items.forEach(function(item) {
-        const googleId = item && item.google_id ? String(item.google_id).trim() : "";
-        const appName = item && item.app_name ? String(item.app_name).trim() : "";
-        const icon = item && item.icon ? String(item.icon).trim() : "";
+        const pkgId = item && item.pkg_id ? String(item.pkg_id).trim() : "";
+        const gameName = item && item.game_name ? String(item.game_name).trim() : "";
+        const logo = item && item.logo ? String(item.logo).trim() : "";
 
-        if (!googleId || !appName) {
+        if (!pkgId || !gameName) {
             return;
         }
+
+        // Smart logo path handling (external URL vs local logo)
+        const logoPath = logo && (logo.startsWith('http://') || logo.startsWith('https://'))
+            ? logo
+            : `/logo/${logo || 'default.png'}`;
 
         const cardWrap = document.createElement("div");
         cardWrap.className = "result-item";
 
         const link = document.createElement("a");
         link.className = "result-card";
-        link.href = "/package/" + encodeURIComponent(googleId) + "/";
-        link.title = appName;
+        link.href = "/package/" + encodeURIComponent(pkgId) + "/";
+        link.title = gameName;
 
         const thumb = document.createElement("div");
         thumb.className = "result-card__thumb";
@@ -175,8 +181,8 @@ function displayResults(items, query) {
         const img = document.createElement("img");
         img.loading = "lazy";
         img.decoding = "async";
-        img.src = "https://play-lh.googleusercontent.com/" + icon + "=w512-rw";
-        img.alt = appName;
+        img.src = logoPath;
+        img.alt = gameName;
 
         thumb.appendChild(img);
 
@@ -185,7 +191,7 @@ function displayResults(items, query) {
 
         const title = document.createElement("div");
         title.className = "result-card__title";
-        title.textContent = appName;
+        title.textContent = gameName;
         body.appendChild(title);   
 
         link.appendChild(thumb);
@@ -196,7 +202,7 @@ function displayResults(items, query) {
     });
 
     if (!fragment.childNodes.length) {
-        results.innerHTML = '<div class="search-status">No valid APK results found for "' + escapeHtml(query) + '".</div>';
+        results.innerHTML = '<div class="search-status">No valid results found for "' + escapeHtml(query) + '".</div>';
         return;
     }
 
@@ -258,6 +264,6 @@ function displayResults(items, query) {
   </div>
 </footer>
 
-<script src="jsai/app-main.js" defer></script>
+<script src="app-main.js" defer></script>
 </body>
 </html>
