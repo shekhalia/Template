@@ -28,6 +28,26 @@ function createGameCard(game) {
     </a>`;
 }
 
+function createRankGameCard(game, index) {
+    const logoPath = game.logo && (game.logo.startsWith('http://') || game.logo.startsWith('https://'))
+        ? game.logo
+        : `/logo/${game.logo || 'default.png'}`;
+
+    const pkgUrl = `/package/${game.pkg_id}/`;
+    const rankClass = index < 3 ? `rank-${index + 1}` : '';
+    
+    return `
+    <a class="rank-item" href="${pkgUrl}">
+        <div class="rank-num ${rankClass}">${index + 1}</div>
+        <div class="rank-thumb">
+            <img src="${logoPath}" alt="${game.game_name}" width="50" height="50" loading="lazy" decoding="async">
+        </div>
+        <div class="rank-main">
+            <div class="rank-title">${game.game_name}</div>
+        </div>
+    </a>`;
+}
+
 const indexPath = path.join(__dirname, 'index.html');
 if (fs.existsSync(indexPath)) {
     let indexHtml = fs.readFileSync(indexPath, 'utf8');
@@ -77,7 +97,7 @@ games.forEach(game => {
         const cat4Html = category4.map(createGameCard).join('\n');
 
         const top12Popular = games.filter(g => g.popular).slice(0, 12);
-        const popHtml = top12Popular.map(createGameCard).join('\n');
+        const popHtml = top12Popular.map((g, idx) => createRankGameCard(g, idx)).join('\n');
 
         let updated = false;
 
