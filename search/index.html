@@ -64,7 +64,7 @@
 
         <section class="search-results-wrap" aria-label="Search results">
             <div class="results" id="results">
-                <div class="search-status">Searching APK files...</div>
+                <div class="search-status">Searching Games...</div>
             </div>
         </section>
     </div>
@@ -128,7 +128,6 @@ async function search() {
 
         const allGames = await response.json();
         
-        // Query ke adhar par game_name ya pkg_id mein filter karna
         const filteredItems = allGames.filter(function(item) {
             const name = item && item.game_name ? String(item.game_name).toLowerCase() : "";
             const pkg = item && item.pkg_id ? String(item.pkg_id).toLowerCase() : "";
@@ -162,7 +161,6 @@ function displayResults(items, query) {
             return;
         }
 
-        // Smart logo path handling (external URL vs local logo)
         const logoPath = logo && (logo.startsWith('http://') || logo.startsWith('https://'))
             ? logo
             : `/logo/${logo || 'default.png'}`;
