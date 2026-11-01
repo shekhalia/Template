@@ -25,26 +25,26 @@
 </script>
 </head>
 <body>
-<header style="background-color: #ffffff; box-shadow: 0 2px 10px rgba(0,0,0,0.05); margin-bottom: 1px; position: relative; z-index: 888; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; box-sizing: border-box;">
-    <div style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 20px; height: 70px; box-sizing: border-box;">  
-        <div style="display: flex; align-items: center; gap: 25px; box-sizing: border-box;">
-            <a href="/" style="display: flex; align-items: center; flex-shrink: 0; text-decoration: none; color: inherit; box-sizing: border-box;">
-                <img src="../assets/mi92026.svg" width="30" height="30" alt="MI9" style="box-sizing: border-box;">
-                <div style="display: flex; flex-direction: column; line-height: 1.1; box-sizing: border-box;">
-                    <span style="font-weight: bold; font-size: 1.4rem; color: #007bff; box-sizing: border-box;">MI9</span>
-                    <span style="font-size: 0.8rem; color: #5f6368; box-sizing: border-box;">Games</span>
+<header class="site-header">
+    <div class="header-container">  
+        <div class="logo-wrapper">
+            <a href="/" class="logo-link">
+                <img src="../assets/mi92026.svg" width="30" height="30" alt="MI9" class="logo-img">
+                <div class="logo-text-wrapper">
+                    <span class="logo-title">WIN</span>
+                    <span class="logo-subtitle">Games</span>
                 </div>
             </a>
         </div>
-        <div style="display: flex; flex: 1; justify-content: flex-end; max-width: 500px; margin: 0 0 0 15px; box-sizing: border-box;">
-            <form action="/search" method="GET" style="display: flex; width: 100%; position: relative; box-sizing: border-box;">
-                <input type="text" name="q" id="search-input" placeholder="Search..." required autocomplete="off" value="" aria-label="Search games" onfocus="this.style.borderColor='#007bff'; this.style.boxShadow='0 0 0 3px rgba(0, 123, 255, 0.1)';" onblur="this.style.borderColor='#e5e7eb'; this.style.boxShadow='none';" style="width: 100%; padding: 10px 45px 10px 18px; background-color: #f8f9fa; color: #202124; border: 1px solid #e5e7eb; border-radius: 50px; outline: none; font-size: 0.95rem; transition: all 0.3s ease; box-sizing: border-box;">
-                <button type="submit" aria-label="Search Game" style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%); background-color: transparent; color: #007bff; border: none; padding: 8px 12px; cursor: pointer; display: flex; align-items: center; justify-content: center; box-sizing: border-box;">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" style="width: 20px; height: 20px; fill: currentColor; display: inline-block; box-sizing: border-box;">
+        <div class="search-container-wrapper">
+            <form action="/search" method="GET" class="search-form">
+                <input type="text" name="q" id="search-input" class="search-input-field" placeholder="Search..." required autocomplete="off" value="" aria-label="Search games">
+                <button type="submit" aria-label="Search Game" class="search-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" class="search-svg">
                         <path d="m229.66 218.34-50.07-50.06a88.11 88.11 0 1 0-11.31 11.31l50.06 50.07a8 8 0 0 0 11.32-11.32ZM40 112a72 72 0 1 1 72 72 72.08 72.08 0 0 1-72-72Z"/>
                     </svg>
                 </button>   
-                <ul id="suggestions-box" class="suggestions-box" style="position: absolute; top: calc(100% + 8px); left: 0; width: 100%; margin: 0; padding: 6px 0; list-style: none; background: #ffffff; border: 1px solid #e5e7eb; border-radius: 12px; box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08); max-height: 280px; overflow-y: auto; z-index: 1000; box-sizing: border-box; display: none;"></ul>
+                <ul id="suggestions-box" class="suggestions-box"></ul>
             </form>
         </div>
     </div>
