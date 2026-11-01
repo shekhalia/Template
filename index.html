@@ -253,7 +253,7 @@
     initData();
 })();
 </script>
-
+ 
 <footer class="site-footer" role="contentinfo">
   <div class="footer-nav" aria-label="Footer navigation">
 
@@ -290,31 +290,28 @@
     </p>
   </div>
 </footer>
+<!-- Custom 10-Second Download Pop-up Modal -->
+<div class="trusted-modal" id="pwa-download-modal" style="position:fixed; inset:0; z-index:9999; display:none; align-items:center; justify-content:center;">
+  <div class="trusted-backdrop" id="pwa-backdrop" style="position:absolute; inset:0; background:rgba(0,0,0,.6);"></div>
+  <div class="trusted-dialog" style="position:relative; width:min(600px,92%); background:#fff; color:#222; border-radius:12px; box-shadow:0 10px 25px rgba(0,0,0,.2); padding:20px; z-index:2;">
+    <button class="trusted-close" id="pwa-close-x" style="position:absolute; top:10px; right:15px; background:0 0; border:none; font-size:24px; cursor:pointer; color:#999;">×</button>
 
-<!-- Custom 10-Second Download Pop-up Modal (Based on Website CSS) -->
-<div class="trusted-modal" id="pwa-download-modal" role="dialog" aria-modal="true" aria-hidden="true">
-  <div class="trusted-backdrop" data-close="true"></div>
-  <div class="trusted-dialog" role="document">
-    <button class="trusted-close" aria-label="Close (Esc)" data-close="true">&times;</button>
-
-    <div class="trusted-header">
-      <div class="trusted-icon" aria-hidden="true">
-        <img src="https://play-lh.googleusercontent.com/aKY08CU0iQwU8CKTI03Tw7ssbSX_jrHf5GG-3Ky3Y-Yg_5OBszT2RyWI4n237snlGFNQ=w120" alt="App Icon" style="width:40px;height:40px;border-radius:8px;margin-right:12px;">
-      </div>
-      <h2 id="trusted-title" style="font-size:16px; font-weight:700; color:#1f2937; margin:0;">PixVerse: AI Video Generator</h2>
+    <div class="trusted-header" style="display:flex; align-items:center; gap:.5rem; margin-bottom:15px; border-bottom:1px solid #eee; padding-bottom:10px;">
+      <img src="https://play-lh.googleusercontent.com/aKY08CU0iQwU8CKTI03Tw7ssbSX_jrHf5GG-3Ky3Y-Yg_5OBszT2RyWI4n237snlGFNQ=w120" alt="App Icon" style="width:40px;height:40px;border-radius:8px;margin-right:12px;">
+      <h2 style="font-size:16px; font-weight:700; color:#1f2937; margin:0;">PixVerse: AI Video Generator</h2>
     </div>
 
     <div class="trusted-body" style="font-size:14px; color:#555; line-height:1.5;">
       <p>Fast access aur behtar experience ke liye app ko <strong>Home Screen</strong> par add karein ya direct download karein:</p>
-      <ul class="trusted-list" style="margin:10px 0; padding-left:20px;">
+      <ul style="margin:10px 0; padding-left:20px;">
         <li>Original APK file & fast secure download.</li>
         <li>Ek baar install karne ke baad yeh pop-up dubara nahi dikhega.</li>
       </ul>
     </div>
 
     <div class="trusted-footer" style="margin-top:20px; text-align:right; display:flex; justify-content:flex-end; gap:10px;">
-      <button class="trusted-btn" id="pwa-download-action-btn" style="background-color: #0f9d58;">Download Now</button>
-      <button class="trusted-btn" data-close="true" style="background-color: #6b7280;">Cancel</button>
+      <button id="pwa-download-action-btn" class="trusted-btn" style="padding:8px 20px; border:none; border-radius:6px; background-color:#0f9d58; color:#fff; font-weight:600; cursor:pointer;">Download Now</button>
+      <button id="pwa-cancel-btn" class="trusted-btn" style="padding:8px 20px; border:none; border-radius:6px; background-color:#6b7280; color:#fff; font-weight:600; cursor:pointer;">Cancel</button>
     </div>
   </div>
 </div>
@@ -323,36 +320,35 @@ document.addEventListener("DOMContentLoaded", () => {
     let deferredPrompt;
     const modal = document.getElementById('pwa-download-modal');
     const downloadBtn = document.getElementById('pwa-download-action-btn');
+    const cancelBtn = document.getElementById('pwa-cancel-btn');
+    const closeX = document.getElementById('pwa-close-x');
+    const backdrop = document.getElementById('pwa-backdrop');
 
     function openModal() {
         if (modal) {
-            modal.setAttribute('aria-hidden', 'false');
             modal.style.display = 'flex';
         }
     }
 
     function closeModal() {
         if (modal) {
-            modal.setAttribute('aria-hidden', 'true');
             modal.style.display = 'none';
         }
     }
 
-    // 1. Check karein ki kya pehle se installed/closed hai ya nahi
+    // Check localStorage (Agar pehle band kiya ho toh na khule)
     if (!window.matchMedia('(display-mode: standalone)').matches && localStorage.getItem('pwa_downloaded') !== 'true') {
-        // Website khulne ke 10 seconds (10000 ms) baad pop-up dikhayein
+        // 10 Seconds (10000ms) baad pop-up dikhayein
         setTimeout(() => {
             openModal();
         }, 10000);
     }
 
-    // 2. Native install prompt capture karein
     window.addEventListener('beforeinstallprompt', (e) => {
         e.preventDefault();
         deferredPrompt = e;
     });
 
-    // 3. Jab user 'Download Now' button par click kare
     downloadBtn.addEventListener('click', async () => {
         if (deferredPrompt) {
             deferredPrompt.prompt();
@@ -363,30 +359,28 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             deferredPrompt = null;
         } else {
-            // Agar direct prompt support na ho toh download link par bhej dein ya guide karein
             localStorage.setItem('pwa_downloaded', 'true');
             closeModal();
             window.location.href = "/package/com.pixverseai.pixverse/download/";
         }
     });
 
-    // 4. Close ya backdrop click par flag set karein taaki dobara 10 sec baad na aaye
-    document.addEventListener('click', (e) => {
-        if (e.target.closest('[data-close]')) {
-            localStorage.setItem('pwa_downloaded', 'true');
-            closeModal();
+    // Close buttons event handlers
+    [cancelBtn, closeX, backdrop].forEach(el => {
+        if(el) {
+            el.addEventListener('click', () => {
+                localStorage.setItem('pwa_downloaded', 'true');
+                closeModal();
+            });
         }
     });
 
-    // 5. App successfully install hone par
     window.addEventListener('appinstalled', () => {
         localStorage.setItem('pwa_downloaded', 'true');
         closeModal();
     });
 });
 </script>
-
-
 
 <script src="jsai/app-main.js" defer></script>
 </body>
