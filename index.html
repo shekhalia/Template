@@ -253,7 +253,7 @@
     initData();
 })();
 </script>
- 
+
 <footer class="site-footer" role="contentinfo">
   <div class="footer-nav" aria-label="Footer navigation">
 
@@ -290,6 +290,103 @@
     </p>
   </div>
 </footer>
+
+<!-- Custom 10-Second Download Pop-up Modal (Based on Website CSS) -->
+<div class="trusted-modal" id="pwa-download-modal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="trusted-backdrop" data-close="true"></div>
+  <div class="trusted-dialog" role="document">
+    <button class="trusted-close" aria-label="Close (Esc)" data-close="true">&times;</button>
+
+    <div class="trusted-header">
+      <div class="trusted-icon" aria-hidden="true">
+        <img src="https://play-lh.googleusercontent.com/aKY08CU0iQwU8CKTI03Tw7ssbSX_jrHf5GG-3Ky3Y-Yg_5OBszT2RyWI4n237snlGFNQ=w120" alt="App Icon" style="width:40px;height:40px;border-radius:8px;margin-right:12px;">
+      </div>
+      <h2 id="trusted-title" style="font-size:16px; font-weight:700; color:#1f2937; margin:0;">PixVerse: AI Video Generator</h2>
+    </div>
+
+    <div class="trusted-body" style="font-size:14px; color:#555; line-height:1.5;">
+      <p>Fast access aur behtar experience ke liye app ko <strong>Home Screen</strong> par add karein ya direct download karein:</p>
+      <ul class="trusted-list" style="margin:10px 0; padding-left:20px;">
+        <li>Original APK file & fast secure download.</li>
+        <li>Ek baar install karne ke baad yeh pop-up dubara nahi dikhega.</li>
+      </ul>
+    </div>
+
+    <div class="trusted-footer" style="margin-top:20px; text-align:right; display:flex; justify-content:flex-end; gap:10px;">
+      <button class="trusted-btn" id="pwa-download-action-btn" style="background-color: #0f9d58;">Download Now</button>
+      <button class="trusted-btn" data-close="true" style="background-color: #6b7280;">Cancel</button>
+    </div>
+  </div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    let deferredPrompt;
+    const modal = document.getElementById('pwa-download-modal');
+    const downloadBtn = document.getElementById('pwa-download-action-btn');
+
+    function openModal() {
+        if (modal) {
+            modal.setAttribute('aria-hidden', 'false');
+            modal.style.display = 'flex';
+        }
+    }
+
+    function closeModal() {
+        if (modal) {
+            modal.setAttribute('aria-hidden', 'true');
+            modal.style.display = 'none';
+        }
+    }
+
+    // 1. Check karein ki kya pehle se installed/closed hai ya nahi
+    if (!window.matchMedia('(display-mode: standalone)').matches && localStorage.getItem('pwa_downloaded') !== 'true') {
+        // Website khulne ke 10 seconds (10000 ms) baad pop-up dikhayein
+        setTimeout(() => {
+            openModal();
+        }, 10000);
+    }
+
+    // 2. Native install prompt capture karein
+    window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault();
+        deferredPrompt = e;
+    });
+
+    // 3. Jab user 'Download Now' button par click kare
+    downloadBtn.addEventListener('click', async () => {
+        if (deferredPrompt) {
+            deferredPrompt.prompt();
+            const { outcome } = await deferredPrompt.userChoice;
+            if (outcome === 'accepted') {
+                localStorage.setItem('pwa_downloaded', 'true');
+                closeModal();
+            }
+            deferredPrompt = null;
+        } else {
+            // Agar direct prompt support na ho toh download link par bhej dein ya guide karein
+            localStorage.setItem('pwa_downloaded', 'true');
+            closeModal();
+            window.location.href = "/package/com.pixverseai.pixverse/download/";
+        }
+    });
+
+    // 4. Close ya backdrop click par flag set karein taaki dobara 10 sec baad na aaye
+    document.addEventListener('click', (e) => {
+        if (e.target.closest('[data-close]')) {
+            localStorage.setItem('pwa_downloaded', 'true');
+            closeModal();
+        }
+    });
+
+    // 5. App successfully install hone par
+    window.addEventListener('appinstalled', () => {
+        localStorage.setItem('pwa_downloaded', 'true');
+        closeModal();
+    });
+});
+</script>
+
+
 
 <script src="jsai/app-main.js" defer></script>
 </body>
