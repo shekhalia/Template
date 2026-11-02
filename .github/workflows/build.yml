@@ -1,0 +1,34 @@
+name: Build and Push Notifications
+
+on:
+  push:
+    branches: [ main ] # Agar aapki branch 'master' hai toh yahan master likh dein
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Build & Notification Script
+        env:
+          FIREBASE_SERVER_KEY: ${{ secrets.FIREBASE_SERVER_KEY }}
+          SITE_DOMAIN: ${{ secrets.SITE_DOMAIN }}
+        run: node build.js
+
+      - name: Commit and push changes (sent_games.json & updated html)
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "Auto-build: Update games and push notification sent status"
+          branch: main
