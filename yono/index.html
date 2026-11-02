@@ -389,5 +389,16 @@
 </footer>
 
 <script src="../jsai/app-main.js" defer></script>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/firebase-messaging-sw.js')
+      .then((registration) => {
+        console.log('Service Worker registered successfully:', registration.scope);
+      })
+      .catch((err) => {
+        console.log('Service Worker registration failed:', err);
+      });
+  }
+</script>
 </body>
 </html>
