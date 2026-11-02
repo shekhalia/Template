@@ -30,6 +30,12 @@ jobs:
           SITE_DOMAIN: ${{ secrets.SITE_DOMAIN }}
         run: node build.js
 
+      - name: Pull latest changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull origin main --rebase || true
+
       - name: Commit sent_games.json updates
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
