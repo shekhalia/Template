@@ -1,34 +1,32 @@
-name: Build and Push Notifications
+name: Build and Notify
 
 on:
   push:
-    branches: [ main ] # Agar aapki branch 'master' hai toh yahan master likh dein
+    branches: [ main ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18'
 
       - name: Install dependencies
-        run: npm install
+        run: npm install firebase-admin
 
-      - name: Run Build & Notification Script
+      - name: Run Build Script
         env:
-          FIREBASE_SERVER_KEY: ${{ secrets.FIREBASE_SERVER_KEY }}
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
           SITE_DOMAIN: ${{ secrets.SITE_DOMAIN }}
         run: node build.js
 
-      - name: Commit and push changes (sent_games.json & updated html)
+      - name: Commit sent_games.json updates
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "Auto-build: Update games and push notification sent status"
-          branch: main
+          commit_message: "Auto-update sent games tracking"
+          file_pattern: sent_games.json
