@@ -13,8 +13,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-        with:
-          persists-credentials: true
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -30,14 +28,16 @@ jobs:
           SITE_DOMAIN: ${{ secrets.SITE_DOMAIN }}
         run: node build.js
 
-      - name: Pull latest changes
+      - name: Commit and push sent_games.json updates
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git pull origin main --rebase || true
-
-      - name: Commit sent_games.json updates
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: "Auto-update sent games tracking"
-          file_pattern: sent_games.json
+          git add sent_games.json
+          git status
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Auto-update sent_games.json tracking"
+            git push origin main
+          fi
