@@ -1,5 +1,21 @@
 const fs = require('fs');
 const path = require('path');
+const admin = require('firebase-admin');
+
+// 1. Firebase Admin Initialization (V1 API using Service Account)
+if (process.env.FIREBASE_SERVICE_ACCOUNT) {
+    try {
+        const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
+        admin.initializeApp({
+            credential: admin.credential.cert(serviceAccount)
+        });
+        console.log('Firebase Admin successfully initialized.');
+    } catch (e) {
+        console.error('Error parsing FIREBASE_SERVICE_ACCOUNT:', e);
+    }
+} else {
+    console.log('Notice: FIREBASE_SERVICE_ACCOUNT secret set nahi hai.');
+}
 
 const gamesFilePath = path.join(__dirname, 'games.json');
 if (!fs.existsSync(gamesFilePath)) {
@@ -48,49 +64,41 @@ function createRankGameCard(game, index) {
     </a>`;
 }
 
-// Firebase Notification Function
+// Firebase V1 Notification Function using firebase-admin
 async function sendFirebaseNotification(game) {
-    const serverKey = process.env.FIREBASE_SERVER_KEY;
-    if (!serverKey) {
-        console.log('Notice: FIREBASE_SERVER_KEY set nahi hai, notification skip ki ja rahi hai.');
+    if (!admin.apps.length) {
+        console.log('Notice: Firebase app initialized nahi hai, notification skip ki ja rahi hai.');
         return false;
     }
 
-    // Aapki website ka domain yahan set hoga (GitHub Secret ya direct apna URL daal sakte hain)
-    const domain = process.env.SITE_DOMAIN || 'https://apkiwebsite.com'; 
+    const domain = process.env.SITE_DOMAIN || 'https://gamestore-200.pages.dev'; 
     const logoPath = game.logo && (game.logo.startsWith('http://') || game.logo.startsWith('https://'))
         ? game.logo
         : `${domain}/logo/${game.logo || 'default.png'}`;
 
     const pkgUrl = `${domain}/package/${game.pkg_id}/`;
 
-    const payload = {
-        to: "/topics/games_update",
+    const message = {
         notification: {
-            title: "New Game Launched! 🎮",
-            body: `${game.game_name} is now live. Play now!`,
-            icon: logoPath,
-            click_action: pkgUrl
-        }
+            title: "New Game Launched!",
+            body: `${game.game_name} is now live. Play now!`
+        },
+        webpush: {
+            notification: {
+                icon: logoPath,
+                click_action: pkgUrl
+            },
+            fcmOptions: {
+                link: pkgUrl
+            }
+        },
+        topic: "games_update"
     };
 
     try {
-        const response = await fetch('https://fcm.googleapis.com/fcm/send', {
-            method: 'POST',
-            headers: {
-                'Authorization': `key=${serverKey}`,
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(payload)
-        });
-        const result = await response.json();
-        if (result.success === 1 || result.message_id) {
-            console.log(`Notification successfully sent for: ${game.game_name}`);
-            return true;
-        } else {
-            console.error(`Notification failed for ${game.game_name}:`, result);
-            return false;
-        }
+        const response = await admin.messaging().send(message);
+        console.log(`Notification successfully sent for: ${game.game_name}`, response);
+        return true;
     } catch (error) {
         console.error(`Error sending notification request for ${game.game_name}:`, error);
         return false;
