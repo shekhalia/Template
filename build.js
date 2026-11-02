@@ -48,76 +48,160 @@ function createRankGameCard(game, index) {
     </a>`;
 }
 
-const indexPath = path.join(__dirname, 'index.html');
-if (fs.existsSync(indexPath)) {
-    let indexHtml = fs.readFileSync(indexPath, 'utf8');
-    const newReleases = games.filter(g => g.new_release).slice(0, 24);
-    const newReleaseHtml = newReleases.map(createGameCard).join('\n');
+// Firebase Notification Function
+async function sendFirebaseNotification(game) {
+    const serverKey = process.env.FIREBASE_SERVER_KEY;
+    if (!serverKey) {
+        console.log('Notice: FIREBASE_SERVER_KEY set nahi hai, notification skip ki ja rahi hai.');
+        return false;
+    }
 
-    if (indexHtml.includes('<!-- GAMES_START -->') && indexHtml.includes('<!-- GAMES_END -->')) {
-        indexHtml = indexHtml.replace(
-            /<!-- GAMES_START -->[\s\S]*?<!-- GAMES_END -->/,
-            `<!-- GAMES_START -->\n${newReleaseHtml}\n<!-- GAMES_END -->`
-        );
-        fs.writeFileSync(indexPath, indexHtml, 'utf8');
-        console.log('Homepage (index.html) successfully update ho gaya hai!');
+    // Aapki website ka domain yahan set hoga (GitHub Secret ya direct apna URL daal sakte hain)
+    const domain = process.env.SITE_DOMAIN || 'https://apkiwebsite.com'; 
+    const logoPath = game.logo && (game.logo.startsWith('http://') || game.logo.startsWith('https://'))
+        ? game.logo
+        : `${domain}/logo/${game.logo || 'default.png'}`;
+
+    const pkgUrl = `${domain}/package/${game.pkg_id}/`;
+
+    const payload = {
+        to: "/topics/games_update",
+        notification: {
+            title: "New Game Launched! 🎮",
+            body: `${game.game_name} is now live. Play now!`,
+            icon: logoPath,
+            click_action: pkgUrl
+        }
+    };
+
+    try {
+        const response = await fetch('https://fcm.googleapis.com/fcm/send', {
+            method: 'POST',
+            headers: {
+                'Authorization': `key=${serverKey}`,
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(payload)
+        });
+        const result = await response.json();
+        if (result.success === 1 || result.message_id) {
+            console.log(`Notification successfully sent for: ${game.game_name}`);
+            return true;
+        } else {
+            console.error(`Notification failed for ${game.game_name}:`, result);
+            return false;
+        }
+    } catch (error) {
+        console.error(`Error sending notification request for ${game.game_name}:`, error);
+        return false;
     }
 }
 
-const uniqueCategories = [...new Set(games.map(g => String(g.category || '').trim()))].filter(Boolean);
-uniqueCategories.forEach(cat => {
-    const catPath = path.join(__dirname, cat, 'index.html');
-    if (fs.existsSync(catPath)) {
-        let catHtml = fs.readFileSync(catPath, 'utf8');
-        const catGames = games.filter(g => String(g.category || '').trim() === cat && g.new_release).slice(0, 24);
-        const catGamesHtml = catGames.map(createGameCard).join('\n');
+async function main() {
+    // 1. Update Homepage (index.html)
+    const indexPath = path.join(__dirname, 'index.html');
+    if (fs.existsSync(indexPath)) {
+        let indexHtml = fs.readFileSync(indexPath, 'utf8');
+        const newReleases = games.filter(g => g.new_release).slice(0, 24);
+        const newReleaseHtml = newReleases.map(createGameCard).join('\n');
 
-        if (catHtml.includes('<!-- GAMES_START -->') && catHtml.includes('<!-- GAMES_END -->')) {
-            catHtml = catHtml.replace(
+        if (indexHtml.includes('<!-- GAMES_START -->') && indexHtml.includes('<!-- GAMES_END -->')) {
+            indexHtml = indexHtml.replace(
                 /<!-- GAMES_START -->[\s\S]*?<!-- GAMES_END -->/,
-                `<!-- GAMES_START -->\n${catGamesHtml}\n<!-- GAMES_END -->`
+                `<!-- GAMES_START -->\n${newReleaseHtml}\n<!-- GAMES_END -->`
             );
-            fs.writeFileSync(catPath, catHtml, 'utf8');
-            console.log(`Category page (${cat}/index.html) successfully update ho gaya hai!`);
+            fs.writeFileSync(indexPath, indexHtml, 'utf8');
+            console.log('Homepage (index.html) successfully update ho gaya hai!');
         }
     }
-});
 
-games.forEach(game => {
-    const pkgDir = path.join(__dirname, 'package', game.pkg_id);
-    const pkgHtmlPath = path.join(pkgDir, 'index.html');
-    
-    if (fs.existsSync(pkgHtmlPath)) {
-        let pkgContent = fs.readFileSync(pkgHtmlPath, 'utf8');
+    // 2. Update Category Pages
+    const uniqueCategories = [...new Set(games.map(g => String(g.category || '').trim()))].filter(Boolean);
+    uniqueCategories.forEach(cat => {
+        const catPath = path.join(__dirname, cat, 'index.html');
+        if (fs.existsSync(catPath)) {
+            let catHtml = fs.readFileSync(catPath, 'utf8');
+            const catGames = games.filter(g => String(g.category || '').trim() === cat && g.new_release).slice(0, 24);
+            const catGamesHtml = catGames.map(createGameCard).join('\n');
 
-        const top12New = games.filter(g => g.new_release).slice(0, 12);
-        const newHtml = top12New.map(createGameCard).join('\n');
-
-        const category4 = games.filter(g => String(g.category || '').trim() === String(game.category || '').trim() && g.pkg_id !== game.pkg_id).slice(0, 4);
-        const cat4Html = category4.map(createGameCard).join('\n');
-
-        const top12Popular = games.filter(g => g.popular).slice(0, 12);
-        const popHtml = top12Popular.map((g, idx) => createRankGameCard(g, idx)).join('\n');
-
-        let updated = false;
-
-        if (pkgContent.includes('<!-- NEW_12_START -->') && pkgContent.includes('<!-- NEW_12_END -->')) {
-            pkgContent = pkgContent.replace(/<!-- NEW_12_START -->[\s\S]*?<!-- NEW_12_END -->/, `<!-- NEW_12_START -->\n${newHtml}\n<!-- NEW_12_END -->`);
-            updated = true;
+            if (catHtml.includes('<!-- GAMES_START -->') && catHtml.includes('<!-- GAMES_END -->')) {
+                catHtml = catHtml.replace(
+                    /<!-- GAMES_START -->[\s\S]*?<!-- GAMES_END -->/,
+                    `<!-- GAMES_START -->\n${catGamesHtml}\n<!-- GAMES_END -->`
+                );
+                fs.writeFileSync(catPath, catHtml, 'utf8');
+                console.log(`Category page (${cat}/index.html) successfully update ho gaya hai!`);
+            }
         }
-        if (pkgContent.includes('<!-- CAT_4_START -->') && pkgContent.includes('<!-- CAT_4_END -->')) {
-            pkgContent = pkgContent.replace(/<!-- CAT_4_START -->[\s\S]*?<!-- CAT_4_END -->/, `<!-- CAT_4_START -->\n${cat4Html}\n<!-- CAT_4_END -->`);
-            updated = true;
-        }
-        if (pkgContent.includes('<!-- POP_12_START -->') && pkgContent.includes('<!-- POP_12_END -->')) {
-            pkgContent = pkgContent.replace(/<!-- POP_12_START -->[\s\S]*?<!-- POP_12_END -->/, `<!-- POP_12_START -->\n${popHtml}\n<!-- POP_12_END -->`);
-            updated = true;
-        }
+    });
 
-        if (updated) {
-            fs.writeFileSync(pkgHtmlPath, pkgContent, 'utf8');
+    // 3. Update Package Pages
+    games.forEach(game => {
+        const pkgDir = path.join(__dirname, 'package', game.pkg_id);
+        const pkgHtmlPath = path.join(pkgDir, 'index.html');
+        
+        if (fs.existsSync(pkgHtmlPath)) {
+            let pkgContent = fs.readFileSync(pkgHtmlPath, 'utf8');
+
+            const top12New = games.filter(g => g.new_release).slice(0, 12);
+            const newHtml = top12New.map(createGameCard).join('\n');
+
+            const category4 = games.filter(g => String(g.category || '').trim() === String(game.category || '').trim() && g.pkg_id !== game.pkg_id).slice(0, 4);
+            const cat4Html = category4.map(createGameCard).join('\n');
+
+            const top12Popular = games.filter(g => g.popular).slice(0, 12);
+            const popHtml = top12Popular.map((g, idx) => createRankGameCard(g, idx)).join('\n');
+
+            let updated = false;
+
+            if (pkgContent.includes('<!-- NEW_12_START -->') && pkgContent.includes('<!-- NEW_12_END -->')) {
+                pkgContent = pkgContent.replace(/<!-- NEW_12_START -->[\s\S]*?<!-- NEW_12_END -->/, `<!-- NEW_12_START -->\n${newHtml}\n<!-- NEW_12_END -->`);
+                updated = true;
+            }
+            if (pkgContent.includes('<!-- CAT_4_START -->') && pkgContent.includes('<!-- CAT_4_END -->')) {
+                pkgContent = pkgContent.replace(/<!-- CAT_4_START -->[\s\S]*?<!-- CAT_4_END -->/, `<!-- CAT_4_START -->\n${cat4Html}\n<!-- CAT_4_END -->`);
+                updated = true;
+            }
+            if (pkgContent.includes('<!-- POP_12_START -->') && pkgContent.includes('<!-- POP_12_END -->')) {
+                pkgContent = pkgContent.replace(/<!-- POP_12_START -->[\s\S]*?<!-- POP_12_END -->/, `<!-- POP_12_START -->\n${popHtml}\n<!-- POP_12_END -->`);
+                updated = true;
+            }
+
+            if (updated) {
+                fs.writeFileSync(pkgHtmlPath, pkgContent, 'utf8');
+            }
+        }
+    });
+
+    // 4. Handle Firebase Notifications & sent_games.json Tracking
+    const sentGamesFilePath = path.join(__dirname, 'sent_games.json');
+    let sentGames = [];
+    if (fs.existsSync(sentGamesFilePath)) {
+        try {
+            sentGames = JSON.parse(fs.readFileSync(sentGamesFilePath, 'utf8'));
+        } catch (e) {
+            sentGames = [];
         }
     }
-});
 
-console.log('Build process 100% successfully complete ho gaya hai!');
+    let sentUpdated = false;
+    for (const game of games) {
+        if (game.new_release && !sentGames.includes(game.pkg_id)) {
+            console.log(`Naya game mila notification ke liye: ${game.game_name} (${game.pkg_id})`);
+            const success = await sendFirebaseNotification(game);
+            if (success) {
+                sentGames.push(game.pkg_id);
+                sentUpdated = true;
+            }
+        }
+    }
+
+    if (sentUpdated) {
+        fs.writeFileSync(sentGamesFilePath, JSON.stringify(sentGames, null, 2), 'utf8');
+        console.log('sent_games.json successfully update ho gaya hai!');
+    }
+
+    console.log('Build process 100% successfully complete ho gaya hai!');
+}
+
+main();
