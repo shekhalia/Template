@@ -4,6 +4,9 @@ on:
   push:
     branches: [ main ]
 
+permissions:
+  contents: write   # GitHub repository mein changes commit karne ki permission deta hai
+
 jobs:
   build:
     runs-on: ubuntu-latest
