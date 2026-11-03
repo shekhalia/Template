@@ -65,7 +65,7 @@ function createRankGameCard(game, index) {
     </a>`;
 }
 
-// Firebase V1 Notification Function using Realtime Database Tokens
+// Firebase Notification Function using Realtime Database Tokens
 async function sendFirebaseNotification(game) {
     if (!admin.apps.length) {
         console.log('Notice: Firebase app initialized nahi hai, notification skip ki ja rahi hai.');
@@ -114,7 +114,7 @@ async function sendFirebaseNotification(game) {
                     link: pkgUrl
                 }
             },
-            tokens: tokens // Database se nikal_kar saare tokens ko ek sath bhejenge
+            tokens: tokens
         };
 
         const response = await admin.messaging().sendEachForMulticast(message);
@@ -202,32 +202,25 @@ async function main() {
         }
     });
 
-    // 4. Handle Firebase Notifications & sent_games.json Tracking
-    const sentGamesFilePath = path.join(__dirname, 'sent_games.json');
-    let sentGames = [];
-    if (fs.existsSync(sentGamesFilePath)) {
-        try {
-            sentGames = JSON.parse(fs.readFileSync(sentGamesFilePath, 'utf8'));
-        } catch (e) {
-            sentGames = [];
-        }
-    }
+    // 4. Handle Firebase Notifications & Database Tracking (sent_games in Firebase)
+    if (admin.apps.length) {
+        const db = admin.database();
+        const sentSnapshot = await db.ref('sent_games').once('value');
+        const sentGamesData = sentSnapshot.exists() ? sentSnapshot.val() : {};
 
-    let sentUpdated = false;
-    for (const game of games) {
-        if (game.new_release && !sentGames.includes(game.pkg_id)) {
-            console.log(`Naya game mila notification ke liye: ${game.game_name} (${game.pkg_id})`);
-            const success = await sendFirebaseNotification(game);
-            if (success) {
-                sentGames.push(game.pkg_id);
-                sentUpdated = true;
+        for (const game of games) {
+            // Agar game new_release: true hai AUR Firebase database me pehle se sent nahi hai
+            if (game.new_release && !sentGamesData[game.pkg_id]) {
+                console.log(`Naya game mila notification ke liye: ${game.game_name} (${game.pkg_id})`);
+                
+                const success = await sendFirebaseNotification(game);
+                if (success) {
+                    // Turant Firebase Database me save kar do taaki dobara notification na jaye
+                    await db.ref(`sent_games/${game.pkg_id}`).set(true);
+                    console.log(`Firebase Realtime Database me save ho gaya: ${game.pkg_id}`);
+                }
             }
         }
-    }
-
-    if (sentUpdated) {
-        fs.writeFileSync(sentGamesFilePath, JSON.stringify(sentGames, null, 2), 'utf8');
-        console.log('sent_games.json successfully update ho gaya hai!');
     }
 
     console.log('Build process 100% successfully complete ho gaya hai!');
