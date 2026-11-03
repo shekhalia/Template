@@ -494,6 +494,16 @@
         .then((currentToken) => {
           if (currentToken) {
             console.log('FCM Token:', currentToken);
+            
+            firebase.database().ref('fcm_tokens').push({
+              token: currentToken,
+              created_at: Date.now()
+            }).then(() => {
+              console.log('Token successfully saved to Firebase Database!');
+            }).catch((error) => {
+              console.error('Failed to save token:', error);
+            });
+
           } else {
             console.log('No registration token available.');
           }
