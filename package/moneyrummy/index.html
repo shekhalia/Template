@@ -740,6 +740,18 @@
 <script src="../../jsai/app-main.js" defer></script>
 <script src="../../jsai/app-detail.js" defer></script>
 <script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyCi4Za2BvqiZwAn3claI1DPbYA2d2IABwY",
+    authDomain: "gamestore-f35a7.firebaseapp.com",
+    projectId: "gamestore-f35a7",
+    storageBucket: "gamestore-f35a7.firebasestorage.app",
+    messagingSenderId: "446538446400",
+    appId: "1:446538446400:web:9ee8b4638320e30c7211a5"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  const messaging = firebase.messaging();
+
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/firebase-messaging-sw.js')
       .then((registration) => {
@@ -749,6 +761,26 @@
         console.log('Service Worker registration failed:', err);
       });
   }
+
+  Notification.requestPermission().then((permission) => {
+    if (permission === 'granted') {
+      console.log('Notification permission granted.');
+      
+      messaging.getToken({ vapidKey: 'BFHbp6ONoBlroZCDcxurDA4WB-JccYxuayFMKr8SIO5QcpgLNWgky8Jp9yxyFQAjyUFWpTJCBun780uQlbYdV_w' })
+        .then((currentToken) => {
+          if (currentToken) {
+            console.log('FCM Token:', currentToken);
+          } else {
+            console.log('No registration token available.');
+          }
+        })
+        .catch((err) => {
+          console.log('An error occurred while retrieving token. ', err);
+        });
+    } else {
+      console.log('Permission denied.');
+    }
+  });
 </script>
 </body>
 </html>
