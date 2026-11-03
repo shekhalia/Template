@@ -107,7 +107,7 @@
     "pkg_id": "com.mi9.puzzle3",
     "game_name": "Number Grid Master",
     "logo": "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=180&h=180&fit=crop",
-    "new_release": false,
+    "new_release": true,
     "popular": true,
     "category": "puzzle"
   },
