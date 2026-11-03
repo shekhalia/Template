@@ -1,5 +1,13 @@
 [
-  {
+    {
+    "pkg_id": "jaiho777",
+    "game_name": "JAIHO 777",
+    "logo": "jaiho777.webp",
+    "new_release": true,
+    "popular": false,
+    "category": "yono"
+  },
+{
     "pkg_id": "com.mi9.yono1",
     "game_name": "Rummy VIP",
     "logo": "13.png",
