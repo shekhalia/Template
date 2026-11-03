@@ -179,7 +179,7 @@
     "pkg_id": "strategy2",
     "game_name": "Kingdom Tactics 3D",
     "logo": "https://images.unsplash.com/photo-1614850523296-d8c1af93d400?w=180&h=180&fit=crop",
-    "new_release": false,
+    "new_release": true,
     "popular": true,
     "category": "strategy"
   },
