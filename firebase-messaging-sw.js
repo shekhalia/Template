@@ -17,7 +17,11 @@ messaging.onBackgroundMessage((payload) => {
   const notificationTitle = payload.notification.title;
   const notificationOptions = {
     body: payload.notification.body,
-    icon: '/favicon.ico'
+    icon: '/favicon-32x32.png', // Side ka chota icon fix rahega
+    image: payload.notification.image, // Yeh notification ke andar bada banner image dikhayega
+    data: {
+      link: payload.fcmOptions?.link || '/'
+    }
   };
 
   self.registration.showNotification(notificationTitle, notificationOptions);
