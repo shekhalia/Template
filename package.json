@@ -1,5 +1,10 @@
 {
+  "name": "Template",
+  "version": "1.0.0",
   "scripts": {
     "build": "node build.js"
+  },
+  "dependencies": {
+    "firebase-admin": "^11.8.0"
   }
 }
