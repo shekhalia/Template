@@ -102,7 +102,7 @@ async function sendFirebaseNotification(game) {
 
         const message = {
             notification: {
-                title: "New Game Launched! 🎮",
+                title: "New Game Launched!",
                 body: `${game.game_name} is now live. Play now!`
             },
             webpush: {
