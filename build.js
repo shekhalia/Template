@@ -103,11 +103,12 @@ async function sendFirebaseNotification(game) {
         const message = {
             notification: {
                 title: "New Game Launched!",
-                body: `${game.game_name} is now live. Play now!`
+                body: `${game.game_name} is now live. Play now!`,
+                image: logoPath // <-- Yahan game ka logo ab bade banner image ke roop mein jayega
             },
             webpush: {
                 notification: {
-                    icon: logoPath,
+                    icon: `${domain}/favicon-32x32.png`, // <-- Side ka chota icon ab hamesha default fix rahega
                     click_action: pkgUrl
                 },
                 fcmOptions: {
