@@ -25,7 +25,7 @@ messaging.onBackgroundMessage((payload) => {
   const notificationTitle = payload.data?.title || "New Notification";
   const notificationOptions = {
     body: payload.data?.body || "Aapke liye ek naya update hai.",
-    icon: payload.data?.icon || '/favicon.ico',
+    icon: payload.data?.icon || '/android-chrome-192x192.png',
     data: { 
       url: payload.data?.url || 'https://gamestore-f35a7.firebaseapp.com/' 
     }
