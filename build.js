@@ -1,22 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-const admin = require('firebase-admin');
-
-// 1. Firebase Admin Initialization (V1 API using Service Account)
-if (process.env.FIREBASE_SERVICE_ACCOUNT) {
-    try {
-        const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
-        admin.initializeApp({
-            credential: admin.credential.cert(serviceAccount),
-            databaseURL: "https://gamestore-f35a7-default-rtdb.firebaseio.com" // Aapka Realtime Database URL
-        });
-        console.log('Firebase Admin successfully initialized.');
-    } catch (e) {
-        console.error('Error parsing FIREBASE_SERVICE_ACCOUNT:', e);
-    }
-} else {
-    console.log('Notice: FIREBASE_SERVICE_ACCOUNT secret set nahi hai.');
-}
 
 const gamesFilePath = path.join(__dirname, 'games.json');
 if (!fs.existsSync(gamesFilePath)) {
@@ -63,68 +46,6 @@ function createRankGameCard(game, index) {
             <div class="rank-title">${game.game_name}</div>
         </div>
     </a>`;
-}
-
-// Firebase Notification Function using Realtime Database Tokens
-async function sendFirebaseNotification(game) {
-    if (!admin.apps.length) {
-        console.log('Notice: Firebase app initialized nahi hai, notification skip ki ja rahi hai.');
-        return false;
-    }
-
-    try {
-        const db = admin.database();
-        const snapshot = await db.ref('fcm_tokens').once('value');
-        if (!snapshot.exists()) {
-            console.log('Database mein koi FCM token nahi mila.');
-            return false;
-        }
-
-        const tokens = [];
-        snapshot.forEach((childSnapshot) => {
-            const data = childSnapshot.val();
-            if (data && data.token) {
-                tokens.push(data.token);
-            }
-        });
-
-        if (tokens.length === 0) {
-            console.log('Token list empty hai.');
-            return false;
-        }
-
-        const domain = process.env.SITE_DOMAIN || 'https://gamestore-200.pages.dev'; 
-        const logoPath = game.logo && (game.logo.startsWith('http://') || game.logo.startsWith('https://'))
-            ? game.logo
-            : `${domain}/logo/${game.logo || 'default.png'}`;
-
-        const pkgUrl = `${domain}/package/${game.pkg_id}/`;
-
-        const message = {
-            notification: {
-                title: "New Game Launched!",
-                body: `${game.game_name} is now live. Play now!`,
-                image: logoPath // <-- Yahan game ka logo ab bade banner image ke roop mein jayega
-            },
-            webpush: {
-                notification: {
-                    icon: `${domain}/favicon-32x32.png`, // <-- Side ka chota icon ab hamesha default fix rahega
-                    click_action: pkgUrl
-                },
-                fcmOptions: {
-                    link: pkgUrl
-                }
-            },
-            tokens: tokens
-        };
-
-        const response = await admin.messaging().sendEachForMulticast(message);
-        console.log(`Notifications successfully sent for: ${game.game_name}. Success count: ${response.successCount}`);
-        return true;
-    } catch (error) {
-        console.error(`Error sending notification request for ${game.game_name}:`, error);
-        return false;
-    }
 }
 
 async function main() {
@@ -202,27 +123,6 @@ async function main() {
             }
         }
     });
-
-    // 4. Handle Firebase Notifications & Database Tracking (sent_games in Firebase)
-    if (admin.apps.length) {
-        const db = admin.database();
-        const sentSnapshot = await db.ref('sent_games').once('value');
-        const sentGamesData = sentSnapshot.exists() ? sentSnapshot.val() : {};
-
-        for (const game of games) {
-            // Agar game new_release: true hai AUR Firebase database me pehle se sent nahi hai
-            if (game.new_release && !sentGamesData[game.pkg_id]) {
-                console.log(`Naya game mila notification ke liye: ${game.game_name} (${game.pkg_id})`);
-                
-                const success = await sendFirebaseNotification(game);
-                if (success) {
-                    // Turant Firebase Database me save kar do taaki dobara notification na jaye
-                    await db.ref(`sent_games/${game.pkg_id}`).set(true);
-                    console.log(`Firebase Realtime Database me save ho gaya: ${game.pkg_id}`);
-                }
-            }
-        }
-    }
 
     console.log('Build process 100% successfully complete ho gaya hai!');
 }
