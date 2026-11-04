@@ -14,23 +14,6 @@ firebase.initializeApp({
 
 const messaging = firebase.messaging();
 
-// Background mein notification receive hone par
-messaging.onBackgroundMessage((payload) => {
-  console.log('[firebase-messaging-sw.js] Received background message ', payload);
-  
-  const notificationTitle = payload.notification.title || "GameStore";
-  const notificationOptions = {
-    body: payload.notification.body || "Naya update aaya hai!",
-    icon: '/favicon-32x32.png',
-    image: payload.notification.image, // Game ki image ke liye
-    data: {
-      link: payload.fcmOptions?.link || payload.data?.link || '/' // Game ka URL
-    }
-  };
-
-  self.registration.showNotification(notificationTitle, notificationOptions);
-});
-
 // Jab user notification par click karega toh game open ho jayega
 self.addEventListener('notificationclick', (event) => {
   event.notification.close();
