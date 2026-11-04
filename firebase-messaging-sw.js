@@ -14,6 +14,35 @@ firebase.initializeApp({
 
 const messaging = firebase.messaging();
 
+// Push event se background notification ko khud handle karenge (Double notification nahi aayegi)
+self.addEventListener('push', function(event) {
+  if (event.data) {
+    const payload = event.data.json();
+    
+    // Firebase Console ya Custom Data se title, body, image, link uthayega
+    const notificationTitle = payload.notification?.title || payload.data?.title || "New Game!";
+    
+    const notificationOptions = {
+      body: payload.notification?.body || payload.data?.body || "",
+      
+      // Favicon hamesha aapke app ka hi dikhega (Hardcoded for branding)
+      icon: 'https://gamestore-200.pages.dev/android-chrome-192x192.png', 
+      
+      // Game ki image Firebase se dynamically aayegi (Jo aap form mein bhejoge)
+      image: payload.notification?.image || payload.data?.image, 
+      
+      data: { 
+        link: payload.data?.link || '/' 
+      }
+    };
+
+    event.waitUntil(
+      self.registration.showNotification(notificationTitle, notificationOptions)
+    );
+  }
+});
+
+// Jab user notification par click karega toh uss game ke page par jayega
 self.addEventListener('notificationclick', (event) => {
   event.notification.close();
   const targetUrl = event.notification.data?.link || '/';
