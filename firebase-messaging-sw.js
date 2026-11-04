@@ -14,6 +14,24 @@ firebase.initializeApp({
 
 const messaging = firebase.messaging();
 
+// Background message handle karne ke liye (Favicon aur Bada Banner set karne ke liye)
+messaging.onBackgroundMessage((payload) => {
+  const notificationTitle = payload.data?.title || "New Notification";
+  
+  const notificationOptions = {
+    body: payload.data?.body || "",
+    
+    icon: 'https://gamestore-200.pages.dev/android-chrome-192x192.png', 
+    
+    // 2. Yeh Firebase form se jo image doge usko niche bada dikhayega
+    image: payload.data?.image, 
+    
+    data: { link: payload.data?.link || '/' }
+  };
+
+  self.registration.showNotification(notificationTitle, notificationOptions);
+});
+
 self.addEventListener('notificationclick', (event) => {
   event.notification.close();
   const targetUrl = event.notification.data?.link || '/';
