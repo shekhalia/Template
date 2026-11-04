@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-messaging-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
 <link rel="preconnect" href="https://www.googletagmanager.com">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -463,6 +460,64 @@
 </footer>
 
 <script src="/jsai/app-main.js" defer></script>
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+  import { getMessaging, getToken } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-messaging.js";
+  import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
 
+  const firebaseConfig = {
+    apiKey: "AIzaSyCi4Za2BvqiZwAn3claI1DPbYA2d2IABwY",
+    authDomain: "gamestore-f35a7.firebaseapp.com",
+    databaseURL: "https://gamestore-f35a7-default-rtdb.firebaseio.com",
+    projectId: "gamestore-f35a7",
+    storageBucket: "gamestore-f35a7.firebasestorage.app",
+    messagingSenderId: "446538446400",
+    appId: "1:446538446400:web:9ee8b4638320e30c7211a5",
+    measurementId: "G-4Y6R9XFF9E"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const messaging = getMessaging(app);
+  const db = getDatabase(app);
+
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/firebase-messaging-sw.js')
+      .then((registration) => {
+        console.log('Service Worker registered successfully with scope:', registration.scope);
+
+        Notification.requestPermission().then(async (permission) => {
+          if (permission === 'granted') {
+            console.log('Notification permission granted.');
+
+            try {
+              const currentToken = await getToken(messaging, { 
+                vapidKey: 'BFHbp6ONoBlroZCDcxurDA4WB-JccYxuayFMKr8SIO5QcpgLNWgky8Jp9yxyFQAjyUFWpTJCBun780uQlbYdV_w',
+                serviceWorkerRegistration: registration 
+              });
+
+              if (currentToken) {
+                const userId = 'user_' + Math.random().toString(36).substring(2, 9);
+                await set(ref(db, 'tokens/' + userId), {
+                  token: currentToken
+                });
+                console.log('FCM Token successfully saved in database:', currentToken);
+              } else {
+                console.log('No registration token available.');
+              }
+            } catch (err) {
+              console.error('An error occurred while retrieving token:', err);
+            }
+
+          } else {
+            console.log('Notification permission denied by user.');
+          }
+        });
+
+      })
+      .catch((err) => {
+        console.log('Service Worker registration failed:', err);
+      });
+  }
+</script>
 </body>
 </html>
