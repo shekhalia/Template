@@ -14,28 +14,6 @@ firebase.initializeApp({
 
 const messaging = firebase.messaging();
 
-// Background notification ko handle karne ke liye (Sirf 1 notification aayegi)
-self.addEventListener('push', function(event) {
-  if (event.data) {
-    const data = event.data.json();
-    
-    const title = data.data?.title || "GameStore";
-    const options = {
-      body: data.data?.body || "",
-      icon: 'https://gamestore-200.pages.dev/android-chrome-192x192.png', // Favicon yahan set rahega
-      image: data.data?.image || "", // Game ka bada banner yahan aayega
-      data: {
-        link: data.data?.link || '/'
-      }
-    };
-
-    event.waitUntil(
-      self.registration.showNotification(title, options)
-    );
-  }
-});
-
-// Click karne par seedha game wale page par le jayega
 self.addEventListener('notificationclick', (event) => {
   event.notification.close();
   const targetUrl = event.notification.data?.link || '/';
