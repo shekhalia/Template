@@ -23,7 +23,6 @@ messaging.onBackgroundMessage((payload) => {
     
     icon: 'https://gamestore-200.pages.dev/android-chrome-192x192.png', 
     
-    // 2. Yeh Firebase form se jo image doge usko niche bada dikhayega
     image: payload.data?.image, 
     
     data: { link: payload.data?.link || '/' }
