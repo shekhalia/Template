@@ -1,6 +1,8 @@
-importScripts('https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js');
-importScripts('https://www.gstatic.com/firebasejs/10.8.0/firebase-messaging-compat.js');
+// Firebase SDKs ko import karein (CDN Scripts use honge)
+importScripts('https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js');
+importScripts('https://www.gstatic.com/firebasejs/10.12.0/firebase-messaging-compat.js');
 
+// Apni Firebase configuration yahan dalein
 firebase.initializeApp({
   apiKey: "AIzaSyCi4Za2BvqiZwAn3claI1DPbYA2d2IABwY",
   authDomain: "gamestore-f35a7.firebaseapp.com",
@@ -12,23 +14,18 @@ firebase.initializeApp({
   measurementId: "G-4Y6R9XFF9E"
 });
 
+// Messaging instance initialize karein
 const messaging = firebase.messaging();
 
-self.addEventListener('notificationclick', (event) => {
-  event.notification.close();
-  const targetUrl = event.notification.data?.link || '/';
+// Optional: Agar aap background notifications ko apne hisaab se customize karna chahte hain
+messaging.onBackgroundMessage((payload) => {
+  console.log('[firebase-messaging-sw.js] Received background message ', payload);
 
-  event.waitUntil(
-    clients.matchAll({ type: 'window', includeUncontrolled: true }).then((windowClients) => {
-      for (let i = 0; i < windowClients.length; i++) {
-        const client = windowClients[i];
-        if (client.url === targetUrl && 'focus' in client) {
-          return client.focus();
-        }
-      }
-      if (clients.openWindow) {
-        return clients.openWindow(targetUrl);
-      }
-    })
-  );
+  const notificationTitle = payload.notification.title;
+  const notificationOptions = {
+    body: payload.notification.body,
+    icon: payload.notification.icon || '/favicon.ico' // Aap apna icon path de sakte hain
+  };
+
+  self.registration.showNotification(notificationTitle, notificationOptions);
 });
