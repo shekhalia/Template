@@ -14,7 +14,6 @@ firebase.initializeApp({
 
 const messaging = firebase.messaging();
 
-// Notification par click karne par target URL par redirect karne ke liye
 self.addEventListener('notificationclick', (event) => {
   event.notification.close();
   const targetUrl = event.notification.data?.link || '/';
