@@ -17,17 +17,22 @@ const messaging = firebase.messaging();
 messaging.onBackgroundMessage((payload) => {
   console.log('[firebase-messaging-sw.js] Received background message ', payload);
   
-  const notificationTitle = payload.notification.title;
+  const notificationTitle = payload.notification?.title;
+  const notificationBody = payload.notification?.body;
+  
+  // Firebase Console ke additional link ya fcmOptions se URL uthane ke liye
+  const targetUrl = payload.fcmOptions?.link || payload.data?.link || '/';
+
   const notificationOptions = {
-    body: payload.notification.body,
-    // Yahan apna poora domain ke sath exact URL daal dein
-    icon: 'https://gamestore-200.pages.dev/android-chrome-192x192.png'
+    body: notificationBody,
+    icon: 'https://gamestore-200.pages.dev/android-chrome-192x192.png',
+    data: { link: targetUrl } // Yeh URL ko notificationclick event tak pahunchata hai
   };
 
   self.registration.showNotification(notificationTitle, notificationOptions);
 });
 
-// Notification click par redirect hone ke liye
+// Notification par click karne par us specific URL par redirect karne ke liye
 self.addEventListener('notificationclick', (event) => {
   event.notification.close();
   const targetUrl = event.notification.data?.link || '/';
