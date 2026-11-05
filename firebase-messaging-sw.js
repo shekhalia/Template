@@ -13,3 +13,16 @@ firebase.initializeApp({
 });
 
 const messaging = firebase.messaging();
+
+messaging.onBackgroundMessage((payload) => {
+  console.log('[firebase-messaging-sw.js] Received background message ', payload);
+
+  const title = payload.data?.title || "New Game";
+  const options = {
+    body: payload.data?.body || "",
+    icon: '/favicon.ico',
+    image: payload.data?.image || ''
+  };
+
+  self.registration.showNotification(title, options);
+});
