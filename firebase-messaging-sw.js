@@ -13,20 +13,3 @@ firebase.initializeApp({
 });
 
 const messaging = firebase.messaging();
-
-// Background message handler
-messaging.onBackgroundMessage((payload) => {
-  console.log('[firebase-messaging-sw.js] Received background message ', payload);
-
-  // Agar notification payload maujud hai, toh hum khud notification show karenge 
-  // aur browser ke default automatic display ko rokne ki koshish karenge.
-  const notificationTitle = payload.notification?.title || payload.data?.title || "New Game";
-  const notificationOptions = {
-    body: payload.notification?.body || payload.data?.body || "",
-    icon: '/favicon.ico',
-    image: payload.notification?.image || payload.data?.image || ''
-  };
-
-  // Agar payload mein 'notification' object hai, toh kuch browser khud notification dikhate hain.
-  // Lekin agar hum fcm_options ya data-only payload use karein toh ye ekdam fix ho jata hai.
-});
