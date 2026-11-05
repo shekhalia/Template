@@ -1,8 +1,6 @@
-// Firebase SDKs ko import karein (CDN Scripts use honge)
 importScripts('https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js');
 importScripts('https://www.gstatic.com/firebasejs/10.12.0/firebase-messaging-compat.js');
 
-// Apni Firebase configuration yahan dalein
 firebase.initializeApp({
   apiKey: "AIzaSyCi4Za2BvqiZwAn3claI1DPbYA2d2IABwY",
   authDomain: "gamestore-f35a7.firebaseapp.com",
@@ -14,17 +12,20 @@ firebase.initializeApp({
   measurementId: "G-4Y6R9XFF9E"
 });
 
-// Messaging instance initialize karein
 const messaging = firebase.messaging();
 
-// Optional: Agar aap background notifications ko apne hisaab se customize karna chahte hain
+// Yeh function check karega ki notification data kahan se aa raha hai
 messaging.onBackgroundMessage((payload) => {
   console.log('[firebase-messaging-sw.js] Received background message ', payload);
 
-  const notificationTitle = payload.notification.title;
+  // Agar notification object ya data object dono mein se kuch bhi ho, 
+  // yeh code sirf EK hi notification banayega.
+  const notificationTitle = payload.notification?.title || payload.data?.title || "New Alert";
+  
   const notificationOptions = {
-    body: payload.notification.body,
-    icon: payload.notification.icon || '/favicon.ico' // Aap apna icon path de sakte hain
+    body: payload.notification?.body || payload.data?.body || "",
+    icon: '/favicon.ico',
+    image: payload.notification?.image || payload.notification?.icon || payload.data?.image || ''
   };
 
   self.registration.showNotification(notificationTitle, notificationOptions);
