@@ -14,12 +14,9 @@ firebase.initializeApp({
 
 const messaging = firebase.messaging();
 
-// Yeh function check karega ki notification data kahan se aa raha hai
 messaging.onBackgroundMessage((payload) => {
   console.log('[firebase-messaging-sw.js] Received background message ', payload);
 
-  // Agar notification object ya data object dono mein se kuch bhi ho, 
-  // yeh code sirf EK hi notification banayega.
   const notificationTitle = payload.notification?.title || payload.data?.title || "New Alert";
   
   const notificationOptions = {
