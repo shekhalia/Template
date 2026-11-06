@@ -12,6 +12,63 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://vulugames.com/#website",
+      "url": "https://vulugames.com/",
+      "name": "VULU",
+      "publisher": {
+        "@id": "https://vulugames.com/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://vulugames.com/#organization",
+      "name": "VULU",
+      "url": "https://vulugames.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://vulugames.com/assets/vulu.png"
+      }
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://vulugames.com/yono/#webpage",
+      "url": "https://vulugames.com/yono/",
+      "name": "Popular Android Games | VULU Games",
+      "description": "Discover the most popular Android games ranked by downloads and ratings. Explore action, puzzle, racing, strategy, and more.",
+      "isPartOf": {
+        "@id": "https://vulugames.com/#website"
+      },
+      "breadcrumb": {
+        "@id": "https://vulugames.com/yono/#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://vulugames.com/yono/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://vulugames.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Yono",
+          "item": "https://vulugames.com/game/"
+        }
+      ]
+    }
+  ]
+}
+</script>
 <script type="speculationrules">
 {
   "prefetch": [
@@ -23,20 +80,6 @@
           {"href_matches": "/*", "relative_to": "document"}
         ]
       }
-    }
-  ]
-}
-</script>
-<script type='application/ld+json'>
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebSite",
-      "@id": "https://vulugames.com/#website",
-      "url": "https://vulugames.com/",
-      "name": "VULU",
-      "description": "Browse and download Yono games."
     }
   ]
 }
