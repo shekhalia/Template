@@ -13,13 +13,6 @@ main.container{
    ========================= */
 .category-hero{margin:22px 0 18px}
 
-.category-hero__title{
-    margin:0 0 8px;
-    font-size:30px;
-    font-weight:700;
-    color:var(--text-dark);
-    letter-spacing:-.2px;
-}
 
 .category-hero__desc{
     max-width:760px;
