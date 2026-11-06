@@ -496,7 +496,6 @@
               });
 
               if (currentToken) {
-                // FIXED: Har baar random ID banane ki jagah localStorage se check karenge
                 let userId = localStorage.getItem('device_id');
                 if (!userId) {
                   userId = 'user_' + Math.random().toString(36).substring(2, 9);
