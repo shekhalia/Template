@@ -263,11 +263,6 @@ a { text-decoration: none; color: inherit; }
     color: #007bff;
 }
 
-.logo-subtitle {
-    font-size: 1.0rem;
-    color: #5f6368;
-}
-
 .search-container-wrapper {
     display: flex;
     flex: 1;
