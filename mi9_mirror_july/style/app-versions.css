@@ -1,0 +1,569 @@
+/* =========================
+   LAYOUT & COMMON
+========================= */
+.centerx {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main h2 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    color: var(--text-dark);
+}
+
+main h3 {
+    font-size: 14px;
+    color: var(--text-dark);
+}
+
+/* =========================
+   BREADCRUMB
+========================= */
+.mi9-breadcrumb {
+    margin: 14px;
+    overflow-x: auto;        
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch; 
+}
+
+.mi9-breadcrumb__list {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 6px 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    min-width: max-content;
+}
+
+.mi9-breadcrumb__item {
+    display: inline-flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 1.4;
+    color: var(--text-light);
+    white-space: nowrap;
+}
+
+.mi9-breadcrumb__item:not(:last-child)::after {
+    content: "/";
+    margin-left: 10px;
+    opacity: 0.7;
+}
+
+.mi9-breadcrumb__link {
+    color: var(--text-light);
+    text-decoration: none;
+}
+
+
+.mi9-breadcrumb__item:last-child {
+    flex: 0 0 auto;
+}
+
+.mi9-breadcrumb__item:last-child .mi9-breadcrumb__current {
+    white-space: nowrap;
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.mi9-breadcrumb::-webkit-scrollbar {
+    display: none;
+}
+.mi9-breadcrumb {
+    scrollbar-width: none;
+}
+
+/* =========================
+   HERO STYLES
+========================= */
+.hero__version{
+	
+	font-weight: 600;
+}
+.apk-hero {
+    background: var(--bg-hero);
+    color: var(--text-dark);
+    overflow: hidden;
+    padding: 20px 18px 0;
+}
+
+.apk-hero *,
+.apk-hero *::before,
+.apk-hero *::after {
+    box-sizing: border-box;
+}
+
+.apk-hero__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+
+.apk-hero__grid {
+    display: grid;
+    grid-template-columns: minmax(320px, 500px) minmax(520px, 1fr);
+    align-items: start;
+    gap: 72px;
+}
+
+.apk-hero__content {
+    min-width: 0;
+    max-width: 500px;
+}
+
+.apk-hero__header {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 12px;
+}
+
+.apk-hero__icon {
+    width: 86px;
+    height: 86px;
+    border-radius: 16px;
+    flex: 0 0 auto;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+.apk-hero-h1 {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.apk-hero__title {
+    margin: 0;
+    font-size: 28px;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.apk-hero__publisher {
+    font-size: 14px;
+}
+
+.apk-hero__publisher a {
+    text-decoration: none;
+	color: var(--primary-hover);
+}
+
+.apk-hero__publisher a:hover {
+    text-decoration: underline;
+}
+
+.apk-hero__desc {
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 460px;
+}
+
+.apk-hero__media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.apk-hero__figure {
+    width: 100%;
+    max-width: 780px;
+    margin: 0;
+}
+
+.apk-hero__image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* =========================
+   META STRIP
+========================= */
+.apk-meta-strip {
+    display: flex;
+}
+
+.apk-meta-strip__item {
+    position: relative;
+    text-align: center;
+    padding: 10px 12px 8px;
+    min-width: 0;
+}
+
+.apk-meta-strip__top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    min-height: 24px;
+    margin-bottom: 4px;
+    line-height: 1.2;
+}
+
+.apk-meta-strip__main {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.15;
+    color: var(--text-dark);
+    letter-spacing: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.apk-meta-strip__sub {
+    font-size: 14px;
+    line-height: 1.35;
+    color: var(--text-light);
+    opacity: 0.78;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.apk-meta-strip__item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 1px;
+    height: 34px;
+    transform: translateY(-50%);
+    background: var(--border-color);
+    opacity: 0.9;
+}
+
+/* =========================
+   HERO ACTIONS (DOWNLOAD BUTTON)
+========================= */
+.apk-hero__actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding-top: 10px;
+}
+
+.apk-hero__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 38px;
+    padding: 0 22px;
+    border-radius: 5px;
+    background: var(--downbg);
+    color: var(--downtext);
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all .2s ease;
+    max-width: 320px;
+    width: 100%;
+}
+
+/* =========================
+   BOX VERSIONS
+========================= */
+.vx-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    margin-top: 10px;
+}
+
+.vx-head {
+    padding: 16px 18px 12px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.vx-title {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.vx-desc {
+    margin: 4px 0 0;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.vx-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.vx-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border-color);
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+.vx-item:last-child {
+    border-bottom: none;
+}
+
+.vx-item:hover {
+    background: var(--hover-bg);
+}
+
+.vx-icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.vx-main {
+    flex: 1;
+    min-width: 0;
+}
+
+.vx-top {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.vx-name {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--linkweb);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.vx-code {
+    font-size: 0.8rem;
+    color: var(--text-light);
+}
+
+.vx-meta {
+    margin-top: 4px;
+    font-size: 0.82rem;
+    color: var(--text-light);
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.vx-dot {
+    opacity: 0.4;
+}
+
+.vx-action {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--download-bg);
+    border-radius: 6px;
+}
+
+.vx-action svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
+.vx-item:hover .vx-action {
+    background: var(--hover-bg);
+}
+
+.vx-more {
+    padding: 16px;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+}
+
+.vx-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 24px;
+    background-color: var(--soft-bg);
+    color: var(--text-dark);
+    border: 1px solid transparent;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 99px;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.vx-btn:hover {
+    background-color: var(--hover-bg);
+    color: var(--text-dark);
+}
+
+.vx-status {
+    margin-top: 8px;
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.mi9-btn-icon {
+    margin-left: 8px;
+    transition: transform 0.2s;
+}
+
+/* =========================
+   DOWNLOAD BOX (APK DL TOOL)
+========================= */
+.apkdl-box {
+    margin: 24px 0;
+    padding: 16px;
+    background: var(--bg-color, #f8f9fa);
+}
+
+.apkdl-content {
+    text-align: center;
+}
+
+.apkdl-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.apkdl-text {
+    font-size: 14px;
+    color: var(--text-dark);
+    line-height: 1.5;
+    margin-bottom: 14px;
+}
+
+.apkdl-btn {
+    display: inline-block;
+    padding: 10px 16px;
+    background: var(--brand-color, #007bff);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border-radius: 5px;
+}
+
+.apkdl-btn:hover {
+    opacity: 0.9;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1100px) {
+    .apk-hero__grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .apk-hero__media {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    main h2 {
+        font-size: 17px;
+    }
+    .apk-hero__desc {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 767px) {
+    .vx-box {
+        border-left: 0;
+        border-right: 0;
+        box-shadow: none;
+    }
+    .vx-item {
+        padding: 10px 12px;
+    }
+    .vx-icon img {
+        width: 36px;
+        height: 36px;
+    }
+    .vx-name {
+        font-size: 0.9rem;
+    }
+    .vx-meta {
+        font-size: 0.78rem;
+    }
+    .vx-btn {
+        width: 100%;
+        height: 44px;
+    }
+    .apk-hero {
+        padding: 18px 16px 0;
+    }
+    .apk-hero__icon {
+        width: 68px;
+        height: 68px;
+    }
+    .apk-hero__title {
+        font-size: 18px;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        display: -webkit-box; 
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .apk-hero__figure {
+        width: calc(100% + 32px);
+        margin-left: -16px;
+        margin-right: -16px;
+    }
+    .apk-meta-strip {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        row-gap: 10px;
+    }
+    .apk-meta-strip__item {
+        padding: 8px 10px 6px;
+    }
+    .apk-meta-strip__sub {
+        font-size: 13px;
+    }
+    .apk-hero__btn {
+        width: 70%;
+      
+    }
+	.apk-hero__actions{
+		    align-items: center;
+		
+	}
+}
+
+@media (max-width: 700px) {
+    .mi9-breadcrumb__item {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mi9-breadcrumb__item {
+        font-size: 12px;
+    }
+    .apk-meta-strip__item {
+        padding: 7px 8px 5px;
+    }
+    .apk-meta-strip__sub {
+        font-size: 12px;
+    }
+}

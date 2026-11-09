@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meine degewo APK 2.26.32 - Tools</title>
+<meta name="description" content="Download Meine degewo APK 2.26.32 (40.70 MB). Your direct line to us. Requires Android 7.0+. Updated Dec 08, 2025. By degewo IT.">
+<meta name="author" content="APK Downloader Team">
+<link rel="canonical" href="https://mi9.com/package/com.aareon.meinedegewo/">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:title" content="Meine degewo APK 2.26.32 - Tools">
+<meta property="og:description" content="Meine degewo: Your direct line to us. Around the clock.">
+<meta property="og:url" content="https://mi9.com/package/com.aareon.meinedegewo/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://lh3.googleusercontent.com/Bym4zNp1-_hTXPEzWLguony5SUpr8huAuPQLaSx-PlgANLKV5Mgs_FGY1-oXWFrZyDic=w1200-h630-c-rw">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Meine degewo APK 2.26.32 - Tools">
+<meta name="twitter:description" content="Meine degewo: Your direct line to us. Around the clock.">
+<meta name="twitter:image" content="https://lh3.googleusercontent.com/Bym4zNp1-_hTXPEzWLguony5SUpr8huAuPQLaSx-PlgANLKV5Mgs_FGY1-oXWFrZyDic=w1200-h675-c-rj">
+<meta name="theme-color" content="#007bff">
+<script type='application/ld+json'>{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://mi9.com/package/com.aareon.meinedegewo/#webpage","url":"https://mi9.com/package/com.aareon.meinedegewo/","name":"Meine degewo APK","inLanguage":"en","mainEntity":{"@id":"https://mi9.com/package/com.aareon.meinedegewo/#app"},"publisher":{"@type":"Organization","name":"MI9","logo":{"@type":"ImageObject","url":"https://mi9.com/assets/mi9.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","@id":"https://mi9.com/#website","name":"MI9","url":"https://mi9.com/"}},{"@type":"BreadcrumbList","@id":"https://mi9.com/package/com.aareon.meinedegewo/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://mi9.com/"},{"@type":"ListItem","position":2,"name":"Apps","item":"https://mi9.com/app/"},{"@type":"ListItem","position":3,"name":"Tools","item":"https://mi9.com/app/tools/"},{"@type":"ListItem","position":4,"name":"Meine degewo","item":"https://mi9.com/package/com.aareon.meinedegewo/"}]},{"@type":"MobileApplication","@id":"https://mi9.com/package/com.aareon.meinedegewo/#app","name":"Meine degewo","description":"Meine degewo: Your direct line to us. Around the clock.","image":"https://lh3.googleusercontent.com/LA-ndO7YldT26WnDOy9ac5sHUTewn4zOW4YbNlBtXNbjKFOTmNaVNkwxmH1jmqDMgg=w512-rw","operatingSystem":"Android","url":"https://mi9.com/package/com.aareon.meinedegewo/","mainEntityOfPage":{"@id":"https://mi9.com/package/com.aareon.meinedegewo/#webpage"},"applicationCategory":"SoftwareApplication","genre":"Tools","author":{"@type":"Organization","name":"degewo IT"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"contentRating":"Everyone","dateModified":"2025-12-08","softwareVersion":"2.26.32","fileSize":"40.70 MB"}]}</script><link rel="stylesheet" href="/style/main.css?v=1780207838">
+<link rel="stylesheet" href="/style/app-detail.css?v=1781406429">
+<script>
+(() => {
+  const theme = localStorage.getItem('theme');
+  document.documentElement.classList.add(
+    theme === 'dark-mode' ? 'dark-mode' : 'light-mode'
+  );
+})();
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RL58EYVK41"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-RL58EYVK41', {
+    transport_type: 'beacon'
+  });
+</script>
+</head>
+<body>
+	<header>
+    <div class="header-container">  
+        
+<button id="mobile-toggle" class="mobile-toggle" aria-label="Open menu">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+        
+        <div class="slog">
+<a href="/" class="logo">
+    <svg class="icon-mi9" width="30" height="30" aria-hidden="true">
+        <use href="/assets/ic.svg#svg-mi9-apk"></use>
+    </svg>    
+    <div class="wsname">
+        <span class="site-name">MI9</span>
+        <span class="brand-tag">APKs</span>
+    </div>
+</a>
+            
+            <form action="/search" method="GET" class="search-box">
+				<input type="text" name="q" id="search-input" placeholder="Search..." required autocomplete="off" value="" aria-label="Search apps and games" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suggestions-box">                <button type="submit" aria-label="Search APK">
+				<svg class="svg-icon" width="20" height="20" aria-hidden="true" focusable="false">
+				<use href="/assets/ic.svg#svg-search"></use>
+				</svg>
+                </button>   
+               <ul id="suggestions-box" class="suggestions-box is-hidden" role="listbox"></ul>
+            </form>
+        </div>
+
+                
+        <div class="slogr">
+            <nav class="nav" aria-label="Primary">
+                <a href="/app/" >Apps</a>
+                <a href="/game/" >Games</a>
+            </nav>  
+            
+            <div class="acclogin">
+				<button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+				<svg class="sun-icon" width="22" height="22">
+				<use href="/assets/ic.svg#svg-sun"></use>
+				</svg>    
+				<svg class="moon-icon" width="22" height="22">
+				<use href="/assets/ic.svg#svg-moon"></use>
+				</svg>
+				</button>
+				<div id="account-box">
+					<a class="loginBtn"
+					   href="/login?redirect=%2Fpackage%2Fcom.aareon.meinedegewo"
+					   title="Sign in with Google">
+						<svg class="acc-icon" width="24" height="24">
+							<use href="/assets/ic.svg#svg-account"></use>
+						</svg>
+					</a>
+				</div>
+
+            </div>
+        </div>
+    </div>
+</header>
+<main class="site-main">
+<section class="apk-hero">
+    <div class="apk-hero__inner">
+        <div class="apk-hero__grid">
+
+            <div class="apk-hero__content">
+				<div class="apk-hero__header">
+				<img
+				src="https://lh3.googleusercontent.com/LA-ndO7YldT26WnDOy9ac5sHUTewn4zOW4YbNlBtXNbjKFOTmNaVNkwxmH1jmqDMgg=w120-rw"
+				alt="Meine degewo icon"
+				class="apk-hero__icon"
+				width="64"
+				height="64"
+				loading="eager"
+				decoding="async"
+				>
+					<div class="apk-hero-h1">
+					<h1 class="apk-hero__title">Meine degewo</h1>
+
+										<div class="apk-hero__publisher">
+					By
+					<a href="/publisher/?name=degewo+IT" rel="noopener noreferrer">
+					degewo IT					</a>
+					</div>
+															<div class="hero__version">2.26.32</div>
+									  <div class="mi9-trusted-badge" data-modal-target="trusted-modal" aria-haspopup="dialog" aria-controls="trusted-modal">
+					<svg width="18" height="18" class="svg-icon"><use href="/assets/ic.svg#svg-safety"></use></svg>
+					<span>Trusted App</span>
+					</div>
+					</div>	
+				</div>
+
+                <div class="apk-hero__text">    
+                                            <p class="apk-hero__desc">Meine degewo: Your direct line to us. Around the clock.</p>
+                                    </div>
+
+               				
+<div class="apk-meta-strip">
+
+    
+            <div class="apk-meta-strip__item">
+            <div class="apk-meta-strip__top apk-meta-strip__top--rating">
+                <span class="apk-meta-strip__main">
+                    50K+                </span>
+
+                            </div>
+
+            <div class="apk-meta-strip__sub">
+                                    Installs
+                            </div>
+        </div>
+    
+
+            <div class="apk-meta-strip__item">
+            <div class="apk-meta-strip__top">
+                <span class="apk-meta-strip__main">Dec 08, 2025</span>
+            </div>
+            <div class="apk-meta-strip__sub">Updated</div>
+        </div>
+    
+
+    
+            <div class="apk-meta-strip__item">
+            <div class="apk-meta-strip__top">
+                <span class="apk-meta-strip__main">
+                    Android 7.0+                </span>
+            </div>
+            <div class="apk-meta-strip__sub">
+                Android OS            </div>
+        </div>
+    
+</div>
+<div class="apk-hero__actions">
+    <a href="/package/com.aareon.meinedegewo/download/"
+       class="apk-hero__btn"
+       title="Download Meine degewo APK">
+
+        <svg class="apk-hero__btn-icon" width="20" height="20">
+            <use href="/assets/ic.svg#svg-external"></use>
+        </svg>
+
+        <span>Latest Version</span>
+    </a>
+
+    <nav class="apk-mini-nav">
+
+        
+                    <a href="#oldversions" class="apk-mini-nav__link">
+                <svg width="20" height="20">
+                    <use href="/assets/ic.svg#svg-history"></use>
+                </svg>
+
+                <span>Versions</span>
+            </a>
+        
+                    <a href="#alternatives"
+               class="apk-mini-nav__link">
+
+                <svg width="20" height="20">
+                    <use href="/assets/ic.svg#svg-alt"></use>
+                </svg>
+
+                <span>Alternatives</span>
+            </a>
+        
+    </nav>
+
+</div>
+            </div>
+
+<div class="apk-hero__media">
+   <iframe src="/_adv/adsterra350.html"
+                width="300" height="250"
+                frameborder="0" scrolling="no"
+                title="Advertisement"
+                id="adIframe"></iframe>
+</div>
+
+        </div>
+    </div>
+</section>
+	
+	  		
+<div class="centerx">
+<nav class="mi9-breadcrumb" aria-label="Breadcrumb">
+    <ol class="mi9-breadcrumb__list">
+        <li class="mi9-breadcrumb__item">
+            <a class="mi9-breadcrumb__link" href="/">Home</a>
+        </li>
+      <li class="mi9-breadcrumb__item">
+	  <a  class="mi9-breadcrumb__link"  href="/app/">App</a>
+	  </li>
+   <li class="mi9-breadcrumb__item">
+	  <a  class="mi9-breadcrumb__link"  href="/app/tools/">Tools</a>
+	  </li>
+	  <li class="mi9-breadcrumb__item" aria-current="page">
+                <span class="mi9-breadcrumb__current">Meine degewo</span>
+            </li>
+    </ol>
+</nav>
+
+</div>
+
+<section class="mi9-app-header centerx"> 	  
+	  <div class="description-box-info">
+	   <h2>Official description</h2> 
+	      <div id="description-wrapper" class="description-wrapper">
+        <div id="description-content" class="description-content" data-nosnippet>	 
+            As a degewo tenant, you can now use our free degewo app. Regardless of whether you are flexibly on the go or conveniently from home – you can access all the information in your rental agreement at any time via your smartphone or tablet.<br><br>The advantages of the &quot;Meine degewo&quot; app:<br>Contracts: View all the data on your rental contract and the composition of the rent. Request individual rental documents quickly and easily.<br>Consumption: Compare your current consumption values ​​for heating, hot water and cold water with previous months and years.<br>Messages: If you have any concerns, simply write to us using our contact form and track the processing status.			        </div>
+		<p class="source-note">Source: Official app description retrieved from <a href="https://play.google.com/store/apps/details?id=com.aareon.meinedegewo&hl=en" target="_blank" rel="nofollow noopener noreferrer">Google Play</a>. Provided for reference only.</p>	
+       <div id="fade-overlay" class="fade-overlay"></div>
+		 </div>	
+<div class="mmm">	 
+		 <button id="toggle-description" class="toggle-btn">
+        Show More
+        <span class="arrow">&#x25BC;</span>
+    </button>
+    </div>
+	
+    </div>
+
+<div class="app-box-header">
+    <h2>Meine degewo Gameplay &amp; Screenshots</h2>
+</div>
+
+<div class="gallery-container">
+    <div class="gallery">
+                    
+            <img
+                class="screenshot-thumb"
+                src="https://lh3.googleusercontent.com/YPtZ22P2oK5oqslkIfBbtUAHsxfzzqwr56tCAqFveWO8ZWzGbY3Ij2-fMeCfxI7gdQ=h250"
+                data-large="https://lh3.googleusercontent.com/YPtZ22P2oK5oqslkIfBbtUAHsxfzzqwr56tCAqFveWO8ZWzGbY3Ij2-fMeCfxI7gdQ=h1024"
+                alt="Meine degewo app interface screenshot screenshot"
+                loading="lazy"
+                decoding="async"
+                width="250">
+
+                    
+            <img
+                class="screenshot-thumb"
+                src="https://lh3.googleusercontent.com/pCl_wK3Kd7xkzkGdYw2vlq-IdECI9PpMUrfGPguAzonsrutAIIep4NEkWMNbYO0hABM=h250"
+                data-large="https://lh3.googleusercontent.com/pCl_wK3Kd7xkzkGdYw2vlq-IdECI9PpMUrfGPguAzonsrutAIIep4NEkWMNbYO0hABM=h1024"
+                alt="Meine degewo user experience view screenshot"
+                loading="lazy"
+                decoding="async"
+                width="250">
+
+                    
+            <img
+                class="screenshot-thumb"
+                src="https://lh3.googleusercontent.com/yZPTnnAUo-NaA8VrqwkH_G8hKZYxP_IpyjilUhFEdofpsESvW_NIzZN6mWNTAO5uJgyn=h250"
+                data-large="https://lh3.googleusercontent.com/yZPTnnAUo-NaA8VrqwkH_G8hKZYxP_IpyjilUhFEdofpsESvW_NIzZN6mWNTAO5uJgyn=h1024"
+                alt="Meine degewo application demo screenshot"
+                loading="lazy"
+                decoding="async"
+                width="250">
+
+                    
+            <img
+                class="screenshot-thumb"
+                src="https://lh3.googleusercontent.com/bRsUQm3VCqfJc0RQIxUKjWytNuiXVYOcDnEmqmt_-frLefS-zjaOlBl3KpxLvbu8B8U=h250"
+                data-large="https://lh3.googleusercontent.com/bRsUQm3VCqfJc0RQIxUKjWytNuiXVYOcDnEmqmt_-frLefS-zjaOlBl3KpxLvbu8B8U=h1024"
+                alt="Meine degewo mobile display view screenshot"
+                loading="lazy"
+                decoding="async"
+                width="250">
+
+                    
+            <img
+                class="screenshot-thumb"
+                src="https://lh3.googleusercontent.com/SEgo0TFFrroaZ10Pcmn5TuPivrI-Wk2a8AlNx0Zr1yPTfi1ZZRhEE_GaTMevvv1_hRl5=h250"
+                data-large="https://lh3.googleusercontent.com/SEgo0TFFrroaZ10Pcmn5TuPivrI-Wk2a8AlNx0Zr1yPTfi1ZZRhEE_GaTMevvv1_hRl5=h1024"
+                alt="Meine degewo features preview screenshot"
+                loading="lazy"
+                decoding="async"
+                width="250">
+
+                    
+            <img
+                class="screenshot-thumb"
+                src="https://lh3.googleusercontent.com/NPc2kGgJuolJ76_-7LZyuuq_7qxPyZuGxgRFwuO7yy5xp7zT6Z2y73ou5ckYOCq49B8=h250"
+                data-large="https://lh3.googleusercontent.com/NPc2kGgJuolJ76_-7LZyuuq_7qxPyZuGxgRFwuO7yy5xp7zT6Z2y73ou5ckYOCq49B8=h1024"
+                alt="Meine degewo android app screen screenshot"
+                loading="lazy"
+                decoding="async"
+                width="250">
+
+                                                                                    </div>
+
+            <script>
+            window.__LB_IMAGES__ = [{"large":"https://lh3.googleusercontent.com/YPtZ22P2oK5oqslkIfBbtUAHsxfzzqwr56tCAqFveWO8ZWzGbY3Ij2-fMeCfxI7gdQ=h1024"},{"large":"https://lh3.googleusercontent.com/pCl_wK3Kd7xkzkGdYw2vlq-IdECI9PpMUrfGPguAzonsrutAIIep4NEkWMNbYO0hABM=h1024"},{"large":"https://lh3.googleusercontent.com/yZPTnnAUo-NaA8VrqwkH_G8hKZYxP_IpyjilUhFEdofpsESvW_NIzZN6mWNTAO5uJgyn=h1024"},{"large":"https://lh3.googleusercontent.com/bRsUQm3VCqfJc0RQIxUKjWytNuiXVYOcDnEmqmt_-frLefS-zjaOlBl3KpxLvbu8B8U=h1024"},{"large":"https://lh3.googleusercontent.com/SEgo0TFFrroaZ10Pcmn5TuPivrI-Wk2a8AlNx0Zr1yPTfi1ZZRhEE_GaTMevvv1_hRl5=h1024"},{"large":"https://lh3.googleusercontent.com/NPc2kGgJuolJ76_-7LZyuuq_7qxPyZuGxgRFwuO7yy5xp7zT6Z2y73ou5ckYOCq49B8=h1024"},{"large":"https://lh3.googleusercontent.com/KL21lOLV0PQyKdUtfKfhuHscGvDJUDThcBn4LN9-8FJcTbUYBHm_XM3J3-nQkTfyE-4=h1024"},{"large":"https://lh3.googleusercontent.com/tOht8V3IC9hF_H8ptNoaYNNh6xsJ5afVk8T6tGLaH6MozlTma-dxy8ziq1E59QIDbM4=h1024"},{"large":"https://lh3.googleusercontent.com/MtEcQS2-SW2xkjBHeufDOc5scY0GSCX9JzvA-spjClqmc61VVbtI3oHz8PzVtDu5HfM=h1024"},{"large":"https://lh3.googleusercontent.com/Cyp0dnOdyR1xVzFcAoCdma9-2bb2u76dNSM_aQr4IajmlkUjmW_rVqRbo0IhLZGOaw=h1024"},{"large":"https://lh3.googleusercontent.com/xf6E7q5Wf4nXBijGe-v6WVDaqBerDwLq11jb1SD0FlZa-iKP757xBOc_KSm1do2durJl=h1024"},{"large":"https://lh3.googleusercontent.com/roaPyETmBClkulQBYfQJyesfZ36hxuWm1lQn91Jcrtpl5YBBLadA7SGDTkR-icYs4A=h1024"}];
+        </script>
+
+        <div class="lightbox" id="lightbox" hidden>
+            <button type="button" class="close" aria-label="Close lightbox">&times;</button>
+            <button type="button" class="prev" aria-label="Previous image">&#10094;</button>
+            <img id="lightbox-img" alt="">
+            <button type="button" class="next" aria-label="Next image">&#10095;</button>
+        </div>
+    </div>
+
+</section>
+<section class="apk-specs-card centerx">
+    <div class="apk-specs-card__head">
+        <h2 class="apk-specs-card__title">Meine degewo APK Information</h2>
+    </div>
+
+    <div class="apk-specs-grid">
+
+                    <div class="apk-specs-item">
+                <div class="apk-specs-item__label">Category</div>
+                <div class="apk-specs-item__value">
+                    <a href="/app/tools/">Tools</a>
+                </div>
+            </div>
+        
+                    <div class="apk-specs-item">
+                <div class="apk-specs-item__label">Offered by</div>
+                <div class="apk-specs-item__value">
+                    <a href="/publisher/?name=degewo+IT" rel="noopener noreferrer">
+                        degewo IT                    </a>
+                </div>
+            </div>
+        
+                    <div class="apk-specs-item">
+                <div class="apk-specs-item__label">Content Rating</div>
+                <div class="apk-specs-item__value">Everyone</div>
+            </div>
+        
+                    <div class="apk-specs-item">
+                <div class="apk-specs-item__label">Installs</div>
+                <div class="apk-specs-item__value">
+                    <strong>50K+</strong>
+                </div>
+            </div>
+        
+        
+        <div class="apk-specs-item">
+            <div class="apk-specs-item__label">Google Play ID</div>
+            <div class="apk-specs-item__value apk-specs-item__value--mono">
+                				<a href="https://play.google.com/store/apps/details?id=com.aareon.meinedegewo" rel="nofollow noopener noreferrer">com.aareon.meinedegewo</a>
+				            </div>
+        </div>
+
+                    <div class="apk-specs-item apk-specs-item--accent">
+                <div class="apk-specs-item__label">Version</div>
+                <div class="apk-specs-item__value">
+                    <a href="/package/com.aareon.meinedegewo/download/300174/" rel="noopener noreferrer">
+                        2.26.32                    </a>
+                </div>
+            </div>
+        
+                    <div class="apk-specs-item">
+                <div class="apk-specs-item__label">Size</div>
+                <div class="apk-specs-item__value">40.70 MB</div>
+            </div>
+        
+        
+                    <div class="apk-specs-item">
+                <div class="apk-specs-item__label">Last updated</div>
+                <div class="apk-specs-item__value">Dec 08, 2025</div>
+            </div>
+                <div class="apk-specs-item">
+            <div class="apk-specs-item__label">Report</div>
+            <div class="apk-specs-item__value">
+                <a href="/contact.html?package=com.aareon.meinedegewo" rel="nofollow noopener noreferrer">
+                    Contact us
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+		<section class="box-versions centerx" aria-labelledby="old-versions-title" id="oldversions">
+    <div class="mi9-alt-header">
+        <h2 id="old-versions-title">
+            Old Versions of Meine degewo        </h2>
+    </div>
+
+    <div class="old-versions">
+        <ul id="versions-wrapper" class="vx-list">
+
+                            
+                <li class="vx-list__item">
+                    <a class="vx-item"
+                       href="/package/com.aareon.meinedegewo/download/300174/"
+                       title="Download Meine degewo APK 2.26.32">
+
+                        <div class="vx-icon">
+                            <img
+                                src="https://lh3.googleusercontent.com/LA-ndO7YldT26WnDOy9ac5sHUTewn4zOW4YbNlBtXNbjKFOTmNaVNkwxmH1jmqDMgg=w120-rw"
+                                alt="Meine degewo APK 2.26.32 icon"
+                                loading="lazy"
+                                width="56"
+                                height="56">
+                        </div>
+
+                        <div class="vx-main">
+                            <div class="vx-top">
+                                <span class="vx-name d-desktop">
+                                    Meine degewo                                </span>
+
+                                <strong class="vx-version">
+                                    v2.26.32                                </strong>
+                            </div>
+
+                            <div class="vx-meta">
+                                <span>40.70 MB</span>
+                                <span class="vx-dot" aria-hidden="true">•</span>
+                                <span>8 Dec 2025</span>
+                            </div>
+                        </div>
+
+					<div class="vx-action" aria-hidden="true">
+					<svg width="24" height="24">
+					<use href="/assets/ic.svg?v=1#svg-action-download"></use>
+					</svg>
+					</div>
+
+                    </a>
+                </li>
+                            
+                <li class="vx-list__item">
+                    <a class="vx-item"
+                       href="/package/com.aareon.meinedegewo/download/300172/"
+                       title="Download Meine degewo APK 2.26.30">
+
+                        <div class="vx-icon">
+                            <img
+                                src="https://lh3.googleusercontent.com/LA-ndO7YldT26WnDOy9ac5sHUTewn4zOW4YbNlBtXNbjKFOTmNaVNkwxmH1jmqDMgg=w120-rw"
+                                alt="Meine degewo APK 2.26.30 icon"
+                                loading="lazy"
+                                width="56"
+                                height="56">
+                        </div>
+
+                        <div class="vx-main">
+                            <div class="vx-top">
+                                <span class="vx-name d-desktop">
+                                    Meine degewo                                </span>
+
+                                <strong class="vx-version">
+                                    v2.26.30                                </strong>
+                            </div>
+
+                            <div class="vx-meta">
+                                <span>42.96 MB</span>
+                                <span class="vx-dot" aria-hidden="true">•</span>
+                                <span>21 Nov 2025</span>
+                            </div>
+                        </div>
+
+					<div class="vx-action" aria-hidden="true">
+					<svg width="24" height="24">
+					<use href="/assets/ic.svg?v=1#svg-action-download"></use>
+					</svg>
+					</div>
+
+                    </a>
+                </li>
+                            
+                <li class="vx-list__item">
+                    <a class="vx-item"
+                       href="/package/com.aareon.meinedegewo/download/300156/"
+                       title="Download Meine degewo APK 2.26.12">
+
+                        <div class="vx-icon">
+                            <img
+                                src="https://lh3.googleusercontent.com/LA-ndO7YldT26WnDOy9ac5sHUTewn4zOW4YbNlBtXNbjKFOTmNaVNkwxmH1jmqDMgg=w120-rw"
+                                alt="Meine degewo APK 2.26.12 icon"
+                                loading="lazy"
+                                width="56"
+                                height="56">
+                        </div>
+
+                        <div class="vx-main">
+                            <div class="vx-top">
+                                <span class="vx-name d-desktop">
+                                    Meine degewo                                </span>
+
+                                <strong class="vx-version">
+                                    v2.26.12                                </strong>
+                            </div>
+
+                            <div class="vx-meta">
+                                <span>47.01 MB</span>
+                                <span class="vx-dot" aria-hidden="true">•</span>
+                                <span>27 Aug 2025</span>
+                            </div>
+                        </div>
+
+					<div class="vx-action" aria-hidden="true">
+					<svg width="24" height="24">
+					<use href="/assets/ic.svg?v=1#svg-action-download"></use>
+					</svg>
+					</div>
+
+                    </a>
+                </li>
+                            
+                <li class="vx-list__item">
+                    <a class="vx-item"
+                       href="/package/com.aareon.meinedegewo/download/300154/"
+                       title="Download Meine degewo APK 2.26.10">
+
+                        <div class="vx-icon">
+                            <img
+                                src="https://lh3.googleusercontent.com/LA-ndO7YldT26WnDOy9ac5sHUTewn4zOW4YbNlBtXNbjKFOTmNaVNkwxmH1jmqDMgg=w120-rw"
+                                alt="Meine degewo APK 2.26.10 icon"
+                                loading="lazy"
+                                width="56"
+                                height="56">
+                        </div>
+
+                        <div class="vx-main">
+                            <div class="vx-top">
+                                <span class="vx-name d-desktop">
+                                    Meine degewo                                </span>
+
+                                <strong class="vx-version">
+                                    v2.26.10                                </strong>
+                            </div>
+
+                            <div class="vx-meta">
+                                <span>47.01 MB</span>
+                                <span class="vx-dot" aria-hidden="true">•</span>
+                                <span>22 Aug 2025</span>
+                            </div>
+                        </div>
+
+					<div class="vx-action" aria-hidden="true">
+					<svg width="24" height="24">
+					<use href="/assets/ic.svg?v=1#svg-action-download"></use>
+					</svg>
+					</div>
+
+                    </a>
+                </li>
+                            
+                <li class="vx-list__item">
+                    <a class="vx-item"
+                       href="/package/com.aareon.meinedegewo/download/300121/"
+                       title="Download Meine degewo APK 2.14.0">
+
+                        <div class="vx-icon">
+                            <img
+                                src="https://lh3.googleusercontent.com/LA-ndO7YldT26WnDOy9ac5sHUTewn4zOW4YbNlBtXNbjKFOTmNaVNkwxmH1jmqDMgg=w120-rw"
+                                alt="Meine degewo APK 2.14.0 icon"
+                                loading="lazy"
+                                width="56"
+                                height="56">
+                        </div>
+
+                        <div class="vx-main">
+                            <div class="vx-top">
+                                <span class="vx-name d-desktop">
+                                    Meine degewo                                </span>
+
+                                <strong class="vx-version">
+                                    v2.14.0                                </strong>
+                            </div>
+
+                            <div class="vx-meta">
+                                <span>38.70 MB</span>
+                                <span class="vx-dot" aria-hidden="true">•</span>
+                                <span>3 Jun 2025</span>
+                            </div>
+                        </div>
+
+					<div class="vx-action" aria-hidden="true">
+					<svg width="24" height="24">
+					<use href="/assets/ic.svg?v=1#svg-action-download"></use>
+					</svg>
+					</div>
+
+                    </a>
+                </li>
+            
+        </ul>
+
+                    <div class="mi9-more-wrap">
+                <a href="/package/com.aareon.meinedegewo/versions/" class="mi9-btn-more">
+                    <span class="mi9-btn-text">All Versions</span>
+                    <svg class="mi9-btn-icon" width="16" height="16">
+                       <use href="/assets/ic.svg#svg-arrow-right"></use>
+                    </svg>
+                </a>
+            </div>
+        
+    </div>
+</section>
+
+
+
+
+
+ <section class="mi9-alt-box centerx" id="alternatives">    <div class="mi9-alt-header">        <h2>Best Alternatives to Meine degewo</h2>        <p>Similar picks based on category, keywords, and popularity.</p>    </div><div class="mi9-panel">    <div class="mi9-panel__head">        <h3 class="mi9-panel__title">Alternatives</h3>    </div>    <div class="mi9-featured__grid"><a class="mi9-featured__item" href="/package/com.vivosun.android/" title="VIVOSUN">    <article class="mi9-featured__card">        <div class="mi9-featured__thumb-wrap">            <img                class="mi9-featured__thumb"                src="https://lh3.googleusercontent.com/dc--WBLQpzYuyioBL_NjUlguixO8Vv9Www7aEHN20MjLddiAxQtOxFDyQNjLZIdm0AQ=w180-rw"                alt="VIVOSUN"                loading="lazy"                decoding="async"                width="180"                height="180"            >        </div>        <div class="mi9-featured__name">VIVOSUN</div>        <div class="mi9-featured__meta">★ 4.6 · 50,000+ · Tools</div>    </article></a>    </div></div><div class="mi9-panel">    <div class="mi9-panel__head">        <h3 class="mi9-panel__title">Related picks</h3>    </div>    <div class="mi9-featured__grid"><a class="mi9-featured__item" href="/package/spider.solitaire.card.games.free.klondike.patience/" title="Spider Solitaire Classic Games">    <article class="mi9-featured__card">        <div class="mi9-featured__thumb-wrap">            <img                class="mi9-featured__thumb"                src="https://lh3.googleusercontent.com/nAYT7nHsy7QMEzJJCITNyNPpQZYv8z8vcFvvYZK8CY9J8koR8houV10ynZWbHDP6b0me=w180-rw"                alt="Spider Solitaire Classic Games"                loading="lazy"                decoding="async"                width="180"                height="180"            >        </div>        <div class="mi9-featured__name">Spider Solitaire Classic Games</div>        <div class="mi9-featured__meta">★ 4.9 · 5,000,000+ · Card</div>    </article></a><a class="mi9-featured__item" href="/package/net.peakgames.mobile.spades.android/" title="Spades Plus - Card Game">    <article class="mi9-featured__card">        <div class="mi9-featured__thumb-wrap">            <img                class="mi9-featured__thumb"                src="https://lh3.googleusercontent.com/ydaVXR0Ixr3E9zsexiDfhF9FAaB4uP1MpSBRf0nrmAQ9OfajOLvgtxR3xL-IVEHiEg=w180-rw"                alt="Spades Plus - Card Game"                loading="lazy"                decoding="async"                width="180"                height="180"            >        </div>        <div class="mi9-featured__name">Spades Plus - Card Game</div>        <div class="mi9-featured__meta">★ 4.7 · 10,000,000+ · Card</div>    </article></a><a class="mi9-featured__item" href="/package/beetles.puzzle.solitaire/" title="Solitaire - Classic Card Games">    <article class="mi9-featured__card">        <div class="mi9-featured__thumb-wrap">            <img                class="mi9-featured__thumb"                src="https://lh3.googleusercontent.com/7V-EDQGeSMIqKbCucuT16ObKsLTSJdyJE4z12pZ0X3AarLyho1l7x9x8ZJxy8f9gyzqhxzO2GWNjhDoZ6CV1=w180-rw"                alt="Solitaire - Classic Card Games"                loading="lazy"                decoding="async"                width="180"                height="180"            >        </div>        <div class="mi9-featured__name">Solitaire - Classic Card Games</div>        <div class="mi9-featured__meta">★ 4.7 · 10,000,000+ · Card</div>    </article></a><a class="mi9-featured__item" href="/package/com.solitaire.card/" title="Classic Solitaire">    <article class="mi9-featured__card">        <div class="mi9-featured__thumb-wrap">            <img                class="mi9-featured__thumb"                src="https://lh3.googleusercontent.com/-Z3Utl7HyGWPSRNGSfMoGjmAGpIHPUpBT7P0cIt9HGgXB6ssVXekl3MGbN-hWMtXoJxm=w180-rw"                alt="Classic Solitaire"                loading="lazy"                decoding="async"                width="180"                height="180"            >        </div>        <div class="mi9-featured__name">Classic Solitaire</div>        <div class="mi9-featured__meta">★ 4.7 · 10,000,000+ · Card</div>    </article></a>    </div></div></section>
+
+<section class="mi9-rec-wrapper centerx" id="smd">
+    
+    </section>
+ 
+<section class="mi9-rank-box centerx" id="toprate">
+<div class="mi9-rec-box">
+    <div class="mi9-rank-header">
+        <h2>Best Tools Apps</h2>
+        <p>Download the top rated Tools apps for Android free.</p>
+    </div>
+
+    <div class="mi9-rank-grid">
+        <a class="mi9-rank-item" href="/package/com.google.android.apps.translate/">
+        <div class="mi9-rank-num rank-1">1</div>
+        <div class="mi9-rank-thumb">
+            <img src="https://lh3.googleusercontent.com/ZrNeuKthBirZN7rrXPN1JmUbaG8ICy3kZSHt-WgSnREsJzo2txzCzjIoChlevMIQEA=w64" alt="Google Translate" loading="lazy" decoding="async" width="64" height="64">
+        </div>
+        <div class="mi9-rank-main">
+            <div class="mi9-rank-title">Google Translate</div>
+            <div class="mi9-rank-dev">Google LLC</div>            <div class="mi9-rank-meta">
+                <span class="mi9-meta-star">★ 4.3</span>                                    <span class="mi9-meta-sep">•</span>                    <span class="mi9-meta-down">↓ 1,000,000,000+</span>
+                            </div>
+        </div>
+    </a>
+        <a class="mi9-rank-item" href="/package/app.jumpjumpvpn.jumpjumpvpn/">
+        <div class="mi9-rank-num rank-2">2</div>
+        <div class="mi9-rank-thumb">
+            <img src="https://lh3.googleusercontent.com/Rm67YlsqllSHBDkjolUUg48GgHneqaV70BeUwAG7k8WAJ-X7ZIf2gPBCb9VVrgYAl1E=w64" alt="JumpJumpVPN: Fast &amp; Secure" loading="lazy" decoding="async" width="64" height="64">
+        </div>
+        <div class="mi9-rank-main">
+            <div class="mi9-rank-title">JumpJumpVPN: Fast & Secure</div>
+            <div class="mi9-rank-dev">SOON BODYWERKZ</div>            <div class="mi9-rank-meta">
+                <span class="mi9-meta-star">★ 4.5</span>                                    <span class="mi9-meta-sep">•</span>                    <span class="mi9-meta-down">↓ 10M+</span>
+                            </div>
+        </div>
+    </a>
+        <a class="mi9-rank-item" href="/package/ch.protonvpn.android/">
+        <div class="mi9-rank-num rank-3">3</div>
+        <div class="mi9-rank-thumb">
+            <img src="https://lh3.googleusercontent.com/hferjPeJ9_aWi_r5t8L0qOAwU4ZWAyduYmRkYodJOylRKwOxPI_117GzVSkAnhaNOw=w64" alt="Proton VPN: Fast &amp; Secure VPN" loading="lazy" decoding="async" width="64" height="64">
+        </div>
+        <div class="mi9-rank-main">
+            <div class="mi9-rank-title">Proton VPN: Fast & Secure VPN</div>
+            <div class="mi9-rank-dev">Proton AG</div>            <div class="mi9-rank-meta">
+                <span class="mi9-meta-star">★ 4.7</span>                                    <span class="mi9-meta-sep">•</span>                    <span class="mi9-meta-down">↓ 50,000,000+</span>
+                            </div>
+        </div>
+    </a>
+        <a class="mi9-rank-item" href="/package/com.fast.free.unblock.secure.vpn/">
+        <div class="mi9-rank-num rank-4">4</div>
+        <div class="mi9-rank-thumb">
+            <img src="https://lh3.googleusercontent.com/dhRK7n-cA6I9DiODqUkv1L96qAeEo2Xasv7CpyHl3Ubqf0rcgWKW8KJQrkPlNBsKrQ=w64" alt="Secure VPN－Safer Internet" loading="lazy" decoding="async" width="64" height="64">
+        </div>
+        <div class="mi9-rank-main">
+            <div class="mi9-rank-title">Secure VPN－Safer Internet</div>
+            <div class="mi9-rank-dev">Secure Signal Inc.</div>            <div class="mi9-rank-meta">
+                <span class="mi9-meta-star">★ 4.7</span>                                    <span class="mi9-meta-sep">•</span>                    <span class="mi9-meta-down">↓ 100,000,000+</span>
+                            </div>
+        </div>
+    </a>
+        <a class="mi9-rank-item" href="/package/com.google.android.apps.authenticator2/">
+        <div class="mi9-rank-num rank-5">5</div>
+        <div class="mi9-rank-thumb">
+            <img src="https://lh3.googleusercontent.com/NntMALIH4odanPPYSqUOXsX8zy_giiK2olJiqkcxwFIOOspVrhMi9Miv6LYdRnKIg-3R=w64" alt="Google Authenticator" loading="lazy" decoding="async" width="64" height="64">
+        </div>
+        <div class="mi9-rank-main">
+            <div class="mi9-rank-title">Google Authenticator</div>
+            <div class="mi9-rank-dev">Google LLC</div>            <div class="mi9-rank-meta">
+                <span class="mi9-meta-star">★ 3.8</span>                                    <span class="mi9-meta-sep">•</span>                    <span class="mi9-meta-down">↓ 100,000,000+</span>
+                            </div>
+        </div>
+    </a>
+        <a class="mi9-rank-item" href="/package/com.google.ar.lens/">
+        <div class="mi9-rank-num rank-6">6</div>
+        <div class="mi9-rank-thumb">
+            <img src="https://lh3.googleusercontent.com/BDWTTN85mBETnnPg_qekwlk1uCxnbl4wtnVE8cz_WyMHEntEJgQsdJaT4uA0_N0VWg=w64" alt="Google Lens" loading="lazy" decoding="async" width="64" height="64">
+        </div>
+        <div class="mi9-rank-main">
+            <div class="mi9-rank-title">Google Lens</div>
+            <div class="mi9-rank-dev">Google LLC</div>            <div class="mi9-rank-meta">
+                <span class="mi9-meta-star">★ 4.7</span>                                    <span class="mi9-meta-sep">•</span>                    <span class="mi9-meta-down">↓ 1,000,000,000+</span>
+                            </div>
+        </div>
+    </a>
+        <a class="mi9-rank-item" href="/package/com.now.vpn/">
+        <div class="mi9-rank-num rank-7">7</div>
+        <div class="mi9-rank-thumb">
+            <img src="https://lh3.googleusercontent.com/h3IofWeRcgC3mXnZDqDUDZXZfDYgxgE2NS2K9IrQoE4NAlza-oqj1pjNNmWiHFeE6g=w64" alt="Now VPN - Fast Secure Proxy" loading="lazy" decoding="async" width="64" height="64">
+        </div>
+        <div class="mi9-rank-main">
+            <div class="mi9-rank-title">Now VPN - Fast Secure Proxy</div>
+            <div class="mi9-rank-dev">Star Core Studio</div>            <div class="mi9-rank-meta">
+                <span class="mi9-meta-star">★ 4.6</span>                                    <span class="mi9-meta-sep">•</span>                    <span class="mi9-meta-down">↓ 10,000,000+</span>
+                            </div>
+        </div>
+    </a>
+        <a class="mi9-rank-item" href="/package/com.google.android.inputmethod.latin/">
+        <div class="mi9-rank-num rank-8">8</div>
+        <div class="mi9-rank-thumb">
+            <img src="https://lh3.googleusercontent.com/X64En0aW6jkvDnd5kr16u-YuUsoJ1W2cBzJab3CQ5lObLeQ3T61DpB7AwIoZ7uqgCn4=w64" alt="Gboard - the Google Keyboard" loading="lazy" decoding="async" width="64" height="64">
+        </div>
+        <div class="mi9-rank-main">
+            <div class="mi9-rank-title">Gboard - the Google Keyboard</div>
+            <div class="mi9-rank-dev">Google LLC</div>            <div class="mi9-rank-meta">
+                <span class="mi9-meta-star">★ 4.5</span>                                    <span class="mi9-meta-sep">•</span>                    <span class="mi9-meta-down">↓ 10,000,000,000+</span>
+                            </div>
+        </div>
+    </a>
+        <a class="mi9-rank-item" href="/package/com.google.android.apps.kids.familylink/">
+        <div class="mi9-rank-num rank-9">9</div>
+        <div class="mi9-rank-thumb">
+            <img src="https://lh3.googleusercontent.com/rfQsLTQvlTitGF915EPBDlCH8UsuAk649xftN-GPi_s_ORnfVLSCX9MEs1AGflbNOGo=w64" alt="Google Family Link" loading="lazy" decoding="async" width="64" height="64">
+        </div>
+        <div class="mi9-rank-main">
+            <div class="mi9-rank-title">Google Family Link</div>
+            <div class="mi9-rank-dev">Google LLC</div>            <div class="mi9-rank-meta">
+                <span class="mi9-meta-star">★ 4.3</span>                                    <span class="mi9-meta-sep">•</span>                    <span class="mi9-meta-down">↓ 100,000,000+</span>
+                            </div>
+        </div>
+    </a>
+        <a class="mi9-rank-item" href="/package/free.vpn.unblock.proxy.turbovpn/">
+        <div class="mi9-rank-num rank-10">10</div>
+        <div class="mi9-rank-thumb">
+            <img src="https://lh3.googleusercontent.com/lyktmo5HvZkprNjrNOYC0Cul_8il704kPhl8rSUV4AXQ-jLpm_yb3wYcJ6QACLKgLV5I=w64" alt="Turbo VPN - Secure VPN Proxy" loading="lazy" decoding="async" width="64" height="64">
+        </div>
+        <div class="mi9-rank-main">
+            <div class="mi9-rank-title">Turbo VPN - Secure VPN Proxy</div>
+            <div class="mi9-rank-dev">Innovative Connecting</div>            <div class="mi9-rank-meta">
+                <span class="mi9-meta-star">★ 4.7</span>                                    <span class="mi9-meta-sep">•</span>                    <span class="mi9-meta-down">↓ 100,000,000+</span>
+                            </div>
+        </div>
+    </a>
+        <a class="mi9-rank-item" href="/package/com.fast.free.unblock.thunder.vpn/">
+        <div class="mi9-rank-num rank-11">11</div>
+        <div class="mi9-rank-thumb">
+            <img src="https://lh3.googleusercontent.com/cUYGDQ5PWqiCZufu3uV65ebqI0rzpi75mWnJnvFYL8WnYIM4Bk3ypLew6XHu2xLjDRw=w64" alt="Thunder VPN - Fast, Safe VPN" loading="lazy" decoding="async" width="64" height="64">
+        </div>
+        <div class="mi9-rank-main">
+            <div class="mi9-rank-title">Thunder VPN - Fast, Safe VPN</div>
+            <div class="mi9-rank-dev">Secure Signal Inc.</div>            <div class="mi9-rank-meta">
+                <span class="mi9-meta-star">★ 4.8</span>                                    <span class="mi9-meta-sep">•</span>                    <span class="mi9-meta-down">↓ 100,000,000+</span>
+                            </div>
+        </div>
+    </a>
+        <a class="mi9-rank-item" href="/package/jp.co.canon.bsd.ad.pixmaprint/">
+        <div class="mi9-rank-num rank-12">12</div>
+        <div class="mi9-rank-thumb">
+            <img src="https://lh3.googleusercontent.com/7jPxifW23bIHeNXes3UJUMjOj57_q3Rq-0DvDc4IcWsB7WUnEjMvuEipYW0bjGPZLaW6=w64" alt="Canon PRINT" loading="lazy" decoding="async" width="64" height="64">
+        </div>
+        <div class="mi9-rank-main">
+            <div class="mi9-rank-title">Canon PRINT</div>
+            <div class="mi9-rank-dev">Canon Inc.</div>            <div class="mi9-rank-meta">
+                <span class="mi9-meta-star">★ 4.6</span>                                    <span class="mi9-meta-sep">•</span>                    <span class="mi9-meta-down">↓ 50,000,000+</span>
+                            </div>
+        </div>
+    </a>
+        </div>
+</div>
+</section>
+
+<aside class="apkdl-box centerx">
+<div class="apk-hero__grid">
+
+            <div class="apk-hero__content">
+				<div class="apk-hero__header">
+				 <img
+            src="https://lh3.googleusercontent.com/LA-ndO7YldT26WnDOy9ac5sHUTewn4zOW4YbNlBtXNbjKFOTmNaVNkwxmH1jmqDMgg=w120-rw"
+            alt="Meine degewo"
+            class="apkdl-icon"
+            width="60"
+            height="60"
+            loading="lazy">
+					<div class="apk-hero-h1">
+					<h3 class="apkdl-title">Download Meine degewo with APK Downloader</h3>		
+					</div>	
+				</div>
+
+                <div class="apk-hero__text">    
+                                           <p class="apkdl-text">
+      Looking for the APK file of <strong>Meine degewo</strong>?
+    Use our APK Downloader to download the latest version directly from Google Play.
+    The downloader supports phones, tablets, Android TV, and optimized APK variants
+    for <strong>arm64-v8a</strong>, <strong>armeabi-v7a</strong>,
+    <strong>x86</strong>, and <strong>x86_64</strong>.
+</p>
+                                    </div>
+
+               				
+
+<div class="apk-hero__actions">
+<a href="/apk-downloader?package=com.aareon.meinedegewo"
+   class="apkdl-btn"
+   title="Download Meine degewo with APK Downloader">
+    Use APK Downloader
+</a>
+
+</div>
+  </div>
+
+    <div class="apk-hero__media">
+        <figure class="apk-hero__figure">
+            <img
+                src="https://lh3.googleusercontent.com/Bym4zNp1-_hTXPEzWLguony5SUpr8huAuPQLaSx-PlgANLKV5Mgs_FGY1-oXWFrZyDic=w720-rw"
+                srcset="https://lh3.googleusercontent.com/Bym4zNp1-_hTXPEzWLguony5SUpr8huAuPQLaSx-PlgANLKV5Mgs_FGY1-oXWFrZyDic=w480-rw 480w, https://lh3.googleusercontent.com/Bym4zNp1-_hTXPEzWLguony5SUpr8huAuPQLaSx-PlgANLKV5Mgs_FGY1-oXWFrZyDic=w720-rw 720w"
+                sizes="(max-width: 767px) 100vw, 56vw"
+                alt="Meine degewo screenshot"
+                class="apk-hero__image"
+                width="720"
+                height="405"
+                loading="eager"
+                fetchpriority="high"
+                decoding="async">
+        </figure>
+    </div>
+        </div>
+</aside>
+</main>
+<div class="trusted-modal" id="trusted-modal" role="dialog" aria-modal="true" aria-labelledby="trusted-title" aria-hidden="true">
+  <div class="trusted-backdrop" data-close="true"></div>
+  <div class="trusted-dialog" role="document">
+    <button class="trusted-close" aria-label="Close (Esc)" data-close="true">×</button>
+
+    <div class="trusted-header">
+      <div class="trusted-icon" aria-hidden="true"><img src="https://lh3.googleusercontent.com/LA-ndO7YldT26WnDOy9ac5sHUTewn4zOW4YbNlBtXNbjKFOTmNaVNkwxmH1jmqDMgg=w120-rw" alt="Meine degewo" class="app-icon"></div>
+      <h2 id="trusted-title">Meine degewo</h2>
+    </div>
+
+    <div class="trusted-body">
+      <p><strong>Mi9.com</strong> carefully checks every app before it is published. Downloads come from these sources:</p>
+      <ul class="trusted-list">
+        <li><strong>Google Play:</strong> Original package — we don’t modify, repack, or inject code.</li>
+        <li><strong>User submissions:</strong> APK signature and safety are verified before release.</li>
+				<li><strong>SHA1:</strong> 0960ca3519b984e1e910f72e5fcf91993ff965e6</li>
+        <li><strong>SHA256:</strong> 84d13010c1dc9a78559c31884ad31536404c8aa1</li>
+		      </ul>
+      <p>Any reported issues are investigated immediately, and unsafe files are removed.</p>
+    </div>
+
+    <div class="trusted-footer">
+      <button class="trusted-btn" data-close="true">Close</button>
+    </div>
+  </div>
+</div><footer class="site-footer" role="contentinfo">
+  <nav class="footer-nav" aria-label="Footer navigation">
+
+    <div class="footer-col">
+      <div class="footer-title">MI9</div>
+      <ul class="footer-list">
+        <li><a href="/about.html">About Us</a></li>
+        <li><a href="/contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <div class="footer-title">Discover</div>
+      <ul class="footer-list">
+        <li><a href="/app/new/">New Apps</a></li>
+        <li><a href="/game/new/">New Games</a></li>
+        <li><a href="/app/updated/">Updated Apps</a></li>
+        <li><a href="/game/updated/">Updated Games</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <div class="footer-title">Tools</div>
+      <ul class="footer-list">
+        <li><a href="/install-apk-guide.html">Install APK Guide</a></li>
+        <li><a href="/apk-downloader/">APK Downloader</a></li>
+        <li>
+          <a href="https://chromewebstore.google.com/detail/android-apps-old-versions/lbkmfiplnipaelaigddbcbpifncgkkpm?hl=en-US&utm_source=mi9.com"
+             target="_blank"
+             rel="noopener noreferrer">
+            Chrome Extension
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <div class="footer-title">Legal</div>
+      <ul class="footer-list">
+        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="/terms.html">Terms</a></li>
+        <li><a href="/dmca.html">DMCA</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <div class="footer-title">Connect</div>
+      <ul class="footer-list">
+        <li>
+          <a href="https://www.linkedin.com/company/mi9com"
+             target="_blank"
+             rel="noopener noreferrer">
+            LinkedIn
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/apk.support"
+             target="_blank"
+             rel="noopener noreferrer">
+            Facebook
+          </a>
+        </li>
+        <li>
+          <a href="https://x.com/googlecom"
+             target="_blank"
+             rel="noopener noreferrer">
+            X
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </nav>
+
+  <div class="footer-bottom">
+    <p class="footer-copy">
+      © 2026 MI9. All rights reserved.
+    </p>
+  </div>
+
+  <div class="footer-disclaimer">
+    <p>
+      Google Play and the Google Play logo are trademarks of Google LLC.
+      <strong>MI9.com</strong> is not affiliated with, endorsed by, or sponsored by Google LLC.
+      We provide original APK files for free Android apps.
+    </p>
+  </div>
+</footer>
+<script src="/jsai/app-main.js?v=3" defer></script>
+<script src="/jsai/app-detail.js?v=2" defer></script>
+</body>
+</html>

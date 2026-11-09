@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /search*
+Disallow: /package/*/download
+Disallow: /package/*/download/
+Disallow: /login*
+Disallow: /logout*
+User-agent: Mediapartners-Google
+Allow: /
+User-agent: Google-Display-Ads-Bot
+Allow: /

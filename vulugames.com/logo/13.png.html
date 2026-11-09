@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VULU Games</title>
+<meta name="description" content="Browse popular action games for Android.">
+<meta name="author" content="VULU Games Team">
+<link rel="canonical" href="../index.html">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel="manifest" href="../site.webmanifest">
+<script type="speculationrules">
+{
+  "prefetch": [
+    {
+      "eagerness": "conservative",
+      "source": "document",
+      "where": {
+        "and": [
+          {"href_matches": "/*", "relative_to": "document"}
+        ]
+      }
+    }
+  ]
+}
+</script>
+<script type='application/ld+json'>
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://vulugames.com/#website",
+      "url": "https://vulugames.com/",
+      "name": "VULU",
+      "description": "Browse and download all real money games."
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="../style/main.css">
+<link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="header-container">  
+        <div class="logo-wrapper">
+            <a href="../index.html" class="logo-link">
+                <img src="../assets/vulu.svg" width="30" height="30" alt="VULU" class="logo-img">
+                <div class="logo-text-wrapper">
+                <span class="logo-title">Vulugames</span>
+               </div>
+            </a>
+        </div>
+        <div class="search-container-wrapper">
+            <form action="https://vulugames.com/search" method="GET" class="search-form">
+                <input type="text" name="q" id="search-input" class="search-input-field" placeholder="Search..." required autocomplete="off" value="" aria-label="Search games">
+                <button type="submit" aria-label="Search Game" class="search-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" class="search-svg">
+                        <path d="m229.66 218.34-50.07-50.06a88.11 88.11 0 1 0-11.31 11.31l50.06 50.07a8 8 0 0 0 11.32-11.32ZM40 112a72 72 0 1 1 72 72 72.08 72.08 0 0 1-72-72Z"/>
+                    </svg>
+                </button>   
+                <ul id="suggestions-box" class="suggestions-box"></ul>
+            </form>
+        </div>
+    </div>
+</header>
+
+<a href="https://t.me/vulugames" target="_blank" class="telegram-float">
+    <div class="telegram-icon">
+        <svg viewBox="0 0 64 64">
+            <path d="M56.4,8.2l-51.2,20c-1.7,0.6-1.6,3,0.1,3.5l9.7,2.9c2.1,0.6,3.8,2.2,4.4,4.3l3.8,12.1c0.5,1.6,2.5,2.1,3.7,0.9 l5.2-5.3c0.9-0.9,2.2-1,3.2-0.3l11.5,8.4c1.6,1.2,3.9,0.3,4.3-1.7l8.7-41.8C60.4,9.1,58.4,7.4,56.4,8.2z M50,17.4L29.4,35.6 c-1.1,1-1.9,2.4-2,3.9c-0.2,1.5-2.3,1.7-2.8,0.3l-0.9-3c-0.7-2.2,0.2-4.5,2.1-5.7l23.5-14.6C49.9,16.1,50.5,16.9,50,17.4z"></path>
+        </svg>
+    </div>
+</a>
+
+
+<main class="container">
+
+<section class="category-hero">
+    <h1 class="category-hero__title">Real Money Games</h1>
+            <p class="category-hero__desc">Discover the most Popular and New Releases real money games. Explore Yono, Diwa, CGS, and other.</p>
+    </section>
+
+    <section class="category category--scroll">
+        <h2 class="category__title">Popular categories</h2>
+
+        <div class="category__scroller">
+                            <a class="category__link" href="../yono.html">
+                    Yono                </a>
+                            <a class="category__link" href="../diwa.html">
+                    Diwa               </a>
+                            <a class="category__link" href="../cgs.html">
+                    CGS                 </a>
+                            <a class="category__link" href="../other.html">
+                    Other Games              </a>
+
+        </div>
+    </section>
+
+    <section class="panel">
+        <div class="panel__head">
+            <h2 class="panel__title" id="section-heading">New Releases</h2>
+            <div class="view-select">
+                <label class="view-select__label sr-only" for="view-select">Choose view</label>
+                <select id="view-select" class="view-select__control" aria-label="Sort items">
+                    <option value="new" selected>New Releases</option>
+                    <option value="popular">Popular</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="list" class="featured__grid" data-json-file="/games.json" data-limit="24">
+            <!-- GAMES_START -->
+
+    <a class="featured__item" href="../package/jaiho777/index.html">
+        <article class="featured__card">
+            <div class="featured__thumb-wrap">
+                <img class="featured__thumb" src="jaiho777.webp" alt="JAIHO 777" loading="lazy" decoding="async" width="180" height="180">
+            </div>
+            <h3 class="featured__name">JAIHO 777</h3>
+        </article>
+    </a>
+
+    <a class="featured__item" href="../package/yono1/index.html">
+        <article class="featured__card">
+            <div class="featured__thumb-wrap">
+                <img class="featured__thumb" src="13.png.html" alt="Rummy VIP" loading="lazy" decoding="async" width="180" height="180">
+            </div>
+            <h3 class="featured__name">Rummy VIP</h3>
+        </article>
+    </a>
+
+    <a class="featured__item" href="../package/yono2/index.html">
+        <article class="featured__card">
+            <div class="featured__thumb-wrap">
+                <img class="featured__thumb" src="12.jpg.html" alt="ET7.COM" loading="lazy" decoding="async" width="180" height="180">
+            </div>
+            <h3 class="featured__name">ET7.COM</h3>
+        </article>
+    </a>
+
+    <a class="featured__item" href="../package/moneyrummy/index.html">
+        <article class="featured__card">
+            <div class="featured__thumb-wrap">
+                <img class="featured__thumb" src="moneyrummy.webp.html" alt="MONEY RUMMY" loading="lazy" decoding="async" width="180" height="180">
+            </div>
+            <h3 class="featured__name">MONEY RUMMY</h3>
+        </article>
+    </a>
+
+    <a class="featured__item" href="../package/yono4/index.html">
+        <article class="featured__card">
+            <div class="featured__thumb-wrap">
+                <img class="featured__thumb" src="https://images.unsplash.com/photo-1596838132731-3301c3fd4317?w=180&h=180&fit=crop" alt="Yono Slots Master" loading="lazy" decoding="async" width="180" height="180">
+            </div>
+            <h3 class="featured__name">Yono Slots Master</h3>
+        </article>
+    </a>
+
+    <a class="featured__item" href="../package/yono5/index.html">
+        <article class="featured__card">
+            <div class="featured__thumb-wrap">
+                <img class="featured__thumb" src="https://images.unsplash.com/photo-1563089145-599997674d42?w=180&h=180&fit=crop" alt="Yono VIP Club" loading="lazy" decoding="async" width="180" height="180">
+            </div>
+            <h3 class="featured__name">Yono VIP Club</h3>
+        </article>
+    </a>
+
+    <a class="featured__item" href="../package/yono6/index.html">
+        <article class="featured__card">
+            <div class="featured__thumb-wrap">
+                <img class="featured__thumb" src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=180&h=180&fit=crop" alt="Yono Thunder Crash" loading="lazy" decoding="async" width="180" height="180">
+            </div>
+            <h3 class="featured__name">Yono Thunder Crash</h3>
+        </article>
+    </a>
+
+    <a class="featured__item" href="../package/yono7/index.html">
+        <article class="featured__card">
+            <div class="featured__thumb-wrap">
+                <img class="featured__thumb" src="https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?w=180&h=180&fit=crop" alt="Yono Ludo Express" loading="lazy" decoding="async" width="180" height="180">
+            </div>
+            <h3 class="featured__name">Yono Ludo Express</h3>
+        </article>
+    </a>
+
+    <a class="featured__item" href="../package/yono8/index.html">
+        <article class="featured__card">
+            <div class="featured__thumb-wrap">
+                <img class="featured__thumb" src="https://images.unsplash.com/photo-1534447677768-be436bb09401?w=180&h=180&fit=crop" alt="Yono Dragon Tiger" loading="lazy" decoding="async" width="180" height="180">
+            </div>
+            <h3 class="featured__name">Yono Dragon Tiger</h3>
+        </article>
+    </a>
+
+    <a class="featured__item" href="../package/arcade1/index.html">
+        <article class="featured__card">
+            <div class="featured__thumb-wrap">
+                <img class="featured__thumb" src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=180&h=180&fit=crop" alt="Cyberpunk Action Hero" loading="lazy" decoding="async" width="180" height="180">
+            </div>
+            <h3 class="featured__name">Cyberpunk Action Hero</h3>
+        </article>
+    </a>
+
+    <a class="featured__item" href="../package/arcade2/index.html">
+        <article class="featured__card">
+            <div class="featured__thumb-wrap">
+                <img class="featured__thumb" src="https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?w=180&h=180&fit=crop" alt="Ninja Jump Runner" loading="lazy" decoding="async" width="180" height="180">
+            </div>
+            <h3 class="featured__name">Ninja Jump Runner</h3>
+        </article>
+    </a>
+
+    <a class="featured__item" href="../package/arcade3/index.html">
+        <article class="featured__card">
+            <div class="featured__thumb-wrap">
+                <img class="featured__thumb" src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=180&h=180&fit=crop" alt="Shadow Strike Force" loading="lazy" decoding="async" width="180" height="180">
+            </div>
+            <h3 class="featured__name">Shadow Strike Force</h3>
+        </article>
+    </a>
+
+    <a class="featured__item" href="../package/puzzle1/index.html">
+        <article class="featured__card">
+            <div class="featured__thumb-wrap">
+                <img class="featured__thumb" src="https://images.unsplash.com/photo-1611996575749-79a3a250f948?w=180&h=180&fit=crop" alt="Brain Teaser Master" loading="lazy" decoding="async" width="180" height="180">
+            </div>
+            <h3 class="featured__name">Brain Teaser Master</h3>
+        </article>
+    </a>
+
+    <a class="featured__item" href="../package/puzzle2/index.html">
+        <article class="featured__card">
+            <div class="featured__thumb-wrap">
+                <img class="featured__thumb" src="https://images.unsplash.com/photo-1580541832626-2a7131ee809f?w=180&h=180&fit=crop" alt="Glass Block Puzzle" loading="lazy" decoding="async" width="180" height="180">
+            </div>
+            <h3 class="featured__name">Glass Block Puzzle</h3>
+        </article>
+    </a>
+
+    <a class="featured__item" href="../package/puzzle3/index.html">
+        <article class="featured__card">
+            <div class="featured__thumb-wrap">
+                <img class="featured__thumb" src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=180&h=180&fit=crop" alt="Number Grid Master" loading="lazy" decoding="async" width="180" height="180">
+            </div>
+            <h3 class="featured__name">Number Grid Master</h3>
+        </article>
+    </a>
+
+    <a class="featured__item" href="../package/racing1/index.html">
+        <article class="featured__card">
+            <div class="featured__thumb-wrap">
+                <img class="featured__thumb" src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=180&h=180&fit=crop" alt="Turbo Street Racing" loading="lazy" decoding="async" width="180" height="180">
+            </div>
+            <h3 class="featured__name">Turbo Street Racing</h3>
+        </article>
+    </a>
+
+    <a class="featured__item" href="../package/racing2/index.html">
+        <article class="featured__card">
+            <div class="featured__thumb-wrap">
+                <img class="featured__thumb" src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=180&h=180&fit=crop" alt="Moto Highway Rider" loading="lazy" decoding="async" width="180" height="180">
+            </div>
+            <h3 class="featured__name">Moto Highway Rider</h3>
+        </article>
+    </a>
+
+    <a class="featured__item" href="../package/racing3/index.html">
+        <article class="featured__card">
+            <div class="featured__thumb-wrap">
+                <img class="featured__thumb" src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=180&h=180&fit=crop" alt="Neon Drift Legends" loading="lazy" decoding="async" width="180" height="180">
+            </div>
+            <h3 class="featured__name">Neon Drift Legends</h3>
+        </article>
+    </a>
+
+    <a class="featured__item" href="../package/sports1/index.html">
+        <article class="featured__card">
+            <div class="featured__thumb-wrap">
+                <img class="featured__thumb" src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=180&h=180&fit=crop" alt="Ultimate Cricket 2026" loading="lazy" decoding="async" width="180" height="180">
+            </div>
+            <h3 class="featured__name">Ultimate Cricket 2026</h3>
+        </article>
+    </a>
+
+    <a class="featured__item" href="../package/sports2/index.html">
+        <article class="featured__card">
+            <div class="featured__thumb-wrap">
+                <img class="featured__thumb" src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=180&h=180&fit=crop" alt="Pro Football League" loading="lazy" decoding="async" width="180" height="180">
+            </div>
+            <h3 class="featured__name">Pro Football League</h3>
+        </article>
+    </a>
+
+    <a class="featured__item" href="../package/sports3/index.html">
+        <article class="featured__card">
+            <div class="featured__thumb-wrap">
+                <img class="featured__thumb" src="https://images.unsplash.com/photo-1546519638-68e109498ffc?w=180&h=180&fit=crop" alt="Street Basketball King" loading="lazy" decoding="async" width="180" height="180">
+            </div>
+            <h3 class="featured__name">Street Basketball King</h3>
+        </article>
+    </a>
+
+    <a class="featured__item" href="../package/strategy1/index.html">
+        <article class="featured__card">
+            <div class="featured__thumb-wrap">
+                <img class="featured__thumb" src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=180&h=180&fit=crop" alt="Clash of Empires" loading="lazy" decoding="async" width="180" height="180">
+            </div>
+            <h3 class="featured__name">Clash of Empires</h3>
+        </article>
+    </a>
+
+    <a class="featured__item" href="../package/strategy2/index.html">
+        <article class="featured__card">
+            <div class="featured__thumb-wrap">
+                <img class="featured__thumb" src="https://images.unsplash.com/photo-1614850523296-d8c1af93d400?w=180&h=180&fit=crop" alt="Kingdom Tactics 3D" loading="lazy" decoding="async" width="180" height="180">
+            </div>
+            <h3 class="featured__name">Kingdom Tactics 3D</h3>
+        </article>
+    </a>
+
+    <a class="featured__item" href="../package/casual1/index.html">
+        <article class="featured__card">
+            <div class="featured__thumb-wrap">
+                <img class="featured__thumb" src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=180&h=180&fit=crop" alt="Candy Bubble Pop" loading="lazy" decoding="async" width="180" height="180">
+            </div>
+            <h3 class="featured__name">Candy Bubble Pop</h3>
+        </article>
+    </a>
+<!-- GAMES_END -->
+        </div>
+
+        <div class="loadmore-wrap">
+            <button id="loadmore" class="loadmore-btn" type="button">Load More</button>
+            <div id="loadmore-status" class="loadmore-status" hidden></div>
+        </div>
+    </section>
+</main>
+
+<script>
+(function () {
+    const list = document.getElementById('list');
+    const button = document.getElementById('loadmore');
+    const status = document.getElementById('loadmore-status');
+    const viewSelect = document.getElementById('view-select');
+    const sectionHeading = document.getElementById('section-heading');
+
+    if (!list || !button) return;
+
+    let allGames = [];
+    let currentView = 'new'; 
+    let currentIndex = 24;
+    const limit = parseInt(list.dataset.limit || '24', 10);
+    const jsonFile = list.dataset.jsonFile || '/games.json';
+
+    function esc(str) {
+        return String(str ?? '')
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#039;');
+    }
+
+    function createCardHtml(item) {
+        const pkgId = String(item.pkg_id || '').trim();
+        const name = String(item.game_name || '').trim();
+        if (!pkgId || !name) return '';
+
+        const logo = item.logo ? `/logo/${item.logo}` : '/logo/default.png';
+
+        return `
+            <a class="featured__item" href="../package/${encodeURIComponent(pkgId)}/index.html">
+                <article class="featured__card">
+                    <div class="featured__thumb-wrap">
+                        <img
+                            class="featured__thumb"
+                            src="https://vulugames.com/logo/${esc(logo)}"
+                            alt="${esc(name)}"
+                            loading="lazy"
+                            decoding="async"
+                            width="180"
+                            height="180"
+                        >
+                    </div>
+                    <h3 class="featured__name">${esc(name)}</h3>
+                </article>
+            </a>
+        `;
+    }
+
+    async function initData() {
+        try {
+            const res = await fetch(jsonFile);
+            if (res.ok) {
+                allGames = await res.json();
+                
+                const filtered = getFilteredList();
+                if (currentIndex >= filtered.length) {
+                    button.style.display = 'none';
+                    status.style.display = 'block';
+                    status.textContent = 'No more games.';
+                } else {
+                    button.style.display = 'block';
+                    status.style.display = 'none';
+                }
+            }
+        } catch (e) {
+            console.error("JSON load error:", e);
+        }
+    }
+
+    function getFilteredList() {
+        if (currentView === 'popular') {
+            return allGames.filter(g => g.popular);
+        } else {
+            return allGames.filter(g => g.new_release);
+        }
+    }
+
+    function switchView(viewType) {
+        currentView = viewType;
+        currentIndex = 0;
+        
+        if (currentView === 'popular') {
+            sectionHeading.textContent = 'Popular Games';
+        } else {
+            sectionHeading.textContent = 'New Releases';
+        }
+
+        list.innerHTML = '';
+        button.style.display = 'block'; 
+        status.style.display = 'none';  
+        
+        loadMore();
+    }
+
+    function loadMore() {
+        if (!allGames.length) return;
+
+        button.disabled = true;
+        status.style.display = 'block';
+        status.textContent = 'Loading...';
+
+        const filtered = getFilteredList();
+        const nextItems = filtered.slice(currentIndex, currentIndex + limit);
+        let html = '';
+
+        nextItems.forEach(function (item) {
+            html += createCardHtml(item);
+        });
+
+        if (html !== '') {
+            list.insertAdjacentHTML('beforeend', html);
+        }
+
+        currentIndex += nextItems.length;
+
+        if (currentIndex >= filtered.length) {
+            button.style.display = 'none';
+            status.style.display = 'block';
+            status.textContent = 'No more games.';
+        } else {
+            button.style.display = 'block';
+            status.style.display = 'none';
+            status.textContent = '';
+        }
+
+        button.disabled = false;
+    }
+
+    viewSelect.addEventListener('change', function () {
+        switchView(this.value);
+    });
+
+    button.addEventListener('click', loadMore);
+
+    initData();
+})();
+</script>
+ 
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-nav" aria-label="Footer navigation">
+
+    <div class="footer-col">
+      <div class="footer-title">Legal</div>
+      <ul class="footer-list">
+        <li><a href="https://vulugames.com/logo/terms.html">Terms</a></li>
+        <li><a href="https://vulugames.com/logo/disclaimer.html">Disclaimer</a></li>
+        <li><a href="https://vulugames.com/logo/privacy-policy.html">Privacy Policy</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-col">
+      <div class="footer-title">VULU</div>
+      <ul class="footer-list">
+        <li><a href="https://vulugames.com/logo/about.html">About Us</a></li>
+        <li><a href="https://vulugames.com/logo/contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p class="footer-copy">
+      © 2026 VULU. All rights reserved.
+    </p>
+  </div>
+
+  <div class="footer-disclaimer">
+    <p>
+      Google Play and the Google Play logo are trademarks of Google LLC.
+      <strong>vulugames.com</strong> is not affiliated with, endorsed by, or sponsored by Google LLC.
+      We provide original APK files for free Android apps.
+    </p>
+  </div>
+</footer>
+
+<script src="../jsai/app-main.js" defer></script>
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+  import { getMessaging, getToken } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-messaging.js";
+  import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyCi4Za2BvqiZwAn3claI1DPbYA2d2IABwY",
+    authDomain: "gamestore-f35a7.firebaseapp.com",
+    databaseURL: "https://gamestore-f35a7-default-rtdb.firebaseio.com",
+    projectId: "gamestore-f35a7",
+    storageBucket: "gamestore-f35a7.firebasestorage.app",
+    messagingSenderId: "446538446400",
+    appId: "1:446538446400:web:9ee8b4638320e30c7211a5",
+    measurementId: "G-4Y6R9XFF9E"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const messaging = getMessaging(app);
+  const db = getDatabase(app);
+
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/firebase-messaging-sw.js')
+      .then((registration) => {
+        console.log('Service Worker registered successfully with scope:', registration.scope);
+
+        Notification.requestPermission().then(async (permission) => {
+          if (permission === 'granted') {
+            console.log('Notification permission granted.');
+
+            try {
+              const currentToken = await getToken(messaging, { 
+                vapidKey: 'BFHbp6ONoBlroZCDcxurDA4WB-JccYxuayFMKr8SIO5QcpgLNWgky8Jp9yxyFQAjyUFWpTJCBun780uQlbYdV_w',
+                serviceWorkerRegistration: registration 
+              });
+
+              if (currentToken) {
+                let userId = localStorage.getItem('device_id');
+                if (!userId) {
+                  userId = 'user_' + Math.random().toString(36).substring(2, 9);
+                  localStorage.setItem('device_id', userId);
+                }
+
+                await set(ref(db, 'tokens/' + userId), {
+                  token: currentToken
+                });
+                console.log('FCM Token successfully saved in database:', currentToken);
+              } else {
+                console.log('No registration token available.');
+              }
+            } catch (err) {
+              console.error('An error occurred while retrieving token:', err);
+            }
+
+          } else {
+            console.log('Notification permission denied by user.');
+          }
+        });
+
+      })
+      .catch((err) => {
+        console.log('Service Worker registration failed:', err);
+      });
+  }
+</script>
+</body>
+</html>

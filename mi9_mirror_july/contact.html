@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MI9 - Contact us</title>
+<meta name="description" content="MI9 - Contact us">
+<meta name="author" content="APK Downloader Team">
+<meta name="robots" content="noindex, follow"><link rel="canonical" href="https://mi9.com/contact.html">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="/style/main.css?v=1780207838">
+<script>
+(() => {
+  const theme = localStorage.getItem('theme');
+  document.documentElement.classList.add(
+    theme === 'dark-mode' ? 'dark-mode' : 'light-mode'
+  );
+})();
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RL58EYVK41"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-RL58EYVK41', {
+    transport_type: 'beacon'
+  });
+</script>
+</head>
+<body>
+	<header>
+    <div class="header-container">  
+        
+<button id="mobile-toggle" class="mobile-toggle" aria-label="Open menu">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+        
+        <div class="slog">
+<a href="/" class="logo">
+    <svg class="icon-mi9" width="30" height="30" aria-hidden="true">
+        <use href="/assets/ic.svg#svg-mi9-apk"></use>
+    </svg>    
+    <div class="wsname">
+        <span class="site-name">MI9</span>
+        <span class="brand-tag">APKs</span>
+    </div>
+</a>
+            
+            <form action="/search" method="GET" class="search-box">
+				<input type="text" name="q" id="search-input" placeholder="Search..." required autocomplete="off" value="" aria-label="Search apps and games" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suggestions-box">                <button type="submit" aria-label="Search APK">
+				<svg class="svg-icon" width="20" height="20" aria-hidden="true" focusable="false">
+				<use href="/assets/ic.svg#svg-search"></use>
+				</svg>
+                </button>   
+               <ul id="suggestions-box" class="suggestions-box is-hidden" role="listbox"></ul>
+            </form>
+        </div>
+
+                
+        <div class="slogr">
+            <nav class="nav" aria-label="Primary">
+                <a href="/app/" >Apps</a>
+                <a href="/game/" >Games</a>
+            </nav>  
+            
+            <div class="acclogin">
+				<button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+				<svg class="sun-icon" width="22" height="22">
+				<use href="/assets/ic.svg#svg-sun"></use>
+				</svg>    
+				<svg class="moon-icon" width="22" height="22">
+				<use href="/assets/ic.svg#svg-moon"></use>
+				</svg>
+				</button>
+				<div id="account-box">
+					<a class="loginBtn"
+					   href="/login?redirect=%2Fcontact.html"
+					   title="Sign in with Google">
+						<svg class="acc-icon" width="24" height="24">
+							<use href="/assets/ic.svg#svg-account"></use>
+						</svg>
+					</a>
+				</div>
+
+            </div>
+        </div>
+    </div>
+</header>
+<style>
+.box-contact{
+    max-width:860px;
+    margin:36px auto;
+    padding:32px 24px;
+    background:var(--card-bg);
+    color:var(--text-dark);
+    border:1px solid var(--border-color);
+    border-radius:var(--border-radius);
+}
+
+#box-ct h2{
+    margin:0 0 10px;
+    text-align:center;
+    font-size:2rem;
+    line-height:1.25;
+    color:var(--text-dark);
+}
+
+.bct_text{
+    max-width:680px;
+    margin:0 auto 24px;
+    text-align:center;
+}
+
+.bct_text p{
+    margin:0;
+    color:var(--text-light);
+}
+
+.bct_text li{
+    list-style:inherit;
+    line-height:1.7;
+}
+
+.cat-ui{
+    max-width:720px;
+    margin:0 auto;
+}
+
+.cat-ui .form{
+    color:var(--text-dark);
+}
+
+.cat-ui .form .input,
+.cat-ui .form .radio{
+    display:block;
+    margin:0 0 20px;
+}
+
+.cat-ui .form label{
+    display:block;
+    margin:0 0 6px;
+    font-size:.95rem;
+    font-weight:600;
+    color:var(--text-dark);
+}
+
+.cat-ui .form input,
+.cat-ui .form textarea{
+    width:100%;
+    box-sizing:border-box;
+    font:inherit;
+}
+
+.cat-ui .form input[type="text"],
+.cat-ui .form input[type="email"],
+.cat-ui .form textarea{
+    background:var(--card-bg);
+    outline:0;
+    font-size:.95rem;
+    line-height:1.5;
+    padding:12px 14px;
+    color:var(--text-dark);
+    border:1px solid var(--border-color);
+    border-radius:10px;
+    margin:0;
+    -webkit-appearance:none;
+    transition:var(--transition);
+}
+
+.cat-ui .form input[type="text"]::placeholder,
+.cat-ui .form input[type="email"]::placeholder,
+.cat-ui .form textarea::placeholder{
+    color:var(--text-light);
+}
+
+.cat-ui .form textarea{
+    resize:vertical;
+    min-height:140px;
+    max-height:520px;
+    height:170px;
+}
+
+.cat-ui .form input:focus,
+.cat-ui .form textarea:focus{
+    border-color:var(--brand-color);
+    box-shadow:0 0 0 3px rgba(0,123,255,.10);
+}
+
+.cat-ui fieldset{
+    border:0;
+    padding:0;
+    margin:0 0 20px;
+}
+
+.cat-ui legend{
+    font-size:.95rem;
+    font-weight:700;
+    margin:0 0 10px;
+    color:var(--text-dark);
+}
+
+.cat-ui .form .radio{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:12px;
+}
+
+@media (min-width:600px){
+    .cat-ui .form .radio{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+    }
+}
+
+.cat-ui .form .radio .field{
+    margin:0;
+    height:100%;
+}
+
+.cat-ui .form .radio label{
+    display:grid;
+    grid-template-columns:auto 1fr;
+    align-items:start;
+    column-gap:10px;
+    padding:12px 14px;
+    border:1px solid var(--border-color);
+    border-radius:10px;
+    background:var(--bg-color);
+    line-height:1.45;
+    height:100%;
+    margin:0;
+    font-weight:500;
+    color:var(--text-dark);
+    overflow-wrap:anywhere;
+    transition:var(--transition);
+    cursor:pointer;
+}
+
+.cat-ui .form .radio label:hover{
+    border-color:var(--brand-color);
+    background:rgba(0,123,255,.04);
+}
+
+.cat-ui .form .radio input{
+    width:auto;
+    margin:3px 0 0;
+    accent-color:var(--brand-color);
+}
+
+.cat-ui .form .radio .error{
+    border-color:#dc2626 !important;
+}
+
+.cat-ui .button{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-height:44px;
+    margin:0;
+    padding:0 22px;
+    border:1px solid var(--primary-color);
+    border-radius:10px;
+    background:var(--primary-color);
+    color:#fff;
+    font-size:.95rem;
+    line-height:1;
+    font-weight:700;
+    text-align:center;
+    text-decoration:none;
+    outline:0;
+    cursor:pointer;
+    transition:var(--transition);
+}
+
+.cat-ui .button:hover{
+    background:var(--primary-hover);
+    border-color:var(--primary-hover);
+}
+
+.cat-ui .button:active{
+    transform:translateY(1px);
+}
+
+.cat-ui .button:disabled{
+    background:#cbd5e1;
+    border-color:#cbd5e1;
+    color:#fff;
+    cursor:not-allowed;
+    transform:none;
+}
+
+#alert{
+    display:none;
+    padding:12px 14px;
+    margin:8px 0 20px;
+    border-radius:10px;
+    font-size:.95rem;
+    border:1px solid transparent;
+}
+
+#alert.error{
+    color:#b91c1c;
+    background:#fef2f2;
+    border-color:#fecaca;
+}
+
+#alert.success{
+    color:#166534;
+    background:#f0fdf4;
+    border-color:#bbf7d0;
+}
+
+#package[disabled],
+#package[readonly]{
+    background:var(--bg-color);
+    color:var(--text-dark);
+    border:1px solid var(--border-color);
+    font-weight:600;
+    letter-spacing:.2px;
+}
+
+#package[disabled]{
+    cursor:not-allowed;
+    opacity:1;
+}
+
+.hp{
+    position:absolute;
+    left:-9999px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+
+/* refine turnstile spacing */
+.cf-turnstile{
+    display:inline-block;
+    max-width:100%;
+}
+
+/* mobile */
+@media (max-width:768px){
+    .box-contact{
+        margin:20px 10px;
+        padding:24px 16px;
+        border-radius:0;
+    }
+
+    #box-ct h2{
+        font-size:1.6rem;
+    }
+
+    .bct_text{
+        margin-bottom:20px;
+    }
+
+    .cat-ui .button{
+        width:100%;
+    }
+}
+
+/* dark mode refinement */
+body.dark-mode #alert.error{
+    background:rgba(127,29,29,.18);
+    border-color:rgba(248,113,113,.35);
+    color:#fca5a5;
+}
+
+body.dark-mode #alert.success{
+    background:rgba(20,83,45,.22);
+    border-color:rgba(74,222,128,.28);
+    color:#86efac;
+}
+</style>
+<div class="box-contact" id="box-ct">
+    <h2>Contact us</h2>
+
+    <div class="bct_text">
+        <p>Report issues, policy violations, or send us your apps here.</p>
+    </div>
+
+    <div class="cat-ui">
+        <form id="form_contact" class="form" action="/sent.html" method="post" novalidate>
+
+            <div class="hp" aria-hidden="true">
+                <label for="website">Leave this field empty</label>
+                <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+            </div>
+
+            <input type="hidden" id="package_hidden" name="package" value="">
+
+            
+            <div class="input">
+                <label for="fullname">Your name</label>
+                <input type="text" id="fullname" name="name" placeholder="Your name" autocomplete="name" required>
+            </div>
+
+            <div class="input">
+                <label for="email">Your email</label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email" required>
+            </div>
+
+            <div class="input">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Subject" required>
+            </div>
+
+            <fieldset class="radio">
+                <legend>Reason for contact</legend>
+
+                <div class="field">
+                    <label><input type="radio" name="reason" value="feedback" checked> Comments and feedback</label>
+                </div>
+
+                <div class="field">
+                    <label><input type="radio" name="reason" value="report_problem"> Report a problem</label>
+                </div>
+
+                <div class="field">
+                    <label><input type="radio" name="reason" value="dmca_takedown_request"> DMCA takedown request</label>
+                </div>
+
+                <div class="field">
+                    <label><input type="radio" name="reason" value="other"> Others</label>
+                </div>
+            </fieldset>
+
+            <div class="input">
+                <label for="message">Your message</label>
+                <textarea id="message" name="message" placeholder="Questions or comments" required></textarea>
+            </div>
+
+            <div class="input">
+                <div class="cf-turnstile" data-sitekey="0x4AAAAAABsymynd0q2YAntd" data-theme="auto"></div>
+            </div>
+
+            <div id="alert" class="alert" role="status" aria-live="polite"></div>
+
+            <button class="button" type="submit" data-load="Sending...">Send</button>
+            <input type="hidden" name="hl" value="en">
+        </form>
+    </div>
+</div>
+
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js"></script>
+<script>
+(function($){
+    $(function(){
+        var $form = $("#form_contact");
+        var $btn = $form.find("button[type=submit]");
+        var $al = $("#alert");
+
+        (function initPackage(){
+            var q = new URLSearchParams(window.location.search);
+            var pkg = q.get("package") || "";
+
+            $("#package_hidden").val(pkg);
+
+            if (pkg && $("#package").length) {
+                $("#package").val(pkg);
+            }
+        })();
+
+        $.validator.messages.required = "";
+
+        $form.validate({
+            rules: {
+                name:    { required: true, minlength: 2, maxlength: 120 },
+                package: {},
+                subject: { required: true, minlength: 2, maxlength: 200 },
+                message: { required: true, minlength: 5 },
+                email:   { required: true, email: true }
+            },
+            errorPlacement: function(){},
+            submitHandler: function(formEl){
+                var tf = $("input[name='cf-turnstile-response']").val() || "";
+
+                if ($btn.prop("disabled")) {
+                    return false;
+                }
+
+                var oldTxt = $btn.text();
+                $btn.prop("disabled", true).text($btn.data("load") || "Sending...");
+
+                var payload = {
+                    name:    $.trim($("input[name=name]").val() || ""),
+                    package: $.trim($("#package_hidden").val() || ""),
+                    email:   $.trim($("input[name=email]").val() || ""),
+                    subject: $.trim($("input[name=subject]").val() || ""),
+                    reason:  $("input[name=reason]:checked").val() || "other",
+                    message: $.trim($("textarea[name=message]").val() || ""),
+                    "cf-turnstile-response": tf,
+                    hl: $("input[name=hl]").val() || "en",
+                    website: $("input[name=website]").val() || ""
+                };
+
+                $al.removeClass("error success").hide();
+
+                $.ajax({
+                    type: "POST",
+                    url: $form.attr("action"),
+                    data: payload,
+                    dataType: "json"
+                }).done(function(resp){
+                    $al
+                        .show()
+                        .toggleClass("success", !!resp.ok)
+                        .toggleClass("error", !resp.ok)
+                        .html(resp.mess || "");
+
+                    if (window.turnstile) {
+                        turnstile.reset();
+                    }
+
+                    if (resp.ok) {
+                        var keepPackage = $("#package_hidden").val() || "";
+                        formEl.reset();
+                        $("#package_hidden").val(keepPackage);
+
+                        if ($("#package").length) {
+                            $("#package").val(keepPackage);
+                        }
+                    }
+                }).fail(function(){
+                    $al
+                        .show()
+                        .addClass("error")
+                        .removeClass("success")
+                        .html("Network error. Please try again.");
+                }).always(function(){
+                    $btn.prop("disabled", false).text(oldTxt);
+                });
+
+                return false;
+            }
+        });
+    });
+})(jQuery);
+</script><footer class="site-footer" role="contentinfo">
+  <nav class="footer-nav" aria-label="Footer navigation">
+
+    <div class="footer-col">
+      <div class="footer-title">MI9</div>
+      <ul class="footer-list">
+        <li><a href="/about.html">About Us</a></li>
+        <li><a href="/contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <div class="footer-title">Discover</div>
+      <ul class="footer-list">
+        <li><a href="/app/new/">New Apps</a></li>
+        <li><a href="/game/new/">New Games</a></li>
+        <li><a href="/app/updated/">Updated Apps</a></li>
+        <li><a href="/game/updated/">Updated Games</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <div class="footer-title">Tools</div>
+      <ul class="footer-list">
+        <li><a href="/install-apk-guide.html">Install APK Guide</a></li>
+        <li><a href="/apk-downloader/">APK Downloader</a></li>
+        <li>
+          <a href="https://chromewebstore.google.com/detail/android-apps-old-versions/lbkmfiplnipaelaigddbcbpifncgkkpm?hl=en-US&utm_source=mi9.com"
+             target="_blank"
+             rel="noopener noreferrer">
+            Chrome Extension
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <div class="footer-title">Legal</div>
+      <ul class="footer-list">
+        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="/terms.html">Terms</a></li>
+        <li><a href="/dmca.html">DMCA</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <div class="footer-title">Connect</div>
+      <ul class="footer-list">
+        <li>
+          <a href="https://www.linkedin.com/company/mi9com"
+             target="_blank"
+             rel="noopener noreferrer">
+            LinkedIn
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/apk.support"
+             target="_blank"
+             rel="noopener noreferrer">
+            Facebook
+          </a>
+        </li>
+        <li>
+          <a href="https://x.com/googlecom"
+             target="_blank"
+             rel="noopener noreferrer">
+            X
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </nav>
+
+  <div class="footer-bottom">
+    <p class="footer-copy">
+      © 2026 MI9. All rights reserved.
+    </p>
+  </div>
+
+  <div class="footer-disclaimer">
+    <p>
+      Google Play and the Google Play logo are trademarks of Google LLC.
+      <strong>MI9.com</strong> is not affiliated with, endorsed by, or sponsored by Google LLC.
+      We provide original APK files for free Android apps.
+    </p>
+  </div>
+</footer>
+<script src="/jsai/app-main.js?v=3" defer></script>
+</body>
+</html>
