@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-messaging-compat.js"></script>
 <link rel="preconnect" href="https://www.googletagmanager.com">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,10 +8,10 @@
 <meta name="description" content="Browse popular action games for Android.">
 <meta name="author" content="MI9 Games Team">
 <link rel="canonical" href="https://mi9.com/">
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<link rel="manifest" href="site.webmanifest">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
 <script type="speculationrules">
 {
   "prefetch": [
@@ -43,23 +41,24 @@
   ]
 }
 </script>
-<link rel="stylesheet" href="style/main.css">
-<link rel="stylesheet" href="style/style.css">
+<link rel="stylesheet" href="/style/main.css">
+<link rel="stylesheet" href="/style/style.css">
 </head>
 <body>
 
 <header class="site-header">
     <div class="header-container">  
         <div class="logo-wrapper">
-            <a href="index.html" class="logo-link">
-                <img src="assets/vulu.svg" width="30" height="30" alt="MI9" class="logo-img">
+            <a href="/" class="logo-link">
+                <img src="../assets/mi92026.svg" width="30" height="30" alt="MI9" class="logo-img">
                 <div class="logo-text-wrapper">
-                    <span class="logo-title">Vulugames</span>
+                    <span class="logo-title">WIN</span>
+                    <span class="logo-subtitle">Games</span>
                 </div>
             </a>
         </div>
         <div class="search-container-wrapper">
-            <form action="https://vulugames.com/search" method="GET" class="search-form">
+            <form action="/search" method="GET" class="search-form">
                 <input type="text" name="q" id="search-input" class="search-input-field" placeholder="Search..." required autocomplete="off" value="" aria-label="Search games">
                 <button type="submit" aria-label="Search Game" class="search-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" class="search-svg">
@@ -92,13 +91,13 @@
         <h2 class="category__title">Popular categories</h2>
 
         <div class="category__scroller">
-                            <a class="category__link" href="yono/index.html">
+                            <a class="category__link" href="/yono/">
                     Yono Games                </a>
-                            <a class="category__link" href="diwa/index.html">
+                            <a class="category__link" href="/diwa/">
                     Diwa Games               </a>
-                            <a class="category__link" href="cgs/index.html">
+                            <a class="category__link" href="/cgs/">
                     Competition Games Soft               </a>
-                            <a class="category__link" href="other/index.html">
+                            <a class="category__link" href="/other/">
                     Other Games              </a>
 
         </div>
@@ -119,34 +118,34 @@
         <div id="list" class="featured__grid" data-json-file="/games.json" data-limit="24">
             <!-- GAMES_START -->
 
-    <a class="featured__item" href="package/com.mi9.yono1/index.html">
+    <a class="featured__item" href="/package/com.mi9.yono1/">
         <article class="featured__card">
             <div class="featured__thumb-wrap">
-                <img class="featured__thumb" src="logo/13.png" alt="Rummy VIP" loading="lazy" decoding="async" width="180" height="180">
+                <img class="featured__thumb" src="/logo/13.png" alt="Rummy VIP" loading="lazy" decoding="async" width="180" height="180">
             </div>
             <h3 class="featured__name">Rummy VIP</h3>
         </article>
     </a>
 
-    <a class="featured__item" href="package/com.mi9.yono2/index.html">
+    <a class="featured__item" href="/package/com.mi9.yono2/">
         <article class="featured__card">
             <div class="featured__thumb-wrap">
-                <img class="featured__thumb" src="logo/12.jpg" alt="ET7.COM" loading="lazy" decoding="async" width="180" height="180">
+                <img class="featured__thumb" src="/logo/12.jpg" alt="ET7.COM" loading="lazy" decoding="async" width="180" height="180">
             </div>
             <h3 class="featured__name">ET7.COM</h3>
         </article>
     </a>
 
-    <a class="featured__item" href="package/moneyrummy/index.html">
+    <a class="featured__item" href="/package/moneyrummy/">
         <article class="featured__card">
             <div class="featured__thumb-wrap">
-                <img class="featured__thumb" src="logo/moneyrummy.webp" alt="Money Rummy" loading="lazy" decoding="async" width="180" height="180">
+                <img class="featured__thumb" src="/logo/moneyrummy.webp" alt="Money Rummy" loading="lazy" decoding="async" width="180" height="180">
             </div>
             <h3 class="featured__name">Money Rummy</h3>
         </article>
     </a>
 
-    <a class="featured__item" href="package/com.mi9.yono4/index.html">
+    <a class="featured__item" href="/package/com.mi9.yono4/">
         <article class="featured__card">
             <div class="featured__thumb-wrap">
                 <img class="featured__thumb" src="https://images.unsplash.com/photo-1596838132731-3301c3fd4317?w=180&h=180&fit=crop" alt="Yono Slots Master" loading="lazy" decoding="async" width="180" height="180">
@@ -155,7 +154,7 @@
         </article>
     </a>
 
-    <a class="featured__item" href="package/com.mi9.yono6/index.html">
+    <a class="featured__item" href="/package/com.mi9.yono6/">
         <article class="featured__card">
             <div class="featured__thumb-wrap">
                 <img class="featured__thumb" src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=180&h=180&fit=crop" alt="Yono Thunder Crash" loading="lazy" decoding="async" width="180" height="180">
@@ -164,7 +163,7 @@
         </article>
     </a>
 
-    <a class="featured__item" href="package/com.mi9.yono7/index.html">
+    <a class="featured__item" href="/package/com.mi9.yono7/">
         <article class="featured__card">
             <div class="featured__thumb-wrap">
                 <img class="featured__thumb" src="https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?w=180&h=180&fit=crop" alt="Yono Ludo Express" loading="lazy" decoding="async" width="180" height="180">
@@ -173,7 +172,7 @@
         </article>
     </a>
 
-    <a class="featured__item" href="package/com.mi9.arcade1/index.html">
+    <a class="featured__item" href="/package/com.mi9.arcade1/">
         <article class="featured__card">
             <div class="featured__thumb-wrap">
                 <img class="featured__thumb" src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=180&h=180&fit=crop" alt="Cyberpunk Action Hero" loading="lazy" decoding="async" width="180" height="180">
@@ -182,7 +181,7 @@
         </article>
     </a>
 
-    <a class="featured__item" href="package/com.mi9.arcade2/index.html">
+    <a class="featured__item" href="/package/com.mi9.arcade2/">
         <article class="featured__card">
             <div class="featured__thumb-wrap">
                 <img class="featured__thumb" src="https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?w=180&h=180&fit=crop" alt="Ninja Jump Runner" loading="lazy" decoding="async" width="180" height="180">
@@ -191,7 +190,7 @@
         </article>
     </a>
 
-    <a class="featured__item" href="package/com.mi9.puzzle1/index.html">
+    <a class="featured__item" href="/package/com.mi9.puzzle1/">
         <article class="featured__card">
             <div class="featured__thumb-wrap">
                 <img class="featured__thumb" src="https://images.unsplash.com/photo-1611996575749-79a3a250f948?w=180&h=180&fit=crop" alt="Brain Teaser Master" loading="lazy" decoding="async" width="180" height="180">
@@ -200,7 +199,7 @@
         </article>
     </a>
 
-    <a class="featured__item" href="package/com.mi9.puzzle2/index.html">
+    <a class="featured__item" href="/package/com.mi9.puzzle2/">
         <article class="featured__card">
             <div class="featured__thumb-wrap">
                 <img class="featured__thumb" src="https://images.unsplash.com/photo-1580541832626-2a7131ee809f?w=180&h=180&fit=crop" alt="Glass Block Puzzle" loading="lazy" decoding="async" width="180" height="180">
@@ -209,7 +208,7 @@
         </article>
     </a>
 
-    <a class="featured__item" href="package/com.mi9.racing1/index.html">
+    <a class="featured__item" href="/package/com.mi9.racing1/">
         <article class="featured__card">
             <div class="featured__thumb-wrap">
                 <img class="featured__thumb" src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=180&h=180&fit=crop" alt="Turbo Street Racing" loading="lazy" decoding="async" width="180" height="180">
@@ -218,7 +217,7 @@
         </article>
     </a>
 
-    <a class="featured__item" href="package/com.mi9.racing2/index.html">
+    <a class="featured__item" href="/package/com.mi9.racing2/">
         <article class="featured__card">
             <div class="featured__thumb-wrap">
                 <img class="featured__thumb" src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=180&h=180&fit=crop" alt="Moto Highway Rider" loading="lazy" decoding="async" width="180" height="180">
@@ -227,7 +226,7 @@
         </article>
     </a>
 
-    <a class="featured__item" href="package/com.mi9.sports1/index.html">
+    <a class="featured__item" href="/package/com.mi9.sports1/">
         <article class="featured__card">
             <div class="featured__thumb-wrap">
                 <img class="featured__thumb" src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=180&h=180&fit=crop" alt="Ultimate Cricket 2026" loading="lazy" decoding="async" width="180" height="180">
@@ -236,7 +235,7 @@
         </article>
     </a>
 
-    <a class="featured__item" href="package/com.mi9.sports2/index.html">
+    <a class="featured__item" href="/package/com.mi9.sports2/">
         <article class="featured__card">
             <div class="featured__thumb-wrap">
                 <img class="featured__thumb" src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=180&h=180&fit=crop" alt="Pro Football League" loading="lazy" decoding="async" width="180" height="180">
@@ -245,7 +244,7 @@
         </article>
     </a>
 
-    <a class="featured__item" href="package/com.mi9.strategy1/index.html">
+    <a class="featured__item" href="/package/com.mi9.strategy1/">
         <article class="featured__card">
             <div class="featured__thumb-wrap">
                 <img class="featured__thumb" src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=180&h=180&fit=crop" alt="Clash of Empires" loading="lazy" decoding="async" width="180" height="180">
@@ -254,7 +253,7 @@
         </article>
     </a>
 
-    <a class="featured__item" href="package/com.mi9.casual1/index.html">
+    <a class="featured__item" href="/package/com.mi9.casual1/">
         <article class="featured__card">
             <div class="featured__thumb-wrap">
                 <img class="featured__thumb" src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=180&h=180&fit=crop" alt="Candy Bubble Pop" loading="lazy" decoding="async" width="180" height="180">
@@ -263,7 +262,7 @@
         </article>
     </a>
 
-    <a class="featured__item" href="package/com.mi9.casual2/index.html">
+    <a class="featured__item" href="/package/com.mi9.casual2/">
         <article class="featured__card">
             <div class="featured__thumb-wrap">
                 <img class="featured__thumb" src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=180&h=180&fit=crop" alt="Farm Harvest Town" loading="lazy" decoding="async" width="180" height="180">
@@ -314,7 +313,7 @@
         const logo = item.logo ? `/logo/${item.logo}` : '/logo/default.png';
 
         return `
-            <a class="featured__item" href="package/${encodeURIComponent(pkgId)}/index.html">
+            <a class="featured__item" href="/package/${encodeURIComponent(pkgId)}/">
                 <article class="featured__card">
                     <div class="featured__thumb-wrap">
                         <img
@@ -460,50 +459,71 @@
   </div>
 </footer>
 
-<script src="jsai/app-main.js" defer></script>
+<script src="/jsai/app-main.js" defer></script>
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+  import { getMessaging, getToken } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-messaging.js";
+  import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
 
-<script>
   const firebaseConfig = {
     apiKey: "AIzaSyCi4Za2BvqiZwAn3claI1DPbYA2d2IABwY",
     authDomain: "gamestore-f35a7.firebaseapp.com",
+    databaseURL: "https://gamestore-f35a7-default-rtdb.firebaseio.com",
     projectId: "gamestore-f35a7",
     storageBucket: "gamestore-f35a7.firebasestorage.app",
     messagingSenderId: "446538446400",
-    appId: "1:446538446400:web:9ee8b4638320e30c7211a5"
+    appId: "1:446538446400:web:9ee8b4638320e30c7211a5",
+    measurementId: "G-4Y6R9XFF9E"
   };
 
-  firebase.initializeApp(firebaseConfig);
-  const messaging = firebase.messaging();
+  const app = initializeApp(firebaseConfig);
+  const messaging = getMessaging(app);
+  const db = getDatabase(app);
 
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/firebase-messaging-sw.js')
       .then((registration) => {
-        console.log('Service Worker registered successfully:', registration.scope);
+        console.log('Service Worker registered successfully with scope:', registration.scope);
+
+        Notification.requestPermission().then(async (permission) => {
+          if (permission === 'granted') {
+            console.log('Notification permission granted.');
+
+            try {
+              const currentToken = await getToken(messaging, { 
+                vapidKey: 'BFHbp6ONoBlroZCDcxurDA4WB-JccYxuayFMKr8SIO5QcpgLNWgky8Jp9yxyFQAjyUFWpTJCBun780uQlbYdV_w',
+                serviceWorkerRegistration: registration 
+              });
+
+              if (currentToken) {
+                // FIXED: Har baar random ID banane ki jagah localStorage se check karenge
+                let userId = localStorage.getItem('device_id');
+                if (!userId) {
+                  userId = 'user_' + Math.random().toString(36).substring(2, 9);
+                  localStorage.setItem('device_id', userId);
+                }
+
+                await set(ref(db, 'tokens/' + userId), {
+                  token: currentToken
+                });
+                console.log('FCM Token successfully saved in database:', currentToken);
+              } else {
+                console.log('No registration token available.');
+              }
+            } catch (err) {
+              console.error('An error occurred while retrieving token:', err);
+            }
+
+          } else {
+            console.log('Notification permission denied by user.');
+          }
+        });
+
       })
       .catch((err) => {
         console.log('Service Worker registration failed:', err);
       });
   }
-
-  Notification.requestPermission().then((permission) => {
-    if (permission === 'granted') {
-      console.log('Notification permission granted.');
-      
-      messaging.getToken({ vapidKey: 'BFHbp6ONoBlroZCDcxurDA4WB-JccYxuayFMKr8SIO5QcpgLNWgky8Jp9yxyFQAjyUFWpTJCBun780uQlbYdV_w' })
-        .then((currentToken) => {
-          if (currentToken) {
-            console.log('FCM Token:', currentToken);
-          } else {
-            console.log('No registration token available.');
-          }
-        })
-        .catch((err) => {
-          console.log('An error occurred while retrieving token. ', err);
-        });
-    } else {
-      console.log('Permission denied.');
-    }
-  });
 </script>
 </body>
 </html>
