@@ -1,5 +1,13 @@
 [
-  {
+   {
+    "pkg_id": "moneyrummy",
+    "game_name": "MONEY RUMMY",
+    "logo": "moneyrummy.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "yono"
+  },
+ {
     "pkg_id": "viprummy",
     "game_name": "VIP RUMMY",
     "logo": "viprummy.webp",
@@ -13,14 +21,6 @@
     "logo": "101z.webp",
     "new_release": true,
     "popular": false,
-    "category": "yono"
-  },
-  {
-    "pkg_id": "moneyrummy",
-    "game_name": "Money Rummy",
-    "logo": "moneyrummy.webp",
-    "new_release": true,
-    "popular": true,
     "category": "yono"
   },
   {
