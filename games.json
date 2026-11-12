@@ -88,52 +88,52 @@
     "category": "yono"
   },
   {
-    "pkg_id": "com.mi9.puzzle1",
+    "pkg_id": "com.mi9.yono1",
     "game_name": "Brain Teaser Master",
     "logo": "https://images.unsplash.com/photo-1611996575749-79a3a250f948?w=180&h=180&fit=crop",
     "new_release": true,
     "popular": true,
-    "category": "puzzle"
+    "category": "yono"
   },
   {
-    "pkg_id": "com.mi9.puzzle2",
-    "game_name": "Glass Block Puzzle",
+    "pkg_id": "com.mi9.yono2",
+    "game_name": "Glass Block yono",
     "logo": "https://images.unsplash.com/photo-1580541832626-2a7131ee809f?w=180&h=180&fit=crop",
     "new_release": true,
     "popular": false,
-    "category": "puzzle"
+    "category": "yono"
   },
   {
-    "pkg_id": "com.mi9.puzzle3",
+    "pkg_id": "com.mi9.yono3",
     "game_name": "Number Grid Master",
     "logo": "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=180&h=180&fit=crop",
     "new_release": false,
     "popular": true,
-    "category": "puzzle"
+    "category": "yono"
   },
   {
-    "pkg_id": "com.mi9.racing1",
-    "game_name": "Turbo Street Racing",
+    "pkg_id": "com.mi9.yono1",
+    "game_name": "Turbo Street yono",
     "logo": "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=180&h=180&fit=crop",
     "new_release": true,
     "popular": true,
-    "category": "racing"
+    "category": "yono"
   },
   {
-    "pkg_id": "com.mi9.racing2",
+    "pkg_id": "com.mi9.yono2",
     "game_name": "Moto Highway Rider",
     "logo": "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=180&h=180&fit=crop",
     "new_release": true,
     "popular": false,
-    "category": "racing"
+    "category": "yono"
   },
   {
-    "pkg_id": "com.mi9.racing3",
+    "pkg_id": "com.mi9.yono3",
     "game_name": "Neon Drift Legends",
     "logo": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=180&h=180&fit=crop",
     "new_release": false,
     "popular": true,
-    "category": "racing"
+    "category": "yono"
   },
   {
     "pkg_id": "com.mi9.sports1",
@@ -160,35 +160,35 @@
     "category": "sports"
   },
   {
-    "pkg_id": "com.mi9.strategy1",
+    "pkg_id": "com.mi9.yono1",
     "game_name": "Clash of Empires",
     "logo": "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=180&h=180&fit=crop",
     "new_release": true,
     "popular": true,
-    "category": "strategy"
+    "category": "yono"
   },
   {
-    "pkg_id": "com.mi9.strategy2",
+    "pkg_id": "com.mi9.yono2",
     "game_name": "Kingdom Tactics 3D",
     "logo": "https://images.unsplash.com/photo-1614850523296-d8c1af93d400?w=180&h=180&fit=crop",
     "new_release": false,
     "popular": true,
-    "category": "strategy"
+    "category": "yono"
   },
   {
-    "pkg_id": "com.mi9.casual1",
+    "pkg_id": "com.mi9.yono1",
     "game_name": "Candy Bubble Pop",
     "logo": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=180&h=180&fit=crop",
     "new_release": true,
     "popular": true,
-    "category": "casual"
+    "category": "yono"
   },
   {
-    "pkg_id": "com.mi9.casual2",
+    "pkg_id": "com.mi9.yono2",
     "game_name": "Farm Harvest Town",
     "logo": "https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=180&h=180&fit=crop",
     "new_release": true,
     "popular": false,
-    "category": "casual"
+    "category": "yono"
   }
 ]
