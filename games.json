@@ -88,12 +88,12 @@
     "category": "yono"
   },
   {
-    "pkg_id": "com.mi9.yono2",
-    "game_name": "Glass Block yono",
-    "logo": "https://images.unsplash.com/photo-1580541832626-2a7131ee809f?w=180&h=180&fit=crop",
+    "pkg_id": "diwaking",
+    "game_name": "DIWA KING",
+    "logo": "diwaking.webp",
     "new_release": true,
     "popular": false,
-    "category": "yono"
+    "category": "diwa"
   },
   {
     "pkg_id": "com.mi9.yono3",
