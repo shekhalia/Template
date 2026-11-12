@@ -48,41 +48,41 @@
     "category": "yono"
   },
   {
-    "pkg_id": "com.mi9.yono8",
-    "game_name": "Yono Dragon Tiger",
-    "logo": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=180&h=180&fit=crop",
+    "pkg_id": "rumblerummy",
+    "game_name": "RUMBLE RUMMY",
+    "logo": "rumblerummy.webp",
     "new_release": false,
     "popular": true,
     "category": "yono"
   },
   {
-    "pkg_id": "com.mi9.yono1",
-    "game_name": "Cyberpunk Action Hero",
-    "logo": "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=180&h=180&fit=crop",
+    "pkg_id": "okrummy",
+    "game_name": "OK RUMMY",
+    "logo": "okrummy.webp",
     "new_release": true,
     "popular": true,
     "category": "yono"
   },
   {
-    "pkg_id": "com.mi9.yono2",
-    "game_name": "Ninja Jump Runner",
-    "logo": "https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?w=180&h=180&fit=crop",
+    "pkg_id": "sagaslots",
+    "game_name": "SAGA SLOTS",
+    "logo": "sagaslots.webp",
     "new_release": true,
     "popular": false,
     "category": "yono"
   },
   {
-    "pkg_id": "com.mi9.yono3",
-    "game_name": "Shadow Strike Force",
-    "logo": "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=180&h=180&fit=crop",
+    "pkg_id": "spinwinter",
+    "game_name": "SPIN WINTER",
+    "logo": "spinwinter.webp",
     "new_release": false,
     "popular": true,
     "category": "yono"
   },
   {
-    "pkg_id": "com.mi9.yono1",
-    "game_name": "Brain Teaser Master",
-    "logo": "https://images.unsplash.com/photo-1611996575749-79a3a250f948?w=180&h=180&fit=crop",
+    "pkg_id": "spingold",
+    "game_name": "SPIN GOLD",
+    "logo": "spingold.webp",
     "new_release": true,
     "popular": true,
     "category": "yono"
