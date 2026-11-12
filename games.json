@@ -1,16 +1,16 @@
 [
   {
-    "pkg_id": "com.mi9.yono1",
-    "game_name": "Rummy VIP",
-    "logo": "13.png",
+    "pkg_id": "viprummy",
+    "game_name": "VIP RUMMY",
+    "logo": "viprummy.webp",
     "new_release": true,
     "popular": true,
     "category": "yono"
   },
   {
-    "pkg_id": "com.mi9.yono2",
-    "game_name": "ET7.COM",
-    "logo": "12.jpg",
+    "pkg_id": "101z",
+    "game_name": "101 Z",
+    "logo": "101z.webp",
     "new_release": true,
     "popular": false,
     "category": "yono"
@@ -24,33 +24,33 @@
     "category": "yono"
   },
   {
-    "pkg_id": "com.mi9.yono4",
-    "game_name": "Yono Slots Master",
-    "logo": "https://images.unsplash.com/photo-1596838132731-3301c3fd4317?w=180&h=180&fit=crop",
+    "pkg_id": "loverummy",
+    "game_name": "LOVE RUMMY",
+    "logo": "loverummy.webp",
     "new_release": true,
     "popular": true,
     "category": "yono"
   },
   {
-    "pkg_id": "com.mi9.yono5",
-    "game_name": "Yono VIP Club",
-    "logo": "https://images.unsplash.com/photo-1563089145-599997674d42?w=180&h=180&fit=crop",
+    "pkg_id": "mbmbet",
+    "game_name": "MBM BET",
+    "logo": "mbmbet.webp",
     "new_release": false,
     "popular": true,
     "category": "yono"
   },
   {
-    "pkg_id": "com.mi9.yono6",
-    "game_name": "Yono Thunder Crash",
-    "logo": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=180&h=180&fit=crop",
+    "pkg_id": "rummyzip",
+    "game_name": "RUMMY ZIP",
+    "logo": "rummyzip.webp",
     "new_release": true,
     "popular": false,
     "category": "yono"
   },
   {
-    "pkg_id": "com.mi9.yono7",
-    "game_name": "Yono Ludo Express",
-    "logo": "https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?w=180&h=180&fit=crop",
+    "pkg_id": "spin101",
+    "game_name": "SPIN 101",
+    "logo": "spin101.webp",
     "new_release": true,
     "popular": true,
     "category": "yono"
