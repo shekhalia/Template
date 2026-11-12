@@ -64,28 +64,28 @@
     "category": "yono"
   },
   {
-    "pkg_id": "com.mi9.arcade1",
+    "pkg_id": "com.mi9.yono1",
     "game_name": "Cyberpunk Action Hero",
     "logo": "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=180&h=180&fit=crop",
     "new_release": true,
     "popular": true,
-    "category": "arcade"
+    "category": "yono"
   },
   {
-    "pkg_id": "com.mi9.arcade2",
+    "pkg_id": "com.mi9.yono2",
     "game_name": "Ninja Jump Runner",
     "logo": "https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?w=180&h=180&fit=crop",
     "new_release": true,
     "popular": false,
-    "category": "arcade"
+    "category": "yono"
   },
   {
-    "pkg_id": "com.mi9.arcade3",
+    "pkg_id": "com.mi9.yono3",
     "game_name": "Shadow Strike Force",
     "logo": "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=180&h=180&fit=crop",
     "new_release": false,
     "popular": true,
-    "category": "arcade"
+    "category": "yono"
   },
   {
     "pkg_id": "com.mi9.puzzle1",
