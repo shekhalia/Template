@@ -22,6 +22,14 @@
     "popular": true,
     "category": "other"
   },
+ {
+    "pkg_id": "tigergame",
+    "game_name": "TIGER.GAME",
+    "logo": "tigergame.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "cgs"
+  },
 {
     "pkg_id": "yesspin",
     "game_name": "YES SPIN",
