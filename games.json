@@ -1,5 +1,53 @@
 [
-   {
+    {
+    "pkg_id": "diwatop",
+    "game_name": "DIWA TOP",
+    "logo": "diwatop.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "diwa"
+  },
+  {
+    "pkg_id": "diwavip",
+    "game_name": "DIWA VIP",
+    "logo": "diwavip.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "diwa"
+  },
+ {
+    "pkg_id": "diwawow",
+    "game_name": "DIWA WOW",
+    "logo": "diwawow.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "diwa"
+  },
+ {
+    "pkg_id": "diwax",
+    "game_name": "DIWA X",
+    "logo": "diwax.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "diwa"
+  },
+  {
+    "pkg_id": "diwaspin",
+    "game_name": "DIWA SPIN",
+    "logo": "diwaspin.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "diwa"
+  },
+  {
+    "pkg_id": "diwaslot",
+    "game_name": "DIWA SLOT",
+    "logo": "diwaslot.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "diwa"
+  },
+  {
     "pkg_id": "moneyrummy",
     "game_name": "MONEY RUMMY",
     "logo": "moneyrummy.webp",
