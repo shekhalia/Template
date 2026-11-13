@@ -63,7 +63,158 @@
     "popular": true,
     "category": "yono"
   },
-
+ {
+    "pkg_id": "jaiho91",
+    "game_name": "JAIHO 91",
+    "logo": "jaiho91.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "yono"
+  },
+ {
+    "pkg_id": "jaihoarcade",
+    "game_name": "JAIHO ARCADE",
+    "logo": "jaihoarcade.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "yono"
+  },
+ {
+    "pkg_id": "jaihoplay",
+    "game_name": "JAIHO PLAY",
+    "logo": "jaihoplay.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "yono"
+  },
+ {
+    "pkg_id": "jaihorummy",
+    "game_name": "JAIHO RUMMY",
+    "logo": "jaihorummy.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "yono"
+  },
+ {
+    "pkg_id": "jaihoslots",
+    "game_name": "JAIHO SLOTS",
+    "logo": "jaihoslots.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "yono"
+  },
+ {
+    "pkg_id": "jaihospin",
+    "game_name": "JAIHO SPIN",
+    "logo": "jaihospin.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "yono"
+  },
+ {
+    "pkg_id": "jaihowin",
+    "game_name": "JAIHO WIN",
+    "logo": "jaihowin.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "yono"
+  },
+ {
+    "pkg_id": "jeetspin",
+    "game_name": "JEET SPIN",
+    "logo": "jeetspin.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "yono"
+  },
+ {
+    "pkg_id": "joyrummy",
+    "game_name": "JOY RUMMY",
+    "logo": "joyrummy.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "yono"
+  },
+ {
+    "pkg_id": "junglehaan",
+    "game_name": "JUNGLE HAAN",
+    "logo": "junglehaan.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "other"
+  },
+ {
+    "pkg_id": "mvmrummy",
+    "game_name": "MVM RUMMY",
+    "logo": "mvmrummy.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "yono"
+  },
+ {
+    "pkg_id": "rummy77",
+    "game_name": "RUMMY 77",
+    "logo": "rummy77.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "yono"
+  },
+ {
+    "pkg_id": "rummy91",
+    "game_name": "RUMMY 91",
+    "logo": "rummy91.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "yono"
+  },
+ {
+    "pkg_id": "rummyludo",
+    "game_name": "RUMMY LUDO",
+    "logo": "rummyludo.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "yono"
+  },
+ {
+    "pkg_id": "slotsguru",
+    "game_name": "SLOTS GURU",
+    "logo": "slotsguru.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "other"
+  },
+ {
+    "pkg_id": "shareslots",
+    "game_name": "SHARE SLOTS",
+    "logo": "shareslots.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "yono"
+  },
+ {
+    "pkg_id": "slotsspin",
+    "game_name": "SLOTS SPIN",
+    "logo": "slotsspin.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "yono"
+  },
+ {
+    "pkg_id": "slotswinter",
+    "game_name": "SLOTS WINTER",
+    "logo": "slotswinter.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "yono"
+  },
+ {
+    "pkg_id": "spin777",
+    "game_name": "SPIN 777",
+    "logo": "spin777.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "yono"
+  },
     {
     "pkg_id": "diwatop",
     "game_name": "DIWA TOP",
