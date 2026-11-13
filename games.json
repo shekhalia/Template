@@ -96,44 +96,44 @@
     "category": "diwa"
   },
   {
-    "pkg_id": "com.mi9.yono3",
-    "game_name": "Number Grid Master",
-    "logo": "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=180&h=180&fit=crop",
+    "pkg_id": "777game",
+    "game_name": "777 GAME",
+    "logo": "777game.webp",
     "new_release": false,
     "popular": true,
     "category": "yono"
   },
   {
-    "pkg_id": "com.mi9.yono1",
-    "game_name": "Turbo Street yono",
-    "logo": "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=180&h=180&fit=crop",
+    "pkg_id": "789jackpots",
+    "game_name": "789 JACKPOTS",
+    "logo": "789jackpots.webp",
     "new_release": true,
     "popular": true,
     "category": "yono"
   },
   {
-    "pkg_id": "com.mi9.yono2",
-    "game_name": "Moto Highway Rider",
-    "logo": "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=180&h=180&fit=crop",
+    "pkg_id": "abcrummy",
+    "game_name": "ABC RUMMY",
+    "logo": "abcrummy.webp",
     "new_release": true,
     "popular": false,
     "category": "yono"
   },
   {
-    "pkg_id": "com.mi9.yono3",
-    "game_name": "Neon Drift Legends",
-    "logo": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=180&h=180&fit=crop",
+    "pkg_id": "bingo101",
+    "game_name": "BINGO 101",
+    "logo": "bingo101.webp",
     "new_release": false,
     "popular": true,
     "category": "yono"
   },
   {
-    "pkg_id": "com.mi9.sports1",
-    "game_name": "Ultimate Cricket 2026",
-    "logo": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=180&h=180&fit=crop",
+    "pkg_id": "bossrummy",
+    "game_name": "BOSS RUMMY",
+    "logo": "bossrummy.webp",
     "new_release": true,
     "popular": true,
-    "category": "sports"
+    "category": "yono"
   },
   {
     "pkg_id": "com.mi9.sports2",
@@ -141,7 +141,7 @@
     "logo": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=180&h=180&fit=crop",
     "new_release": true,
     "popular": false,
-    "category": "sports"
+    "category": "yono"
   },
   {
     "pkg_id": "com.mi9.sports3",
@@ -149,7 +149,7 @@
     "logo": "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=180&h=180&fit=crop",
     "new_release": false,
     "popular": true,
-    "category": "sports"
+    "category": "yono"
   },
   {
     "pkg_id": "com.mi9.yono1",
