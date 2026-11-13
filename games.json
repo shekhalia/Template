@@ -22,7 +22,15 @@
     "popular": true,
     "category": "yono"
   },
- {
+   {
+    "pkg_id": "777game",
+    "game_name": "777 GAME",
+    "logo": "777game.webp",
+    "new_release": false,
+    "popular": true,
+    "category": "yono"
+  },
+{
     "pkg_id": "spincrush",
     "game_name": "SPIN CRUSH",
     "logo": "spincrush.webp",
@@ -477,14 +485,6 @@
     "new_release": true,
     "popular": false,
     "category": "diwa"
-  },
-  {
-    "pkg_id": "777game",
-    "game_name": "777 GAME",
-    "logo": "777game.webp",
-    "new_release": false,
-    "popular": true,
-    "category": "yono"
   },
   {
     "pkg_id": "789jackpots",
