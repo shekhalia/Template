@@ -38,18 +38,18 @@
     "popular": true,
     "category": "yono"
   },
-{
-    "pkg_id": "winrummy",
-    "game_name": "WIN RUMMY",
-    "logo": "winrummy.webp",
-    "new_release": true,
-    "popular": true,
-    "category": "yono"
-  },
    {
     "pkg_id": "777game",
     "game_name": "777 GAME",
     "logo": "777game.webp",
+    "new_release": false,
+    "popular": true,
+    "category": "yono"
+  },
+  {
+    "pkg_id": "clubinr",
+    "game_name": "CLUB INR",
+    "logo": "clubinr.webp",
     "new_release": false,
     "popular": true,
     "category": "yono"
@@ -550,15 +550,15 @@
     "popular": false,
     "category": "yono"
   },
-  {
-    "pkg_id": "clubinr",
-    "game_name": "CLUB INR",
-    "logo": "clubinr.webp",
-    "new_release": false,
+{
+    "pkg_id": "winrummy",
+    "game_name": "WIN RUMMY",
+    "logo": "winrummy.webp",
+    "new_release": true,
     "popular": true,
     "category": "yono"
   },
-  {
+ {
     "pkg_id": "diwa777",
     "game_name": "DIWA 777",
     "logo": "diwa777.webp",
