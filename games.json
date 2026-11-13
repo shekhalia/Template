@@ -1,4 +1,12 @@
-[  {
+[   {
+    "pkg_id": "yesspin",
+    "game_name": "YEW SPIN",
+    "logo": "yesspin.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "yono"
+  },
+{
     "pkg_id": "winrummy",
     "game_name": "slotswinterN RUMMY",
     "logo": "winrummy.webp",
@@ -69,6 +77,14 @@
     "new_release": true,
     "popular": true,
     "category": "yono"
+  }, 
+{
+    "pkg_id": "yonoarcade",
+    "game_name": "YONO ARCADE",
+    "logo": "yonoarcade.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "yono"
   },
  {
     "pkg_id": "indclub",
@@ -134,7 +150,15 @@
     "popular": true,
     "category": "yono"
   },
- {
+  {
+    "pkg_id": "yonorummy",
+    "game_name": "YONO RUMMY",
+    "logo": "yonorummy.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "yono"
+  },
+  {
     "pkg_id": "jaihowin",
     "game_name": "JAIHO WIN",
     "logo": "jaihowin.webp",
