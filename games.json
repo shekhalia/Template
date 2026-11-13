@@ -42,7 +42,7 @@
     "pkg_id": "777game",
     "game_name": "777 GAME",
     "logo": "777game.webp",
-    "new_release": false,
+    "new_release": true,
     "popular": true,
     "category": "yono"
   },
