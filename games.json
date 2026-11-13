@@ -14,6 +14,14 @@
     "popular": true,
     "category": "yono"
   },
+ {
+    "pkg_id": "765club",
+    "game_name": "765 CLUB",
+    "logo": "765club.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "other"
+  },
 {
     "pkg_id": "yesspin",
     "game_name": "YES SPIN",
