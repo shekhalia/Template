@@ -262,7 +262,15 @@
     "popular": true,
     "category": "yono"
   },
- {
+  {
+    "pkg_id": "yonovip",
+    "game_name": "YONO VIP",
+    "logo": "yonovip.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "yono"
+  },
+  {
     "pkg_id": "spin777",
     "game_name": "SPIN 777",
     "logo": "spin777.webp",
