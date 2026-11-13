@@ -1,4 +1,12 @@
-[ {
+[  {
+    "pkg_id": "rs9",
+    "game_name": "RS9",
+    "logo": ".webp",
+    "new_release": false,
+    "popular": true,
+    "category": "other"
+  },
+  {
     "pkg_id": "nanogame",
     "game_name": "NANO.GAME",
     "logo": "nanogame.webp",
