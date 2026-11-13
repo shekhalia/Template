@@ -7,7 +7,46 @@
     "popular": true,
     "category": "yono"
   },
-
+ {
+    "pkg_id": "diwagame",
+    "game_name": "DIWA GAME",
+    "logo": "diwagame.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "diwa"
+  },
+ {
+    "pkg_id": "diwalucky",
+    "game_name": "DIWA LUCKY",
+    "logo": "diwalucky.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "diwa"
+  },
+ {
+    "pkg_id": "diwaok",
+    "game_name": "DIWA OK",
+    "logo": "diwaok.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "diwa"
+  },
+ {
+    "pkg_id": "diwaplay",
+    "game_name": "DIWA PLAY",
+    "logo": "diwaplay.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "diwa"
+  },
+ {
+    "pkg_id": "diwarummy",
+    "game_name": "DIWA RUMMY",
+    "logo": "diwarummy.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "diwa"
+  },
  {
     "pkg_id": "viprummy",
     "game_name": "VIP RUMMY",
