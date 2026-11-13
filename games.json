@@ -55,6 +55,14 @@
     "category": "yono"
   },
   {
+    "pkg_id": "porschegame",
+    "game_name": "PORSCHE.GAME",
+    "logo": "porschegame.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "cgs"
+  },
+  {
     "pkg_id": "spincrush",
     "game_name": "SPIN CRUSH",
     "logo": "spincrush.webp",
