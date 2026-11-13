@@ -1,4 +1,69 @@
 [
+   {
+    "pkg_id": "gamerummy",
+    "game_name": "GAME RUMMY",
+    "logo": "gamerummy.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "yono"
+  },
+ {
+    "pkg_id": "gogorummy",
+    "game_name": "GOGO RUMMY",
+    "logo": "gogorummy.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "yono"
+  },
+ {
+    "pkg_id": "goldrummy",
+    "game_name": "GOLD RUMMY",
+    "logo": "goldrummy.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "yono"
+  },
+ {
+    "pkg_id": "goodslots",
+    "game_name": "GOOD SLOTS",
+    "logo": "goodslots.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "yono"
+  },
+ {
+    "pkg_id": "hindi777",
+    "game_name": "HINDI 777",
+    "logo": "hindi777.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "yono"
+  },
+ {
+    "pkg_id": "hirummy",
+    "game_name": "HI RUMMY",
+    "logo": "hirummy.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "yono"
+  },
+ {
+    "pkg_id": "indclub",
+    "game_name": "IND CLUB",
+    "logo": "indclub.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "yono"
+  },
+ {
+    "pkg_id": "inrrummy",
+    "game_name": "INR RUMMY",
+    "logo": "inrrummy.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "yono"
+  },
+
     {
     "pkg_id": "diwatop",
     "game_name": "DIWA TOP",
