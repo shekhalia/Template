@@ -206,7 +206,15 @@
     "popular": true,
     "category": "yono"
   },
- {
+  {
+    "pkg_id": "yonoslots",
+    "game_name": "YONO SLOTS",
+    "logo": "yonoslots.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "yono"
+  },
+{
     "pkg_id": "rummy91",
     "game_name": "RUMMY 91",
     "logo": "rummy91.webp",
