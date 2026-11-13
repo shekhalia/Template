@@ -1,4 +1,12 @@
 [ {
+    "pkg_id": "nanogame",
+    "game_name": "NANO.GAME",
+    "logo": "nanogame.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "other"
+  },
+  {
     "pkg_id": "firegame",
     "game_name": "FIRE GAME",
     "logo": "firegame.webp",
