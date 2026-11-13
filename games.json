@@ -1,4 +1,27 @@
-[
+[  {
+    "pkg_id": "winrummy",
+    "game_name": "slotswinterN RUMMY",
+    "logo": "winrummy.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "yono"
+  },
+ {
+    "pkg_id": "spincrush",
+    "game_name": "SPIN CRUSH",
+    "logo": "spincrush.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "yono"
+  },
+{
+    "pkg_id": "spinrummy",
+    "game_name": "SPIN RUMMY",
+    "logo": "spinrummy.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "yono"
+  },
    {
     "pkg_id": "gamerummy",
     "game_name": "GAME RUMMY",
