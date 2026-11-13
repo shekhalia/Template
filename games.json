@@ -55,6 +55,14 @@
     "category": "yono"
   },
   {
+    "pkg_id": "crest777",
+    "game_name": "CREST 777",
+    "logo": "crest777.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "cgs"
+  },
+  {
     "pkg_id": "porschegame",
     "game_name": "PORSCHE.GAME",
     "logo": "porschegame.webp",
