@@ -136,51 +136,51 @@
     "category": "yono"
   },
   {
-    "pkg_id": "com.mi9.sports2",
-    "game_name": "Pro Football League",
-    "logo": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=180&h=180&fit=crop",
+    "pkg_id": "cashrummy",
+    "game_name": "CASH RUMMY",
+    "logo": "cashrummy.webp",
     "new_release": true,
     "popular": false,
     "category": "yono"
   },
   {
-    "pkg_id": "com.mi9.sports3",
-    "game_name": "Street Basketball King",
-    "logo": "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=180&h=180&fit=crop",
+    "pkg_id": "clubinr",
+    "game_name": "CLUB INR",
+    "logo": "clubinr.webp",
     "new_release": false,
     "popular": true,
     "category": "yono"
   },
   {
-    "pkg_id": "com.mi9.yono1",
-    "game_name": "Clash of Empires",
-    "logo": "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=180&h=180&fit=crop",
+    "pkg_id": "diwa777",
+    "game_name": "DIWA 777",
+    "logo": "diwa777.webp",
     "new_release": true,
     "popular": true,
-    "category": "yono"
+    "category": "diwa"
   },
   {
-    "pkg_id": "com.mi9.yono2",
-    "game_name": "Kingdom Tactics 3D",
-    "logo": "https://images.unsplash.com/photo-1614850523296-d8c1af93d400?w=180&h=180&fit=crop",
+    "pkg_id": "diwace",
+    "game_name": "DIWA ACE",
+    "logo": "diwace.webp",
     "new_release": false,
     "popular": true,
-    "category": "yono"
+    "category": "diwa"
   },
   {
-    "pkg_id": "com.mi9.yono1",
-    "game_name": "Candy Bubble Pop",
-    "logo": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=180&h=180&fit=crop",
+    "pkg_id": "diwabonus",
+    "game_name": "DIWA BONUS",
+    "logo": "diwabonus.webp",
     "new_release": true,
     "popular": true,
-    "category": "yono"
+    "category": "diwa"
   },
   {
-    "pkg_id": "com.mi9.yono2",
-    "game_name": "Farm Harvest Town",
-    "logo": "https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=180&h=180&fit=crop",
+    "pkg_id": "diwafun",
+    "game_name": "diwafun",
+    "logo": "diwafun.webp",
     "new_release": true,
     "popular": false,
-    "category": "yono"
+    "category": "diwa"
   }
 ]
