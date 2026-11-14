@@ -2,7 +2,7 @@
     "pkg_id": "rs9",
     "game_name": "RS9",
     "logo": "rs9.webp",
-    "new_release": false,
+    "new_release": true,
     "popular": true,
     "category": "other"
   },
@@ -66,7 +66,7 @@
     "pkg_id": "clubinr",
     "game_name": "CLUB INR",
     "logo": "clubinr.webp",
-    "new_release": false,
+    "new_release": true,
     "popular": true,
     "category": "yono"
   },
@@ -459,7 +459,7 @@
     "game_name": "101 Z",
     "logo": "101z.webp",
     "new_release": true,
-    "popular": false,
+    "popular": true,
     "category": "yono"
   },
   {
@@ -474,7 +474,7 @@
     "pkg_id": "mbmbet",
     "game_name": "MBM BET",
     "logo": "mbmbet.webp",
-    "new_release": false,
+    "new_release": true,
     "popular": true,
     "category": "yono"
   },
@@ -483,7 +483,7 @@
     "game_name": "RUMMY ZIP",
     "logo": "rummyzip.webp",
     "new_release": true,
-    "popular": false,
+    "popular": true,
     "category": "yono"
   },
   {
@@ -498,7 +498,7 @@
     "pkg_id": "rumblerummy",
     "game_name": "RUMBLE RUMMY",
     "logo": "rumblerummy.webp",
-    "new_release": false,
+    "new_release": true,
     "popular": true,
     "category": "yono"
   },
@@ -515,14 +515,14 @@
     "game_name": "SAGA SLOTS",
     "logo": "sagaslots.webp",
     "new_release": true,
-    "popular": false,
+    "popular": true,
     "category": "yono"
   },
   {
     "pkg_id": "spinwinter",
     "game_name": "SPIN WINTER",
     "logo": "spinwinter.webp",
-    "new_release": false,
+    "new_release": true,
     "popular": true,
     "category": "yono"
   },
@@ -539,7 +539,7 @@
     "game_name": "DIWA KING",
     "logo": "diwaking.webp",
     "new_release": true,
-    "popular": false,
+    "popular": true,
     "category": "diwa"
   },
   {
@@ -555,14 +555,14 @@
     "game_name": "ABC RUMMY",
     "logo": "abcrummy.webp",
     "new_release": true,
-    "popular": false,
+    "popular": true,
     "category": "yono"
   },
   {
     "pkg_id": "bingo101",
     "game_name": "BINGO 101",
     "logo": "bingo101.webp",
-    "new_release": false,
+    "new_release": true,
     "popular": true,
     "category": "yono"
   },
@@ -579,7 +579,7 @@
     "game_name": "CASH RUMMY",
     "logo": "cashrummy.webp",
     "new_release": true,
-    "popular": false,
+    "popular": true,
     "category": "yono"
   },
   {
@@ -602,7 +602,7 @@
     "pkg_id": "diwace",
     "game_name": "DIWA ACE",
     "logo": "diwaace.webp",
-    "new_release": false,
+    "new_release": true,
     "popular": true,
     "category": "diwa"
   },
@@ -619,7 +619,7 @@
     "game_name": "DIWA FUN",
     "logo": "diwafun.webp",
     "new_release": true,
-    "popular": false,
+    "popular": true,
     "category": "diwa"
   }
 ]
