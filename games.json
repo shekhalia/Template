@@ -1,4 +1,12 @@
-[  {
+[ {
+    "pkg_id": "diwarich",
+    "game_name": "DIWA RICH",
+    "logo": "diwarich.webp",
+    "new_release": true,
+    "popular": false,
+    "category": "diwa"
+  },
+  {
     "pkg_id": "rs9",
     "game_name": "RS9",
     "logo": "rs9.webp",
