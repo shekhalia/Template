@@ -1,4 +1,12 @@
 [ {
+    "pkg_id": "yonoocean",
+    "game_name": "YONO OCEAN",
+    "logo": "yonoocean.webp",
+    "new_release": true,
+    "popular": true,
+    "category": "yono"
+  },
+  {
     "pkg_id": "diwarich",
     "game_name": "DIWA RICH",
     "logo": "diwarich.webp",
